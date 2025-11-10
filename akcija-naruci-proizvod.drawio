@@ -1,0 +1,992 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
+  <diagram name="Page-1" id="hL5Y6a9LiReSi_ZO5CNs">
+    <mxGraphModel dx="1216" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KPofzv6rY3SYcD04jEbj-8" value="Frontend" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="290" width="200" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-14" value="Naruči proizvod" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-8">
+          <mxGeometry x="20" y="80" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-82" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.025;exitY=0.961;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-8" source="KPofzv6rY3SYcD04jEbj-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="970" as="sourcePoint" />
+            <mxPoint x="160" y="973" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-83" value="Uspjeh - prikaz detalja narudžbe" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-8">
+          <mxGeometry x="40" y="950" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-9" value="API Gateway" style="swimlane;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="290" width="200" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-18" value="Naruči proizvod" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-9">
+          <mxGeometry x="40" y="70" width="120" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-49" value="Transakcija" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-90;fontColor=#00FF10;fontSize=30;fontStyle=1" vertex="1" parent="KPofzv6rY3SYcD04jEbj-9">
+          <mxGeometry x="5" y="500" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-10" value="Products Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="290" width="250" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-24" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="110" as="sourcePoint" />
+            <mxPoint x="190" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-25" value="Može li obaviti&amp;nbsp;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;akciju&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;kupnje proizvoda (ažuriranje statusa,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;broja dostupnih proizvoda itd.)&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-28" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="220" as="sourcePoint" />
+            <mxPoint x="350" y="221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-29" value="Može li obaviti akciju kreiranja narudžbe,&lt;div&gt;ažuriranje statistika, praćenje narudžbi za korisnika itd.&lt;/div&gt;" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-34" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="390" as="sourcePoint" />
+            <mxPoint x="-40" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-35" value="Da" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-50" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="580" as="sourcePoint" />
+            <mxPoint x="190" y="580" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-51" value="Obavi akciju" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-52" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="580" as="sourcePoint" />
+            <mxPoint x="190" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-53" value="Kupnja proizvoda" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-54" value="O" style="endArrow=classic;html=1;rounded=0;entryX=0.992;entryY=0.085;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="630" as="sourcePoint" />
+            <mxPoint x="-40" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-55" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-61" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="680" as="sourcePoint" />
+            <mxPoint x="330" y="680" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-62" value="Obavi akciju" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-61">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-65" value="O" style="endArrow=classic;html=1;rounded=0;entryX=1.008;entryY=0.701;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-10" target="KPofzv6rY3SYcD04jEbj-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="730" as="sourcePoint" />
+            <mxPoint x="100" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-66" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-67" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="770" as="sourcePoint" />
+            <mxPoint x="520" y="770" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-68" value="Obavi akciju" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-67">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-80" value="Comit phase" style="swimlane;startSize=0;strokeColor=#FF2727;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FF2727;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-10">
+          <mxGeometry x="-180" y="520" width="1020" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-11" value="Orders Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="290" width="195" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-30" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="104" y="270" as="sourcePoint" />
+            <mxPoint x="-284" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-31" value="Da" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285" y="340" as="sourcePoint" />
+            <mxPoint x="295" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-75" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-33" value="Može li obaviti akciju naplate računa korisnika" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-36" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285" y="439.5" as="sourcePoint" />
+            <mxPoint x="515" y="440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-75" y="439.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-37" value="Može li obaviti akciju naručivanja dostave od dostavne službe" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-38" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505" y="480" as="sourcePoint" />
+            <mxPoint x="-285" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-39" value="Da" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-42" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="220" as="sourcePoint" />
+            <mxPoint x="105" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-43" value="Provjera mogućnosti" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-63" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="680" as="sourcePoint" />
+            <mxPoint x="85" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-64" value="Kreiranje narudžbe" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-72" value="O" style="endArrow=classic;html=1;rounded=0;entryX=1.008;entryY=0.799;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-11" target="KPofzv6rY3SYcD04jEbj-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="274" y="821" as="sourcePoint" />
+            <mxPoint x="-95" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-73" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-74" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285" y="860" as="sourcePoint" />
+            <mxPoint x="485" y="860" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-165" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-75" value="Obavi akciju" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-74">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-78" value="O" style="endArrow=classic;html=1;rounded=0;entryX=1.008;entryY=0.799;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="910" as="sourcePoint" />
+            <mxPoint x="-285" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-79" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-12" value="Payment Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1825" y="290" width="200" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-44" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="340" as="sourcePoint" />
+            <mxPoint x="95" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-45" value="Provjera mogućnosti" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-70" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="75" y="770" as="sourcePoint" />
+            <mxPoint x="75" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-71" value="Naplata" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-13" value="Shipping Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2025" y="290" width="200" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-46" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115" y="440" as="sourcePoint" />
+            <mxPoint x="115" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-47" value="Provjera mogućnosti" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-76" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="860" as="sourcePoint" />
+            <mxPoint x="85" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-77" value="Naruči dostavu" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="KPofzv6rY3SYcD04jEbj-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1220" y="407.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-19" value="Dizajniramo 2 akcije &quot;Naručivanja/kupnje proizvoda&quot;:&lt;div&gt;1. Koristi 2PC protokol za ostvarivanje transakcije&lt;/div&gt;&lt;div&gt;2. Koristi SAGA obrazac za ostvarivanje transakcije&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=1;fontColor=#00FF08;" vertex="1" parent="1">
+          <mxGeometry x="1325" y="20" width="470" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-20" value="&lt;font style=&quot;color: rgb(37, 255, 3);&quot;&gt;&lt;b&gt;1. 2PC protokol&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="925" y="165" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-21" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Uspješan scenarij&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="965" y="250" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.992;entryY=0.085;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="KPofzv6rY3SYcD04jEbj-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="443" as="sourcePoint" />
+            <mxPoint x="1600" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-27" value="Da" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-40" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1570" y="400" as="sourcePoint" />
+            <mxPoint x="1570" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-41" value="Provjera mogućnosti" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-48" value="Preparation phase" style="swimlane;startSize=0;strokeColor=#FF2727;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FF2727;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="380" width="1020" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-84" value="Frontend" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="1390" width="200" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-85" value="Naruči proizvod" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-84">
+          <mxGeometry x="20" y="80" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-86" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.025;exitY=0.961;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-84" source="KPofzv6rY3SYcD04jEbj-89">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="970" as="sourcePoint" />
+            <mxPoint x="160" y="973" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-87" value="Neuspjeh - prikaz ekrana greške" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-84">
+          <mxGeometry x="40" y="950" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-88" value="API Gateway" style="swimlane;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="1390" width="200" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-89" value="Naruči proizvod" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-88">
+          <mxGeometry x="40" y="70" width="120" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-90" value="Transakcija" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-90;fontColor=#00FF10;fontSize=30;fontStyle=1" vertex="1" parent="KPofzv6rY3SYcD04jEbj-88">
+          <mxGeometry x="5" y="500" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-91" value="Products Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="1390" width="250" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-92" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-91">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="110" as="sourcePoint" />
+            <mxPoint x="190" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-93" value="Može li obaviti&amp;nbsp;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;akciju&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;kupnje proizvoda (ažuriranje statusa,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;broja dostupnih proizvoda itd.)&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-92">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-94" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-91">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="220" as="sourcePoint" />
+            <mxPoint x="350" y="221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-95" value="Može li obaviti akciju kreiranja narudžbe,&lt;div&gt;ažuriranje statistika, praćenje narudžbi za korisnika itd.&lt;/div&gt;" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-94">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-96" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-91">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="390" as="sourcePoint" />
+            <mxPoint x="-40" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-97" value="&lt;font style=&quot;color: rgb(255, 39, 39);&quot;&gt;Ne&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;fontStyle=1" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-96">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-100" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-91">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="580" as="sourcePoint" />
+            <mxPoint x="190" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-101" value="Rollback promjena (ako ih je bilo)" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-102" value="O" style="endArrow=classic;html=1;rounded=0;entryX=0.992;entryY=0.085;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-91">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="630" as="sourcePoint" />
+            <mxPoint x="-40" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-103" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-104" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-91">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="680" as="sourcePoint" />
+            <mxPoint x="330" y="680" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-105" value="Abort" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-104">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-106" value="O" style="endArrow=classic;html=1;rounded=0;entryX=1.008;entryY=0.701;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-91" target="KPofzv6rY3SYcD04jEbj-89">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="730" as="sourcePoint" />
+            <mxPoint x="100" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-107" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-108" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-91">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="770" as="sourcePoint" />
+            <mxPoint x="520" y="770" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-109" value="Abort" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-108">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-110" value="Abort phase" style="swimlane;startSize=0;strokeColor=#FF2727;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FF2727;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-91">
+          <mxGeometry x="-180" y="520" width="1020" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-147" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-110">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="60" as="sourcePoint" />
+            <mxPoint x="370" y="60" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-148" value="Abort" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-147">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-111" value="Orders Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="1390" width="195" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-112" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="104" y="270" as="sourcePoint" />
+            <mxPoint x="-284" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-113" value="Da" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-114" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285" y="340" as="sourcePoint" />
+            <mxPoint x="295" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-75" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-115" value="Može li obaviti akciju naplate računa korisnika" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-114">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-116" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285" y="439.5" as="sourcePoint" />
+            <mxPoint x="515" y="440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-75" y="439.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-117" value="Može li obaviti akciju naručivanja dostave od dostavne službe" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-116">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-118" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505" y="480" as="sourcePoint" />
+            <mxPoint x="-285" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-119" value="Da" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-118">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-120" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="220" as="sourcePoint" />
+            <mxPoint x="105" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-121" value="Provjera mogućnosti" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-120">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-122" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="680" as="sourcePoint" />
+            <mxPoint x="85" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-123" value="Rollback promjena" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-122">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-124" value="O" style="endArrow=classic;html=1;rounded=0;entryX=1.008;entryY=0.799;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-111" target="KPofzv6rY3SYcD04jEbj-89">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="274" y="821" as="sourcePoint" />
+            <mxPoint x="-95" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-125" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-124">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-126" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285" y="860" as="sourcePoint" />
+            <mxPoint x="485" y="860" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-165" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-127" value="Abort" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-126">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-128" value="O" style="endArrow=classic;html=1;rounded=0;entryX=1.008;entryY=0.799;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-111">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="910" as="sourcePoint" />
+            <mxPoint x="-285" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-129" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-128">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-130" value="Payment Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1825" y="1390" width="200" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-131" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-130">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="340" as="sourcePoint" />
+            <mxPoint x="95" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-132" value="Provjera mogućnosti" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-133" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-130">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="75" y="770" as="sourcePoint" />
+            <mxPoint x="75" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-134" value="Rollback promjena" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-133">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-135" value="Shipping Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2025" y="1390" width="200" height="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-136" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-135">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115" y="440" as="sourcePoint" />
+            <mxPoint x="115" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-137" value="Provjera mogućnosti" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-136">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-138" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-135">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="860" as="sourcePoint" />
+            <mxPoint x="85" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-139" value="Rollback promjena" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-138">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="KPofzv6rY3SYcD04jEbj-85">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1220" y="1507.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-141" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Neuspješan scenarij&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="955" y="1350" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-142" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.992;entryY=0.085;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="KPofzv6rY3SYcD04jEbj-89">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="1543" as="sourcePoint" />
+            <mxPoint x="1600" y="1690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-143" value="Da" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-142">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-144" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1570" y="1500" as="sourcePoint" />
+            <mxPoint x="1570" y="1550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-145" value="Provjera mogućnosti" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-144">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-146" value="Preparation phase" style="swimlane;startSize=0;strokeColor=#FF2727;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FF2727;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="1480" width="1020" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-151" value="&lt;font style=&quot;color: rgb(37, 255, 3);&quot;&gt;&lt;b&gt;2. SAGA obrazac&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="890" y="2500" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-152" value="Frontend" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="2620" width="200" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-153" value="Naruči proizvod" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-152">
+          <mxGeometry x="20" y="80" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-155" value="Uspjeh - prikaz detalja narudžbe" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-152">
+          <mxGeometry x="40" y="485" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-156" value="API Gateway" style="swimlane;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="2620" width="200" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-157" value="Naruči proizvod" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-156">
+          <mxGeometry x="40" y="70" width="120" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-158" value="Transakcija" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-90;fontColor=#00FF10;fontSize=30;fontStyle=1" vertex="1" parent="KPofzv6rY3SYcD04jEbj-156">
+          <mxGeometry x="5" y="250" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-159" value="Products Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="2620" width="250" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-160" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-159">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="110" as="sourcePoint" />
+            <mxPoint x="190" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-161" value="Obavi akciju kupnje proizvoda" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-160">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-162" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-159">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="220" as="sourcePoint" />
+            <mxPoint x="350" y="221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-163" value="Obavi akciju kreiranja narudzbe" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-162">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-164" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-159">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="390" as="sourcePoint" />
+            <mxPoint x="-40" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-165" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;fontStyle=1" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-164">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-216" value="Action phase" style="swimlane;startSize=0;strokeColor=#FF2727;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FF2727;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-159">
+          <mxGeometry x="-170" y="80" width="1020" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-179" value="Orders Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="2620" width="195" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-180" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-179">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="104" y="270" as="sourcePoint" />
+            <mxPoint x="-284" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-181" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-180">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-182" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-179">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285" y="340" as="sourcePoint" />
+            <mxPoint x="295" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-75" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-183" value="Obavi akciju naplate računa korisnika" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-182">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-184" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-179">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285" y="439.5" as="sourcePoint" />
+            <mxPoint x="515" y="440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-75" y="439.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-185" value="Obavi akciju naručivanja dostave" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-184">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-186" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-179">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505" y="480" as="sourcePoint" />
+            <mxPoint x="-285" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-187" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-186">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-188" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-179">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="220" as="sourcePoint" />
+            <mxPoint x="105" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-189" value="Kreiranje narudzbe" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-188">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-198" value="Payment Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1825" y="2620" width="200" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-199" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-198">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="340" as="sourcePoint" />
+            <mxPoint x="95" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-200" value="Naplata" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-199">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-203" value="Shipping Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2025" y="2620" width="200" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-204" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-203">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="115" y="440" as="sourcePoint" />
+            <mxPoint x="115" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-205" value="Naručivanje dostave" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-204">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-208" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="KPofzv6rY3SYcD04jEbj-153">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1220" y="2737.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-209" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Uspješan scenarij&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="965" y="2580" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-210" value="" style="endArrow=classic;html=1;rounded=0;entryX=1.033;entryY=0.178;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="KPofzv6rY3SYcD04jEbj-157">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="2773" as="sourcePoint" />
+            <mxPoint x="1600" y="2920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-211" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-210">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-212" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1570" y="2730" as="sourcePoint" />
+            <mxPoint x="1570" y="2780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-213" value="Kupnja proizvoda" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-212">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-154" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.025;exitY=0.961;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KPofzv6rY3SYcD04jEbj-157" target="KPofzv6rY3SYcD04jEbj-155">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1090" y="3590" as="sourcePoint" />
+            <mxPoint x="1140" y="3593" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-219" value="Frontend" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="3360" width="200" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-220" value="Naruči proizvod" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-219">
+          <mxGeometry x="20" y="80" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-221" value="Neuspjeh - prikaz detalja greške" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-219">
+          <mxGeometry x="30" y="600" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-222" value="API Gateway" style="swimlane;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="3360" width="200" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-223" value="Naruči proizvod" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-222">
+          <mxGeometry x="40" y="70" width="120" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-225" value="Products Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="3360" width="260" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-226" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-225">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="110" as="sourcePoint" />
+            <mxPoint x="190" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-227" value="Obavi akciju kupnje proizvoda" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-226">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-228" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-225">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="220" as="sourcePoint" />
+            <mxPoint x="370" y="221" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-229" value="Obavi akciju kreiranja narudzbe" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-228">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-230" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-225">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="390" as="sourcePoint" />
+            <mxPoint x="-40" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-231" value="&lt;font style=&quot;color: rgb(255, 39, 39);&quot;&gt;Greška!&lt;/font&gt;" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;fontStyle=1" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-230">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-232" value="Action phase" style="swimlane;startSize=0;strokeColor=#FF2727;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FF2727;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-225">
+          <mxGeometry x="-170" y="80" width="1020" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-224" value="Transakcija" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=-90;fontColor=#00FF10;fontSize=30;fontStyle=1" vertex="1" parent="KPofzv6rY3SYcD04jEbj-232">
+          <mxGeometry x="-20" y="270" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-257" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-225">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="470" as="sourcePoint" />
+            <mxPoint x="190" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-258" value="Poništi akciju kupnje proizvoda" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-257">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-259" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-225">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="470" as="sourcePoint" />
+            <mxPoint x="190" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-260" value="Rollback promjena" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-259">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-261" value="" style="endArrow=classic;html=1;rounded=0;entryX=1.017;entryY=0.776;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-225" target="KPofzv6rY3SYcD04jEbj-223">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="190" y="520" as="sourcePoint" />
+            <mxPoint x="-26" y="527" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-262" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-261">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-263" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-225">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40" y="560" as="sourcePoint" />
+            <mxPoint x="330" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-264" value="Poništi akciju kreiranja narudžbe" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-263">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-233" value="Orders Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="3360" width="190" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-234" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-233">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="104" y="270" as="sourcePoint" />
+            <mxPoint x="-284" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-235" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-234">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-236" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.025;exitY=0.053;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-233">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285" y="340" as="sourcePoint" />
+            <mxPoint x="295" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-75" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-237" value="Obavi akciju naplate računa korisnika" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-236">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-242" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-233">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105" y="220" as="sourcePoint" />
+            <mxPoint x="105" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-243" value="Kreiranje narudzbe" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-242">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-265" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-233">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="560" as="sourcePoint" />
+            <mxPoint x="70" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-266" value="Rollback promjena" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-265">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-267" value="" style="endArrow=classic;html=1;rounded=0;entryX=1.025;entryY=0.931;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-233" target="KPofzv6rY3SYcD04jEbj-223">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="610" as="sourcePoint" />
+            <mxPoint x="-158" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-268" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-267">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-269" value="Compensation actions phase (Rollback phase)" style="swimlane;startSize=0;strokeColor=#FF2727;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;fontColor=#FF2727;" vertex="1" parent="KPofzv6rY3SYcD04jEbj-233">
+          <mxGeometry x="-430" y="420" width="1020" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-244" value="Payment Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1820" y="3360" width="195" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-245" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="KPofzv6rY3SYcD04jEbj-244">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="340" as="sourcePoint" />
+            <mxPoint x="95" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-246" value="Naplata" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-245">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-247" value="Shipping Service" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2015" y="3360" width="200" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-250" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="KPofzv6rY3SYcD04jEbj-220">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210" y="3477.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-251" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Neuspješan scenarij&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="945" y="3320" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-252" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1550" y="3513" as="sourcePoint" />
+            <mxPoint x="1334" y="3520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-253" value="OK" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-252">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-254" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="3470" as="sourcePoint" />
+            <mxPoint x="1560" y="3520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-255" value="Kupnja proizvoda" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="KPofzv6rY3SYcD04jEbj-254">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KPofzv6rY3SYcD04jEbj-256" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.025;exitY=0.961;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KPofzv6rY3SYcD04jEbj-223" target="KPofzv6rY3SYcD04jEbj-221">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1080" y="4330" as="sourcePoint" />
+            <mxPoint x="1130" y="4333" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

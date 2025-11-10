@@ -1,0 +1,106 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
+  <diagram name="Page-1" id="zxqvaeCGuLB9s_HUF4E6">
+    <mxGraphModel dx="2066" dy="2301" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-33" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFF33;" parent="1" vertex="1">
+          <mxGeometry x="530" y="260" width="560" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-5" value="API GATEWAY" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="770" y="120" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-6" value="BACKEND" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=23;" parent="1" vertex="1">
+          <mxGeometry x="65" y="85" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-7" value="ORDERS&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;SERVICE&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="370" y="345" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-8" value="PRODUCT SERVICE" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="1170" y="325" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-9" value="PAYMENT SERVICE" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="630" y="560" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-10" value="SHIPPING SERVICE" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="970" y="570" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-11" value="Delegira zahtjeve&amp;nbsp;&lt;div&gt;frontenda&amp;nbsp;&lt;/div&gt;&lt;div&gt;pojedinim mikroservisima&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="860" y="90" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-12" value="Implementira endpointe&amp;nbsp;&lt;div&gt;koji su potrebni za&amp;nbsp;&lt;/div&gt;&lt;div&gt;funkcije korisničke aplikacije&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="860" y="150" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-13" value="Implementira logiku&amp;nbsp;&lt;div&gt;kreiranja i praćenja&amp;nbsp;&lt;/div&gt;&lt;div&gt;narudžbi&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="240" y="350" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-14" value="Implementira logiku&amp;nbsp;&lt;div&gt;naplate&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="480" y="560" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-15" value="Implementira logiku&amp;nbsp;&lt;div&gt;pokretanja dostave&amp;nbsp;&lt;/div&gt;&lt;div&gt;za narudzbe,&amp;nbsp;&lt;/div&gt;&lt;div&gt;kreiranje i&amp;nbsp;&lt;/div&gt;&lt;div&gt;praćenje aktivnih&amp;nbsp;&lt;/div&gt;&lt;div&gt;dostava&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1055" y="560" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-16" value="Implementira logiku&amp;nbsp;&lt;div&gt;pregleda, dodavanja,&amp;nbsp;&lt;/div&gt;&lt;div&gt;brisanja i praćenja&amp;nbsp;&lt;/div&gt;&lt;div&gt;dostupnih proizvoda&amp;nbsp;&lt;/div&gt;&lt;div&gt;u shop- u&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1260" y="325" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="poaBUeB-n_7GjIZ_I3u9-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="810" y="-110" as="sourcePoint" />
+            <mxPoint x="820" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-18" value="HTTP (REST)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="820" y="-20" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-19" value="HTTP (REST)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="460" y="300" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="poaBUeB-n_7GjIZ_I3u9-5" target="poaBUeB-n_7GjIZ_I3u9-7" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="170" as="sourcePoint" />
+            <mxPoint x="510" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-21" value="HTTP (REST)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="690" y="490" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="poaBUeB-n_7GjIZ_I3u9-5" target="poaBUeB-n_7GjIZ_I3u9-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="210" as="sourcePoint" />
+            <mxPoint x="350" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="poaBUeB-n_7GjIZ_I3u9-5" target="poaBUeB-n_7GjIZ_I3u9-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="850" y="320" as="sourcePoint" />
+            <mxPoint x="420" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="poaBUeB-n_7GjIZ_I3u9-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="810" y="200" as="sourcePoint" />
+            <mxPoint x="500" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-25" value="HTTP (REST)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="960" y="450" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-26" value="HTTP (REST)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=14;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="1045" y="270" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-32" value="&lt;font style=&quot;color: rgb(255, 255, 51);&quot;&gt;Kafka&lt;/font&gt;" style="shape=datastore;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFF33;" parent="1" vertex="1">
+          <mxGeometry x="780" y="285" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-34" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.595;entryY=0.936;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#FFFF33;exitX=0.516;exitY=-0.017;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="poaBUeB-n_7GjIZ_I3u9-35" target="poaBUeB-n_7GjIZ_I3u9-33" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="1010" as="sourcePoint" />
+            <mxPoint x="780" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="poaBUeB-n_7GjIZ_I3u9-35" value="&lt;b&gt;OPCIONALNO&lt;/b&gt; - Event Queue&amp;nbsp;&lt;div&gt;za asinkrone akcije ažuriranja&amp;nbsp;&lt;/div&gt;&lt;div&gt;-&amp;gt; Eventualna konzistentnost&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FFFF33;" parent="1" vertex="1">
+          <mxGeometry x="770" y="730" width="190" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
