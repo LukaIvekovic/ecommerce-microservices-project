@@ -1,0 +1,75 @@
+### Get all orders (with pagination)
+GET http://localhost:8082/api/orders
+Accept: application/json
+
+### Get all orders with page size
+GET http://localhost:8082/api/orders?page=0&size=10
+Accept: application/json
+
+### Get order by ID
+GET http://localhost:8082/api/orders/1
+Accept: application/json
+
+### Get orders by customer email
+GET http://localhost:8082/api/orders/customer/john.doe@example.com
+Accept: application/json
+
+### Get orders by status (PENDING)
+GET http://localhost:8082/api/orders/status/PENDING
+Accept: application/json
+
+### Create a new order
+POST http://localhost:8082/api/orders
+Content-Type: application/json
+Accept: application/json
+
+{
+  "customerName": "Michael Scott",
+  "customerEmail": "michael.scott@dundermifflin.com",
+  "shippingAddress": "1725 Slough Avenue, Scranton, PA 18540",
+  "orderItems": [
+    {
+      "productId": 1,
+      "quantity": 1
+    },
+    {
+      "productId": 4,
+      "quantity": 1
+    }
+  ]
+}
+
+### Create another order with multiple quantities
+POST http://localhost:8082/api/orders
+Content-Type: application/json
+Accept: application/json
+
+{
+  "customerName": "Dwight Schrute",
+  "customerEmail": "dwight.schrute@dundermifflin.com",
+  "shippingAddress": "Schrute Farms, Honesdale, PA 18431",
+  "orderItems": [
+    {
+      "productId": 7,
+      "quantity": 2
+    },
+    {
+      "productId": 10,
+      "quantity": 3
+    }
+  ]
+}
+
+### Update order status to CONFIRMED
+PATCH http://localhost:8082/api/orders/1/status
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "CONFIRMED"
+}
+
+### Delete order
+DELETE http://localhost:8082/api/orders/3
+Accept: application/json
+

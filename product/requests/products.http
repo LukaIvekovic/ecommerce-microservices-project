@@ -1,0 +1,36 @@
+### Get all products (with pagination)
+GET http://localhost:8081/api/products
+Accept: application/json
+
+### Get product by ID
+GET http://localhost:8081/api/products/1
+Accept: application/json
+
+### Create a new product
+POST http://localhost:8081/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Wireless Mouse",
+  "description": "Ergonomic wireless mouse with 2.4GHz connection",
+  "price": 29.99,
+  "stockQuantity": 100
+}
+
+### Update product
+PUT http://localhost:8081/api/products/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Wireless Mouse Pro",
+  "description": "Premium ergonomic wireless mouse with 2.4GHz connection and extended battery life",
+  "price": 39.99,
+  "stockQuantity": 75
+}
+
+### Delete product
+DELETE http://localhost:8081/api/products/3
+Accept: application/json
+

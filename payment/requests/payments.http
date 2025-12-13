@@ -1,0 +1,57 @@
+### Get all payments (with pagination)
+GET http://localhost:8084/api/payments
+Accept: application/json
+
+### Get payment by ID
+GET http://localhost:8084/api/payments/1
+Accept: application/json
+
+### Get payment by transaction ID
+GET http://localhost:8084/api/payments/transaction/TXN-a1b2c3d4-e5f6-7890-ab12-cd34ef567890
+Accept: application/json
+
+### Get payments by customer email
+GET http://localhost:8084/api/payments/customer/john.doe@example.com
+Accept: application/json
+
+### Get payments by status (COMPLETED)
+GET http://localhost:8084/api/payments/status/COMPLETED
+Accept: application/json
+
+### Create a new payment
+POST http://localhost:8084/api/payments
+Content-Type: application/json
+Accept: application/json
+
+{
+  "orderId": 6,
+  "paidCustomerName": "Michael Scott",
+  "paidCustomerEmail": "michael.scott@dundermifflin.com",
+  "paymentMethod": "CREDIT_CARD",
+  "paymentProvider": "Stripe",
+  "cardLastFourDigits": "9876"
+}
+
+### Update payment status to FAILED with reason
+PATCH http://localhost:8084/api/payments/3/status
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "FAILED",
+  "failureReason": "Insufficient funds"
+}
+
+### Update payment status to REFUNDED
+PATCH http://localhost:8084/api/payments/2/status
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "REFUNDED"
+}
+
+### Delete payment
+DELETE http://localhost:8084/api/payments/3
+Accept: application/json
+

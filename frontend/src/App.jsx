@@ -1,34 +1,102 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(false)
+  const [response, setResponse] = useState(null)
+  const [error, setError] = useState(null)
+
+  const placeOrder = async () => {
+    setLoading(true)
+    setError(null)
+    setResponse(null)
+
+    const orderData = {
+      customerName: "John Doe",
+      customerEmail: "john.doe@example.com",
+      shippingAddress: "123 Main Street, New York, NY 10001",
+      paymentMethod: "CREDIT_CARD",
+      paymentProvider: "Stripe",
+      cardLastFourDigits: "4242",
+      carrier: "FedEx",
+      orderItems: [
+        {
+          productId: 1,
+          quantity: 2
+        },
+        {
+          productId: 2,
+          quantity: 1
+        }
+      ]
+    }
+
+    try {
+      const res = await fetch('http://localhost:8080/api/gateway/place-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(orderData)
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        setResponse(data)
+      } else {
+        setError(data.message || 'Failed to place order')
+      }
+    } catch (err) {
+      setError('Error: ' + err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+    <div className="app">
+      <h1>🛒 E-Commerce Order System</h1>
+      <p>Simple microservices demonstration</p>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button
+          onClick={placeOrder}
+          disabled={loading}
+          className="order-button"
+        >
+          {loading ? '⏳ Placing Order...' : '📦 Place Sample Order'}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+
+        <p className="info">
+          This will order: 2x Laptop + 1x Smartphone
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+      {error && (
+        <div className="error-box">
+          <h3>❌ Error</h3>
+          <p>{error}</p>
+        </div>
+      )}
+
+      {response && (
+        <div className="success-box">
+          <h3>✅ Order Placed Successfully!</h3>
+          <div className="response-details">
+            <p><strong>Order ID:</strong> {response.orderId}</p>
+            <p><strong>Order Status:</strong> {response.orderStatus}</p>
+            <p><strong>Total Amount:</strong> ${response.totalAmount?.toFixed(2)}</p>
+            <p><strong>Payment ID:</strong> {response.paymentId}</p>
+            <p><strong>Transaction ID:</strong> {response.transactionId}</p>
+            <p><strong>Payment Status:</strong> {response.paymentStatus}</p>
+            <p><strong>Shipment ID:</strong> {response.shipmentId}</p>
+            <p><strong>Tracking Number:</strong> {response.trackingNumber}</p>
+            <p><strong>Shipment Status:</strong> {response.shipmentStatus}</p>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 

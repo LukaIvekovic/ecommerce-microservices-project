@@ -1,0 +1,25 @@
+### Place Order - Complete Flow (Credit Card)
+POST http://localhost:8080/api/gateway/place-order
+Content-Type: application/json
+Accept: application/json
+
+{
+  "customerName": "John Doe",
+  "customerEmail": "john.doe@example.com",
+  "shippingAddress": "123 Main Street, New York, NY 10001",
+  "paymentMethod": "CREDIT_CARD",
+  "paymentProvider": "Stripe",
+  "cardLastFourDigits": "4242",
+  "carrier": "FedEx",
+  "orderItems": [
+    {
+      "productId": 1,
+      "quantity": 2
+    },
+    {
+      "productId": 2,
+      "quantity": 1
+    }
+  ]
+}
+

@@ -1,3 +1,17 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: Api Gateway
+
+service:
+  product:
+    url: http://localhost:8081
+  order:
+    url: http://localhost:8082
+  payment:
+    url: http://localhost:8084
+  shipping:
+    url: http://localhost:8083
+

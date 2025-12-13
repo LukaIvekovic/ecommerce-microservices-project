@@ -1,0 +1,105 @@
+### Get all shipments (with pagination)
+GET http://localhost:8083/api/shipments
+Accept: application/json
+
+### Get all shipments with page size
+GET http://localhost:8083/api/shipments?page=0&size=10
+Accept: application/json
+
+### Get shipment by ID
+GET http://localhost:8083/api/shipments/1
+Accept: application/json
+
+### Get shipment by order ID
+GET http://localhost:8083/api/shipments/order/1
+Accept: application/json
+
+### Get shipment by tracking number
+GET http://localhost:8083/api/shipments/tracking/TRK-A1B2C3D4
+Accept: application/json
+
+### Get shipments by customer email
+GET http://localhost:8083/api/shipments/customer/john.doe@example.com
+Accept: application/json
+
+### Get shipments by status (PENDING)
+GET http://localhost:8083/api/shipments/status/PENDING
+Accept: application/json
+
+### Get shipments by status (IN_TRANSIT)
+GET http://localhost:8083/api/shipments/status/IN_TRANSIT
+Accept: application/json
+
+### Get shipments by status (DELIVERED)
+GET http://localhost:8083/api/shipments/status/DELIVERED
+Accept: application/json
+
+### Create a new shipment
+POST http://localhost:8083/api/shipments
+Content-Type: application/json
+Accept: application/json
+
+{
+  "orderId": 7,
+  "carrier": "FedEx",
+  "estimatedDeliveryDate": "2025-12-20T10:00:00"
+}
+
+### Update shipment status to PREPARING
+PATCH http://localhost:8083/api/shipments/5/status
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "PREPARING"
+}
+
+### Update shipment status to IN_TRANSIT
+PATCH http://localhost:8083/api/shipments/3/status
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "IN_TRANSIT"
+}
+
+### Update shipment status to OUT_FOR_DELIVERY
+PATCH http://localhost:8083/api/shipments/2/status
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "OUT_FOR_DELIVERY"
+}
+
+### Update shipment status to DELIVERED
+PATCH http://localhost:8083/api/shipments/4/status
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "DELIVERED"
+}
+
+### Update shipment status to FAILED
+PATCH http://localhost:8083/api/shipments/1/status
+Content-Type: application/json
+Accept: application/json
+
+{
+  "status": "FAILED"
+}
+
+### Update tracking number
+PATCH http://localhost:8083/api/shipments/5/tracking
+Content-Type: application/json
+Accept: application/json
+
+{
+  "trackingNumber": "TRK-CUSTOM123"
+}
+
+### Delete shipment
+DELETE http://localhost:8083/api/shipments/3
+Accept: application/json
+
