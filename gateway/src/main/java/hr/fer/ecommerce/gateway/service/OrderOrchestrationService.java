@@ -9,11 +9,13 @@ import hr.fer.ecommerce.gateway.client.payment.CreatePaymentRequest;
 import hr.fer.ecommerce.gateway.client.payment.PaymentResponse;
 import hr.fer.ecommerce.gateway.client.shipment.CreateShipmentRequest;
 import hr.fer.ecommerce.gateway.client.shipment.ShipmentResponse;
+import hr.fer.ecommerce.gateway.dto.SagaContext;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
@@ -25,18 +27,21 @@ public class OrderOrchestrationService {
 
     public PlaceOrderResponse placeOrder(PlaceOrderRequest request) {
         log.info("Starting order placement for customer: {}", request.getCustomerEmail());
-
+        SagaContext saga = SagaContext.builder().build();
         try {
             log.info("Step 1: Creating order...");
             OrderResponse order = createOrder(request);
+            saga.setOrder(order);
             log.info("Order created with ID: {}", order.getId());
 
             log.info("Step 2: Processing payment...");
             PaymentResponse payment = createPayment(request, order);
+            saga.setPayment(payment);
             log.info("Payment created with ID: {} and transaction ID: {}", payment.getId(), payment.getTransactionId());
 
             log.info("Step 3: Creating shipment...");
             ShipmentResponse shipment = createShipment(request, order);
+            saga.setShipment(shipment);
             log.info("Shipment created with ID: {}", shipment.getId());
 
             PlaceOrderResponse response = PlaceOrderResponse.builder()
@@ -59,13 +64,47 @@ public class OrderOrchestrationService {
 
         } catch (Exception e) {
             log.error("Error during order placement: {}", e.getMessage(), e);
-
+            rollback(request, saga);
             return PlaceOrderResponse.builder()
                     .success(false)
                     .message("Failed to place order")
                     .errorDetails(e.getMessage())
                     .timestamp(LocalDateTime.now())
                     .build();
+        }
+    }
+
+    private void rollback(PlaceOrderRequest request, SagaContext saga) {
+
+        // Rollback in reverse order
+        if (saga.getShipment() != null) {
+            try {
+                microserviceClient.cancelShipment(saga.getShipment().getId());
+            } catch (Exception e) {
+                log.error("Failed to compensate shipment", e);
+            }
+        }
+
+        if (saga.getPayment() != null) {
+            try {
+                microserviceClient.refundPayment(saga.getPayment().getId());
+            } catch (Exception e) {
+                log.error("Failed to compensate payment", e);
+            }
+        }
+
+        if (saga.getOrder() != null) {
+            try {
+                microserviceClient.cancelOrder(saga.getOrder().getId());
+            } catch (Exception e) {
+                log.error("Failed to compensate order", e);
+            }
+        }
+
+        try {
+            microserviceClient.releaseProducts(mapOrderItems(request));
+        } catch (Exception e) {
+            log.error("Failed to compensate products", e);
         }
     }
 
@@ -106,6 +145,15 @@ public class OrderOrchestrationService {
                 .build();
 
         return microserviceClient.createShipment(shipmentRequest);
+    }
+
+    private List<CreateOrderRequest.OrderItem> mapOrderItems(PlaceOrderRequest request) {
+        return request.getOrderItems().stream()
+                .map(i -> CreateOrderRequest.OrderItem.builder()
+                        .productId(i.getProductId())
+                        .quantity(i.getQuantity())
+                        .build())
+                .toList();
     }
 }
 

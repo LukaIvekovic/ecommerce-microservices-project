@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -59,6 +61,54 @@ public class MicroserviceClient {
         } catch (Exception e) {
             log.error("Error creating shipment: {}", e.getMessage(), e);
             throw new RuntimeException("Failed to create shipment: " + e.getMessage(), e);
+        }
+    }
+
+    public void releaseProducts(List<CreateOrderRequest.OrderItem> orderItems) {
+        String url = servicesConfig.getProduct().getUrl()
+                + "/api/products/release";
+
+        log.warn("Compensating products: releasing reserved quantities");
+        try {
+            restTemplate.postForLocation(url, orderItems);
+        } catch (Exception e) {
+            log.error("Failed to release product reservations", e);
+        }
+    }
+
+    public void cancelOrder(Long orderId) {
+        String url = servicesConfig.getOrder().getUrl()
+                + "/api/orders/" + orderId + "/cancel";
+
+        log.warn("Compensating order: cancelling order ID {}", orderId);
+        try {
+            restTemplate.put(url, null);
+        } catch (Exception e) {
+            log.error("Failed to cancel order {}", orderId, e);
+        }
+    }
+
+    public void refundPayment(Long paymentId) {
+        String url = servicesConfig.getPayment().getUrl()
+                + "/api/payments/" + paymentId + "/refund";
+
+        log.warn("Compensating payment: refunding payment ID {}", paymentId);
+        try {
+            restTemplate.postForLocation(url, null);
+        } catch (Exception e) {
+            log.error("Failed to refund payment {}", paymentId, e);
+        }
+    }
+
+    public void cancelShipment(Long shipmentId) {
+        String url = servicesConfig.getShipping().getUrl()
+                + "/api/shipments/" + shipmentId + "/cancel";
+
+        log.warn("Compensating shipment: cancelling shipment ID {}", shipmentId);
+        try {
+            restTemplate.put(url, null);
+        } catch (Exception e) {
+            log.error("Failed to cancel shipment {}", shipmentId, e);
         }
     }
 }
