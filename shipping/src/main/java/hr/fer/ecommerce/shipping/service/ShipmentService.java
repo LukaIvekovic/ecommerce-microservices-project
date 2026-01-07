@@ -136,5 +136,15 @@ public class ShipmentService {
     private String generateTrackingNumber() {
         return "TRK-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
     }
+    @Transactional
+    public void sagaCancel(Long id) {
+        if (!shipmentRepository.existsById(id)) {
+            throw new ShipmentNotFoundException(id);
+        }
+
+        shipmentRepository.deleteById(id);
+        log.warn("Saga compensation: cancelled shipment {}", id);
+    }
+
 }
 

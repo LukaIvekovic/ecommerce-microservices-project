@@ -73,5 +73,9 @@ public class PaymentController {
         paymentService.deletePayment(id);
         return ResponseEntity.noContent().build();
     }
+    @PostMapping("/{id}/refund")
+    public ResponseEntity<PaymentDto> refund(@PathVariable Long id) {
+        return ResponseEntity.ok(paymentService.sagaRefund(id));
+    }
 }
 

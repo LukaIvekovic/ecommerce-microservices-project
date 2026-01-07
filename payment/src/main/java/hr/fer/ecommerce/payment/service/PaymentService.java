@@ -123,5 +123,14 @@ public class PaymentService {
         paymentRepository.deleteById(id);
         log.info("Deleted payment: {}", id);
     }
+    @Transactional
+    public PaymentDto sagaRefund(Long id) {
+
+        Payment payment = paymentRepository.findById(id)
+                .orElseThrow(() -> new PaymentNotFoundException(id));
+
+        paymentRepository.deleteById(id);
+        return PaymentMapper.toDTO(payment);
+    }
 }
 

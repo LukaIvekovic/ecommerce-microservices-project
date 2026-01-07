@@ -81,5 +81,10 @@ public class ShipmentController {
         shipmentService.deleteShipment(id);
         return ResponseEntity.noContent().build();
     }
+    @PutMapping("/{id}/cancel")
+    public ResponseEntity<Void> cancelShipment(@PathVariable Long id) {
+        shipmentService.sagaCancel(id);
+        return ResponseEntity.ok().build();
+    }
 }
 
