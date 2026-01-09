@@ -100,12 +100,6 @@ public class OrderOrchestrationService {
                 log.error("Failed to compensate order", e);
             }
         }
-
-        try {
-            microserviceClient.releaseProducts(mapOrderItems(request));
-        } catch (Exception e) {
-            log.error("Failed to compensate products", e);
-        }
     }
 
     private OrderResponse createOrder(PlaceOrderRequest request) {

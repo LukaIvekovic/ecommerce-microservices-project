@@ -114,5 +114,14 @@ public class OrderService {
         orderRepository.deleteById(id);
         log.info("Deleted order: {}", id);
     }
+
+    @Transactional
+    public void cancelOrder(Long id) {
+        if (!orderRepository.existsById(id)) {
+            throw new OrderNotFoundException(id);
+        }
+        orderRepository.deleteById(id);
+        log.info("Saga compensation: cancelled order {}", id);
+    }
 }
 

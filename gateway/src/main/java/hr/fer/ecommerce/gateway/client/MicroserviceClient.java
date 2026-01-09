@@ -64,25 +64,13 @@ public class MicroserviceClient {
         }
     }
 
-    public void releaseProducts(List<CreateOrderRequest.OrderItem> orderItems) {
-        String url = servicesConfig.getProduct().getUrl()
-                + "/api/products/release";
-
-        log.warn("Compensating products: releasing reserved quantities");
-        try {
-            restTemplate.postForLocation(url, orderItems);
-        } catch (Exception e) {
-            log.error("Failed to release product reservations", e);
-        }
-    }
-
     public void cancelOrder(Long orderId) {
         String url = servicesConfig.getOrder().getUrl()
                 + "/api/orders/" + orderId + "/cancel";
 
         log.warn("Compensating order: cancelling order ID {}", orderId);
         try {
-            restTemplate.put(url, null);
+            restTemplate.delete(url);
         } catch (Exception e) {
             log.error("Failed to cancel order {}", orderId, e);
         }
