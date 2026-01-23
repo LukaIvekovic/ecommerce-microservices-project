@@ -59,9 +59,6 @@ public class Shipment {
     protected void onCreate() {
         createdAt = LocalDateTime.now();
         updatedAt = LocalDateTime.now();
-        if (status == null) {
-            status = ShipmentStatus.PENDING;
-        }
     }
 
     @PreUpdate

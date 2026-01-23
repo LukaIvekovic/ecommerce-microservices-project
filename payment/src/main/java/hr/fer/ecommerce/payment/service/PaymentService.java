@@ -101,7 +101,7 @@ public class PaymentService {
                 .transactionId(transactionId)
                 .paymentProvider("FINA")
                 .cardLastFourDigits(request.getCardLastFourDigits())
-                .status(PaymentStatus.PENDING)
+                .status(PaymentStatus.COMPLETED)
                 .build();
 
         Payment savedPayment = paymentRepository.save(payment);

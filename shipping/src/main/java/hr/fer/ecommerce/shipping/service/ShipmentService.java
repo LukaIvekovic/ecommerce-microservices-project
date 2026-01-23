@@ -101,6 +101,7 @@ public class ShipmentService {
                 .carrier(request.getCarrier())
                 .trackingNumber(generateTrackingNumber())
                 .estimatedDeliveryDate(request.getEstimatedDeliveryDate())
+                .status(ShipmentStatus.PREPARING)
                 .build();
 
         Shipment savedShipment = shipmentRepository.save(shipment);

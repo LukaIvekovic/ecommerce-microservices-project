@@ -2,7 +2,8 @@ package hr.fer.ecommerce.gateway.controller;
 
 import hr.fer.ecommerce.gateway.dto.PlaceOrderRequest;
 import hr.fer.ecommerce.gateway.dto.PlaceOrderResponse;
-import hr.fer.ecommerce.gateway.service.OrderOrchestrationService;
+import hr.fer.ecommerce.gateway.service.SagaService;
+import hr.fer.ecommerce.gateway.service.TwoPhaseCommitService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,13 +20,27 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins = "*")
 public class GatewayController {
 
-    private final OrderOrchestrationService orderOrchestrationService;
+    private final SagaService sagaService;
+    private final TwoPhaseCommitService twoPhaseCommitService;
 
-    @PostMapping("/place-order")
+    @PostMapping("/place-order-saga")
     public ResponseEntity<PlaceOrderResponse> placeOrder(@RequestBody @Valid PlaceOrderRequest request) {
         log.info("Received place order request for customer: {}", request.getCustomerEmail());
 
-        PlaceOrderResponse response = orderOrchestrationService.placeOrder(request);
+        PlaceOrderResponse response = sagaService.placeOrder(request);
+
+        if (response.isSuccess()) {
+            return ResponseEntity.status(HttpStatus.CREATED).body(response);
+        } else {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+        }
+    }
+
+    @PostMapping("/place-order-2pc")
+    public ResponseEntity<PlaceOrderResponse> placeOrderWith2PC(@RequestBody @Valid PlaceOrderRequest request) {
+        log.info("Received 2PC place order request for customer: {}", request.getCustomerEmail());
+
+        PlaceOrderResponse response = twoPhaseCommitService.placeOrderWith2PC(request);
 
         if (response.isSuccess()) {
             return ResponseEntity.status(HttpStatus.CREATED).body(response);

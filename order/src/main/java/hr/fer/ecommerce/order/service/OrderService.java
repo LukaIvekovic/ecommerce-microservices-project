@@ -73,6 +73,7 @@ public class OrderService {
                     .customerEmail(request.getCustomerEmail())
                     .shippingAddress(request.getShippingAddress())
                     .orderItems(new ArrayList<>())
+                    .status(OrderStatus.CONFIRMED)
                     .build();
 
             BigDecimal totalAmount = BigDecimal.ZERO;

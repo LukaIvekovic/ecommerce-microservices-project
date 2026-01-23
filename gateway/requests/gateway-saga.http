@@ -1,4 +1,4 @@
-### Place Order - Complete Flow (Credit Card)
+### Place Order Saga - Complete Flow (Credit Card)
 POST http://localhost:8080/api/gateway/place-order
 Content-Type: application/json
 Accept: application/json
@@ -8,9 +8,9 @@ Accept: application/json
   "customerEmail": "john.doe@example.com",
   "shippingAddress": "123 Main Street, New York, NY 10001",
   "paymentMethod": "CREDIT_CARD",
-  "paymentProvider": "Stripe",
+  "paymentProvider": "FINA",
   "cardLastFourDigits": "4242",
-  "carrier": "FedEx",
+  "carrier": "GLS",
   "orderItems": [
     {
       "productId": 1,

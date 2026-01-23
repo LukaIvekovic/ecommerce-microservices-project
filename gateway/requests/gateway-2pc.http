@@ -1,0 +1,26 @@
+### Place Order - 2PC Protocol
+POST http://localhost:8080/api/gateway/place-order-2pc
+Content-Type: application/json
+Accept: application/json
+
+{
+  "customerName": "Jane Smith",
+  "customerEmail": "jane.smith@example.com",
+  "shippingAddress": "456 Oak Avenue, Los Angeles, CA 90001",
+  "paymentMethod": "DEBIT_CARD",
+  "paymentProvider": "FINA",
+  "cardLastFourDigits": "5678",
+  "carrier": "DHL",
+  "orderItems": [
+    {
+      "productId": 1,
+      "quantity": 1
+    },
+    {
+      "productId": 3,
+      "quantity": 2
+    }
+  ]
+}
+
+###

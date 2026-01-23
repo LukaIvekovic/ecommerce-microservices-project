@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class OrderOrchestrationService {
+public class SagaService {
 
     private final MicroserviceClient microserviceClient;
 
