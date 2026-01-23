@@ -1,0 +1,77 @@
+### Validate Stock Availability
+POST http://localhost:8081/api/products/stock/validate
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 2
+    },
+    {
+      "productId": 2,
+      "quantity": 1
+    }
+  ]
+}
+
+### Reserve Stock
+POST http://localhost:8081/api/products/stock/reserve
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 2
+    },
+    {
+      "productId": 2,
+      "quantity": 1
+    }
+  ]
+}
+
+### Release Stock
+POST http://localhost:8081/api/products/stock/release
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 2
+    },
+    {
+      "productId": 2,
+      "quantity": 1
+    }
+  ]
+}
+
+### Test Insufficient Stock
+POST http://localhost:8081/api/products/stock/validate
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 99999
+    }
+  ]
+}
+
+### Test Non-existent Product
+POST http://localhost:8081/api/products/stock/validate
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "productId": 999999,
+      "quantity": 1
+    }
+  ]
+}
+

@@ -81,6 +81,13 @@ public class ShipmentController {
         shipmentService.deleteShipment(id);
         return ResponseEntity.noContent().build();
     }
+
+    @PostMapping("/validate")
+    public ResponseEntity<Void> validateShipment(@RequestBody @Valid ShipmentRequestDto request) {
+        shipmentService.validateShipmentReadiness(request);
+        return ResponseEntity.ok().build();
+    }
+
     @PutMapping("/{id}/cancel")
     public ResponseEntity<Void> cancelShipment(@PathVariable Long id) {
         shipmentService.sagaCancel(id);

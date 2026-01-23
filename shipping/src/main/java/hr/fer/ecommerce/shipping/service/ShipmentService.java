@@ -6,6 +6,8 @@ import hr.fer.ecommerce.shipping.dto.ShipmentDto;
 import hr.fer.ecommerce.shipping.dto.ShipmentRequestDto;
 import hr.fer.ecommerce.shipping.dto.ShipmentStatusUpdateDto;
 import hr.fer.ecommerce.shipping.dto.TrackingNumberUpdateDto;
+import hr.fer.ecommerce.shipping.exception.CarrierUnavailableException;
+import hr.fer.ecommerce.shipping.exception.DuplicateShipmentException;
 import hr.fer.ecommerce.shipping.exception.ShipmentNotFoundException;
 import hr.fer.ecommerce.shipping.mapper.ShipmentMapper;
 import hr.fer.ecommerce.shipping.model.Shipment;
@@ -29,6 +31,7 @@ public class ShipmentService {
 
     private final ShipmentRepository shipmentRepository;
     private final OrderClient orderClient;
+    private final CarrierService carrierService;
 
     @Transactional(readOnly = true)
     public Page<ShipmentDto> getAllShipments(Pageable pageable) {
@@ -73,10 +76,22 @@ public class ShipmentService {
     @Transactional
     public ShipmentDto createShipment(ShipmentRequestDto request) {
         if (shipmentRepository.findByOrderId(request.getOrderId()).isPresent()) {
-            throw new IllegalArgumentException("Shipment already exists for order: " + request.getOrderId());
+            throw new DuplicateShipmentException(request.getOrderId());
         }
 
         OrderDto order = orderClient.getOrder(request.getOrderId());
+
+        if (!carrierService.validateCarrierAvailability(request.getCarrier())) {
+            throw new CarrierUnavailableException(request.getCarrier());
+        }
+
+        if (!carrierService.validateShippingAddress(request.getCarrier(), order.getShippingAddress())) {
+            throw new IllegalArgumentException("Invalid shipping address for carrier: " + request.getCarrier());
+        }
+
+        if (!carrierService.checkCarrierCapacity(request.getCarrier())) {
+            throw new CarrierUnavailableException(request.getCarrier(), "Carrier at full capacity");
+        }
 
         Shipment shipment = Shipment.builder()
                 .orderId(request.getOrderId())
@@ -94,6 +109,31 @@ public class ShipmentService {
         return ShipmentMapper.toDTO(savedShipment);
     }
 
+    @Transactional(readOnly = true)
+    public void validateShipmentReadiness(ShipmentRequestDto request) {
+        log.info("Validating shipment readiness for order: {}", request.getOrderId());
+
+        if (shipmentRepository.findByOrderId(request.getOrderId()).isPresent()) {
+            throw new DuplicateShipmentException(request.getOrderId());
+        }
+
+        OrderDto order = orderClient.getOrder(request.getOrderId());
+
+        if (!carrierService.validateCarrierAvailability(request.getCarrier())) {
+            throw new CarrierUnavailableException(request.getCarrier());
+        }
+
+        if (!carrierService.validateShippingAddress(request.getCarrier(), order.getShippingAddress())) {
+            throw new IllegalArgumentException("Invalid shipping address for carrier: " + request.getCarrier());
+        }
+
+        if (!carrierService.checkCarrierCapacity(request.getCarrier())) {
+            throw new CarrierUnavailableException(request.getCarrier(), "Carrier at full capacity");
+        }
+
+        log.info("Shipment validation passed for order: {}", request.getOrderId());
+    }
+
     @Transactional
     public ShipmentDto updateShipmentStatus(Long id, ShipmentStatusUpdateDto request) {
         Shipment shipment = shipmentRepository.findById(id)
@@ -101,7 +141,6 @@ public class ShipmentService {
 
         shipment.setStatus(request.getStatus());
 
-        // Set actual delivery date when status is DELIVERED
         if (request.getStatus() == ShipmentStatus.DELIVERED && shipment.getActualDeliveryDate() == null) {
             shipment.setActualDeliveryDate(LocalDateTime.now());
         }

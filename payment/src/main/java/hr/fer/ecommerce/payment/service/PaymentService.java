@@ -5,6 +5,8 @@ import hr.fer.ecommerce.payment.client.OrderDto;
 import hr.fer.ecommerce.payment.dto.PaymentDto;
 import hr.fer.ecommerce.payment.dto.PaymentRequestDto;
 import hr.fer.ecommerce.payment.dto.PaymentStatusUpdateDto;
+import hr.fer.ecommerce.payment.exception.DuplicatePaymentException;
+import hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException;
 import hr.fer.ecommerce.payment.exception.PaymentNotFoundException;
 import hr.fer.ecommerce.payment.mapper.PaymentMapper;
 import hr.fer.ecommerce.payment.model.Payment;
@@ -28,6 +30,7 @@ public class PaymentService {
 
     private final PaymentRepository paymentRepository;
     private final OrderClient orderClient;
+    private final FinancialAgencyService financialAgencyService;
 
     @Transactional(readOnly = true)
     public Page<PaymentDto> getAllPayments(Pageable pageable) {
@@ -71,9 +74,23 @@ public class PaymentService {
 
     @Transactional
     public PaymentDto createPayment(PaymentRequestDto request) {
+        if (paymentRepository.findByOrderId(request.getOrderId()).isPresent()) {
+            throw new DuplicatePaymentException(request.getOrderId());
+        }
+
         String transactionId = "TXN-" + UUID.randomUUID();
 
         OrderDto order = orderClient.getOrder(request.getOrderId());
+
+        if (!financialAgencyService.validateFinaAvailability()) {
+            throw new FinancialAgencyUnavailableException();
+        }
+
+        if (!financialAgencyService.validatePaymentMethod(
+                request.getPaymentMethod().toString(),
+                request.getCardLastFourDigits())) {
+            throw new IllegalArgumentException("Invalid payment method or card details");
+        }
 
         Payment payment = Payment.builder()
                 .orderId(request.getOrderId())
@@ -82,7 +99,7 @@ public class PaymentService {
                 .paidAmount(order.getTotalAmount())
                 .paymentMethod(request.getPaymentMethod())
                 .transactionId(transactionId)
-                .paymentProvider(request.getPaymentProvider() != null ? request.getPaymentProvider() : "Default Provider")
+                .paymentProvider("FINA")
                 .cardLastFourDigits(request.getCardLastFourDigits())
                 .status(PaymentStatus.PENDING)
                 .build();
@@ -91,6 +108,53 @@ public class PaymentService {
 
         log.info("Created payment: {} for order: {}", savedPayment.getId(), savedPayment.getOrderId());
         return PaymentMapper.toDTO(savedPayment);
+    }
+
+    @Transactional(readOnly = true)
+    public void validatePaymentReadiness(PaymentRequestDto request) {
+        log.info("Validating payment readiness for order: {}", request.getOrderId());
+
+        if (paymentRepository.findByOrderId(request.getOrderId()).isPresent()) {
+            throw new DuplicatePaymentException(request.getOrderId());
+        }
+
+        if (!financialAgencyService.validateFinaAvailability()) {
+            throw new FinancialAgencyUnavailableException();
+        }
+
+        if (!financialAgencyService.validatePaymentMethod(
+                request.getPaymentMethod().toString(),
+                request.getCardLastFourDigits())) {
+            throw new IllegalArgumentException("Invalid payment method or card details");
+        }
+
+        log.info("Payment validation passed for order: {}", request.getOrderId());
+    }
+
+    @Transactional
+    public PaymentDto preAuthorizePayment(Long paymentId) {
+        Payment payment = paymentRepository.findById(paymentId)
+                .orElseThrow(() -> new PaymentNotFoundException(paymentId));
+
+        boolean authorized = financialAgencyService.preAuthorizePayment(
+            payment.getTransactionId(),
+            payment.getPaidAmount()
+        );
+
+        if (!authorized) {
+            payment.setStatus(PaymentStatus.FAILED);
+            payment.setFailureReason("Pre-authorization failed");
+            paymentRepository.save(payment);
+            throw new FinancialAgencyUnavailableException(
+                "Pre-authorization failed"
+            );
+        }
+
+        payment.setStatus(PaymentStatus.PROCESSING);
+        Payment updatedPayment = paymentRepository.save(payment);
+
+        log.info("Payment {} pre-authorized successfully", paymentId);
+        return PaymentMapper.toDTO(updatedPayment);
     }
 
     @Transactional
@@ -123,6 +187,7 @@ public class PaymentService {
         paymentRepository.deleteById(id);
         log.info("Deleted payment: {}", id);
     }
+
     @Transactional
     public PaymentDto sagaRefund(Long id) {
 

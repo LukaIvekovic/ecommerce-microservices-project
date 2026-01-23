@@ -68,7 +68,6 @@ public class OrderService {
 
         BigDecimal totalAmount = BigDecimal.ZERO;
 
-        // Create order items by fetching product information
         for (OrderItemRequestDto itemRequest : request.getOrderItems()) {
             ProductDto product = productClient.getProduct(itemRequest.getProductId());
 

@@ -2,6 +2,7 @@ package hr.fer.ecommerce.product.controller;
 
 import hr.fer.ecommerce.product.dto.ProductDto;
 import hr.fer.ecommerce.product.dto.ProductRequestDto;
+import hr.fer.ecommerce.product.dto.StockReservationRequest;
 import hr.fer.ecommerce.product.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -47,6 +48,24 @@ public class ProductController {
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/stock/validate")
+    public ResponseEntity<Void> validateStock(@RequestBody @Valid StockReservationRequest request) {
+        productService.validateStockAvailability(request);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/stock/reserve")
+    public ResponseEntity<Void> reserveStock(@RequestBody @Valid StockReservationRequest request) {
+        productService.reserveStock(request);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/stock/release")
+    public ResponseEntity<Void> releaseStock(@RequestBody @Valid StockReservationRequest request) {
+        productService.releaseStock(request);
+        return ResponseEntity.ok().build();
     }
 }
 

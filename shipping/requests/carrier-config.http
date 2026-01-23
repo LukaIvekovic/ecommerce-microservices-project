@@ -1,0 +1,14 @@
+### Get current carrier validation status
+GET http://localhost:8083/api/config/carrier/status
+
+### Enable carrier availability validation
+POST http://localhost:8083/api/config/carrier/availability/true
+
+### Disable carrier availability validation
+POST http://localhost:8083/api/config/carrier/availability/false
+
+### Enable carrier capacity validation
+POST http://localhost:8083/api/config/carrier/capacity/true
+
+### Disable carrier capacity validation
+POST http://localhost:8083/api/config/carrier/capacity/false

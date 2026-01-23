@@ -1,0 +1,52 @@
+### Validate Payment Readiness
+POST http://localhost:8082/api/payments/validate
+Content-Type: application/json
+
+{
+  "orderId": 1,
+  "paidCustomerName": "John Doe",
+  "paidCustomerEmail": "john.doe@example.com",
+  "paymentMethod": "CREDIT_CARD",
+  "paymentProvider": "FINA",
+  "cardLastFourDigits": "1234"
+}
+
+### Create Payment
+POST http://localhost:8082/api/payments
+Content-Type: application/json
+
+{
+  "orderId": 2,
+  "paidCustomerName": "Jane Smith",
+  "paidCustomerEmail": "jane.smith@example.com",
+  "paymentMethod": "DEBIT_CARD",
+  "paymentProvider": "FINA",
+  "cardLastFourDigits": "5678"
+}
+
+### Pre-authorize Payment
+POST http://localhost:8082/api/payments/1/pre-authorize
+
+### Test Invalid Card Format
+POST http://localhost:8082/api/payments/validate
+Content-Type: application/json
+
+{
+  "orderId": 3,
+  "paidCustomerName": "Test User",
+  "paidCustomerEmail": "test@example.com",
+  "paymentMethod": "CREDIT_CARD",
+  "paymentProvider": "FINA",
+  "cardLastFourDigits": "ABC"
+}
+
+### Test Missing Payment Method
+POST http://localhost:8082/api/payments/validate
+Content-Type: application/json
+
+{
+  "orderId": 4,
+  "paidCustomerName": "Test User",
+  "paidCustomerEmail": "test@example.com",
+  "paymentProvider": "FINA"
+}

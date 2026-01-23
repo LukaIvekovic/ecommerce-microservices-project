@@ -1,0 +1,14 @@
+### Get current FINA validation status
+GET http://localhost:8082/api/config/fina/status
+
+### Enable FINA availability validation
+POST http://localhost:8082/api/config/fina/availability/true
+
+### Disable FINA availability validation
+POST http://localhost:8082/api/config/fina/availability/false
+
+### Enable payment pre-authorization
+POST http://localhost:8082/api/config/fina/pre-authorization/true
+
+### Disable payment pre-authorization
+POST http://localhost:8082/api/config/fina/pre-authorization/false

@@ -73,6 +73,18 @@ public class PaymentController {
         paymentService.deletePayment(id);
         return ResponseEntity.noContent().build();
     }
+
+    @PostMapping("/validate")
+    public ResponseEntity<Void> validatePayment(@RequestBody @Valid PaymentRequestDto request) {
+        paymentService.validatePaymentReadiness(request);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/{id}/pre-authorize")
+    public ResponseEntity<PaymentDto> preAuthorizePayment(@PathVariable Long id) {
+        return ResponseEntity.ok(paymentService.preAuthorizePayment(id));
+    }
+
     @PostMapping("/{id}/refund")
     public ResponseEntity<PaymentDto> refund(@PathVariable Long id) {
         return ResponseEntity.ok(paymentService.sagaRefund(id));

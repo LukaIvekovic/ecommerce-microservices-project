@@ -1,0 +1,39 @@
+### Validate Shipment Readiness
+POST http://localhost:8083/api/shipments/validate
+Content-Type: application/json
+
+{
+  "orderId": 1,
+  "carrier": "DHL",
+  "estimatedDeliveryDate": "2026-01-30T12:00:00"
+}
+
+### Create Shipment
+POST http://localhost:8083/api/shipments
+Content-Type: application/json
+
+{
+  "orderId": 2,
+  "carrier": "GLS",
+  "estimatedDeliveryDate": "2026-01-31T12:00:00"
+}
+
+### Test Unsupported Carrier
+POST http://localhost:8083/api/shipments/validate
+Content-Type: application/json
+
+{
+  "orderId": 4,
+  "carrier": "UnknownCarrier",
+  "estimatedDeliveryDate": "2026-01-30T12:00:00"
+}
+
+### Test Invalid Address
+POST http://localhost:8083/api/shipments/validate
+Content-Type: application/json
+
+{
+  "orderId": 999,
+  "carrier": "DHL",
+  "estimatedDeliveryDate": "2026-01-30T12:00:00"
+}
