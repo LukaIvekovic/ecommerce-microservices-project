@@ -78,9 +78,9 @@ public class OrderController {
     }
 
     @PostMapping("/{id}/commit")
-    public ResponseEntity<Void> commitOrder(@PathVariable Long id) {
-        orderService.commitOrder(id);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<OrderDto> commitOrder(@PathVariable Long id) {
+        OrderDto order = orderService.commitOrder(id);
+        return ResponseEntity.ok(order);
     }
 
     @PostMapping("/{id}/abort")

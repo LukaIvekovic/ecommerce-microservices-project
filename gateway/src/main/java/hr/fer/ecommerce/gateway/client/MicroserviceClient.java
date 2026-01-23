@@ -114,13 +114,14 @@ public class MicroserviceClient {
         }
     }
 
-    public void commitOrder(Long orderId) {
+    public OrderResponse commitOrder(Long orderId) {
         String url = servicesConfig.getOrder().getUrl() + "/api/orders/" + orderId + "/commit";
         log.info("2PC: Committing order at: {}", url);
 
         try {
-            restTemplate.postForObject(url, null, Void.class);
+            OrderResponse response = restTemplate.postForObject(url, null, OrderResponse.class);
             log.info("2PC: Order committed - ID: {}", orderId);
+            return response;
         } catch (Exception e) {
             log.error("2PC: Failed to commit order {}: {}", orderId, e.getMessage(), e);
             throw new RuntimeException("Failed to commit order: " + e.getMessage(), e);
@@ -153,13 +154,14 @@ public class MicroserviceClient {
         }
     }
 
-    public void commitPayment(Long paymentId) {
+    public PaymentResponse commitPayment(Long paymentId) {
         String url = servicesConfig.getPayment().getUrl() + "/api/payments/" + paymentId + "/commit";
         log.info("2PC: Committing payment at: {}", url);
 
         try {
-            restTemplate.postForObject(url, null, Void.class);
+            PaymentResponse response = restTemplate.postForObject(url, null, PaymentResponse.class);
             log.info("2PC: Payment committed - ID: {}", paymentId);
+            return response;
         } catch (Exception e) {
             log.error("2PC: Failed to commit payment {}: {}", paymentId, e.getMessage(), e);
             throw new RuntimeException("Failed to commit payment: " + e.getMessage(), e);
@@ -192,13 +194,14 @@ public class MicroserviceClient {
         }
     }
 
-    public void commitShipment(Long shipmentId) {
+    public ShipmentResponse commitShipment(Long shipmentId) {
         String url = servicesConfig.getShipping().getUrl() + "/api/shipments/" + shipmentId + "/commit";
         log.info("2PC: Committing shipment at: {}", url);
 
         try {
-            restTemplate.postForObject(url, null, Void.class);
+            ShipmentResponse response = restTemplate.postForObject(url, null, ShipmentResponse.class);
             log.info("2PC: Shipment committed - ID: {}", shipmentId);
+            return response;
         } catch (Exception e) {
             log.error("2PC: Failed to commit shipment {}: {}", shipmentId, e.getMessage(), e);
             throw new RuntimeException("Failed to commit shipment: " + e.getMessage(), e);

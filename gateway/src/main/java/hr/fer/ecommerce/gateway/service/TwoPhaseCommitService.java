@@ -93,17 +93,20 @@ public class TwoPhaseCommitService {
 
     private void commitPhase(TwoPhaseCommitContext context) {
         log.info("Committing order");
-        microserviceClient.commitOrder(context.getOrder().getId());
+        OrderResponse committedOrder = microserviceClient.commitOrder(context.getOrder().getId());
+        context.setOrder(committedOrder);
         context.setOrderCommitted(true);
         log.info("Order committed: ID={}", context.getOrder().getId());
 
         log.info("Committing payment");
-        microserviceClient.commitPayment(context.getPayment().getId());
+        PaymentResponse committedPayment = microserviceClient.commitPayment(context.getPayment().getId());
+        context.setPayment(committedPayment);
         context.setPaymentCommitted(true);
         log.info("Payment committed: ID={}", context.getPayment().getId());
 
         log.info("Committing shipment");
-        microserviceClient.commitShipment(context.getShipment().getId());
+        ShipmentResponse committedShipment = microserviceClient.commitShipment(context.getShipment().getId());
+        context.setShipment(committedShipment);
         context.setShipmentCommitted(true);
         log.info("Shipment committed: ID={}", context.getShipment().getId());
 

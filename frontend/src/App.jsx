@@ -6,7 +6,7 @@ function App() {
   const [response, setResponse] = useState(null)
   const [error, setError] = useState(null)
 
-  const placeOrder = async () => {
+  const placeOrderWithSaga = async () => {
     setLoading(true)
     setError(null)
     setResponse(null)
@@ -16,9 +16,9 @@ function App() {
       customerEmail: "john.doe@example.com",
       shippingAddress: "123 Main Street, New York, NY 10001",
       paymentMethod: "CREDIT_CARD",
-      paymentProvider: "Stripe",
+      paymentProvider: "FINA",
       cardLastFourDigits: "4242",
-      carrier: "FedEx",
+      carrier: "GLS",
       orderItems: [
         {
           productId: 1,
@@ -32,7 +32,7 @@ function App() {
     }
 
     try {
-      const res = await fetch('http://localhost:8080/api/gateway/place-order', {
+      const res = await fetch('http://localhost:8080/api/gateway/place-order-saga', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,7 +45,55 @@ function App() {
       if (data.success) {
         setResponse(data)
       } else {
-        setError(data.message || 'Failed to place order')
+        setError(data.message || 'Failed to place order with Saga')
+      }
+    } catch (err) {
+      setError('Error: ' + err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const placeOrderWith2PC = async () => {
+    setLoading(true)
+    setError(null)
+    setResponse(null)
+
+    const orderData = {
+      customerName: "John Doe",
+      customerEmail: "john.doe@example.com",
+      shippingAddress: "123 Main Street, New York, NY 10001",
+      paymentMethod: "CREDIT_CARD",
+      paymentProvider: "FINA",
+      cardLastFourDigits: "4242",
+      carrier: "GLS",
+      orderItems: [
+        {
+          productId: 1,
+          quantity: 2
+        },
+        {
+          productId: 2,
+          quantity: 1
+        }
+      ]
+    }
+
+    try {
+      const res = await fetch('http://localhost:8080/api/gateway/place-order-2pc', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(orderData)
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        setResponse(data)
+      } else {
+        setError(data.message || 'Failed to place order with 2PC')
       }
     } catch (err) {
       setError('Error: ' + err.message)
@@ -57,19 +105,35 @@ function App() {
   return (
     <div className="app">
       <h1>🛒 E-Commerce Order System</h1>
-      <p>Simple microservices demonstration</p>
+      <p>Distributed Transaction Patterns Demo</p>
 
       <div className="card">
-        <button
-          onClick={placeOrder}
-          disabled={loading}
-          className="order-button"
-        >
-          {loading ? '⏳ Placing Order...' : '📦 Place Sample Order'}
-        </button>
+        <h3>Choose Transaction Pattern:</h3>
+
+        <div className="button-group">
+          <button
+            onClick={placeOrderWithSaga}
+            disabled={loading}
+            className="order-button saga-button"
+          >
+            {loading ? '⏳ Processing...' : '📦 Place Order with Saga'}
+          </button>
+
+          <button
+            onClick={placeOrderWith2PC}
+            disabled={loading}
+            className="order-button tpc-button"
+          >
+            {loading ? '⏳ Processing...' : '🔒 Place Order with 2PC'}
+          </button>
+        </div>
 
         <p className="info">
-          This will order: 2x Laptop + 1x Smartphone
+          Sample order: 2x Laptop + 1x Smartphone
+        </p>
+        <p className="info-small">
+          <strong>Saga:</strong> Eventual consistency with compensations<br/>
+          <strong>2PC:</strong> Strong consistency with atomic commits
         </p>
       </div>
 

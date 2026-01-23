@@ -98,9 +98,9 @@ public class PaymentController {
     }
 
     @PostMapping("/{id}/commit")
-    public ResponseEntity<Void> commitPayment(@PathVariable Long id) {
-        paymentService.commitPayment(id);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<PaymentDto> commitPayment(@PathVariable Long id) {
+        PaymentDto payment = paymentService.commitPayment(id);
+        return ResponseEntity.ok(payment);
     }
 
     @PostMapping("/{id}/abort")

@@ -235,7 +235,7 @@ public class PaymentService {
     }
 
     @Transactional
-    public void commitPayment(Long id) {
+    public PaymentDto commitPayment(Long id) {
         log.info("2PC COMMIT: Capturing payment ID: {}", id);
         Payment payment = paymentRepository.findById(id)
                 .orElseThrow(() -> new PaymentNotFoundException(id));
@@ -250,8 +250,9 @@ public class PaymentService {
         payment.setProcessedAt(LocalDateTime.now());
         payment.setTransactionId(payment.getTransactionId().replace("PRE-", "CAPTURED-"));
 
-        paymentRepository.save(payment);
+        Payment savedPayment = paymentRepository.save(payment);
         log.info("2PC COMMIT: Payment captured - ID: {}, new status: COMPLETED", id);
+        return PaymentMapper.toDTO(savedPayment);
     }
 
     @Transactional

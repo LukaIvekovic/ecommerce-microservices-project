@@ -114,10 +114,6 @@ public class ShipmentService {
     public void validateShipmentReadiness(ShipmentRequestDto request) {
         log.info("Validating shipment readiness for order: {}", request.getOrderId());
 
-        if (shipmentRepository.findByOrderId(request.getOrderId()).isPresent()) {
-            throw new DuplicateShipmentException(request.getOrderId());
-        }
-
         OrderDto order = orderClient.getOrder(request.getOrderId());
 
         if (!carrierService.validateCarrierAvailability(request.getCarrier())) {
@@ -225,7 +221,7 @@ public class ShipmentService {
     }
 
     @Transactional
-    public void commitShipment(Long id) {
+    public ShipmentDto commitShipment(Long id) {
         log.info("2PC COMMIT: Confirming shipment ID: {}", id);
         Shipment shipment = shipmentRepository.findById(id)
                 .orElseThrow(() -> new ShipmentNotFoundException(id));
@@ -239,9 +235,10 @@ public class ShipmentService {
         shipment.setTrackingNumber(generateTrackingNumber());
         shipment.setStatus(ShipmentStatus.PREPARING);
 
-        shipmentRepository.save(shipment);
+        Shipment savedShipment = shipmentRepository.save(shipment);
         log.info("2PC COMMIT: Shipment confirmed - ID: {}, tracking: {}, new status: PREPARING",
-                 id, shipment.getTrackingNumber());
+                 id, savedShipment.getTrackingNumber());
+        return ShipmentMapper.toDTO(savedShipment);
     }
 
     @Transactional

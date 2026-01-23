@@ -226,7 +226,7 @@ public class OrderService {
     }
 
     @Transactional
-    public void commitOrder(Long id) {
+    public OrderDto commitOrder(Long id) {
         log.info("2PC COMMIT: Committing order ID: {}", id);
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new OrderNotFoundException(id));
@@ -238,8 +238,9 @@ public class OrderService {
         }
 
         order.setStatus(OrderStatus.CONFIRMED);
-        orderRepository.save(order);
+        Order savedOrder = orderRepository.save(order);
         log.info("2PC COMMIT: Order committed - ID: {}, new status: CONFIRMED", id);
+        return OrderMapper.toDTO(savedOrder);
     }
 
     @Transactional

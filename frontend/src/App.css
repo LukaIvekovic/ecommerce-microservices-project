@@ -17,31 +17,63 @@ h1 {
   margin: 2rem 0;
 }
 
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
 .order-button {
-  background: #4CAF50;
   color: white;
   border: none;
   padding: 1rem 2rem;
   font-size: 1.1rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
   font-weight: bold;
+  flex: 1;
+  max-width: 300px;
 }
 
-.order-button:hover:not(:disabled) {
+.saga-button {
+  background: #2196F3;
+}
+
+.saga-button:hover:not(:disabled) {
+  background: #0b7dda;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+}
+
+.tpc-button {
+  background: #4CAF50;
+}
+
+.tpc-button:hover:not(:disabled) {
   background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
 }
 
 .order-button:disabled {
   background: #cccccc;
   cursor: not-allowed;
+  transform: none;
 }
 
 .info {
   margin-top: 1rem;
   color: #666;
   font-size: 0.9rem;
+}
+
+.info-small {
+  margin-top: 0.5rem;
+  color: #888;
+  font-size: 0.8rem;
+  line-height: 1.6;
 }
 
 .success-box {

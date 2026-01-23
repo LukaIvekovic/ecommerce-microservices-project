@@ -102,9 +102,9 @@ public class ShipmentController {
     }
 
     @PostMapping("/{id}/commit")
-    public ResponseEntity<Void> commitShipment(@PathVariable Long id) {
-        shipmentService.commitShipment(id);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<ShipmentDto> commitShipment(@PathVariable Long id) {
+        ShipmentDto shipment = shipmentService.commitShipment(id);
+        return ResponseEntity.ok(shipment);
     }
 
     @PostMapping("/{id}/abort")
