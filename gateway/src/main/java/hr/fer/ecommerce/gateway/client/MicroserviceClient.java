@@ -12,6 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Map;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -218,6 +220,42 @@ public class MicroserviceClient {
         } catch (Exception e) {
             log.error("2PC: Failed to abort shipment {}: {}", shipmentId, e.getMessage(), e);
         }
+    }
+
+    public Map<String, Object> setFinaAvailability(boolean enabled) {
+        String url = servicesConfig.getPayment().getUrl() + "/api/config/fina/availability/" + enabled;
+        log.info("Setting FINA availability to: {}", enabled);
+        return restTemplate.postForObject(url, null, Map.class);
+    }
+
+    public Map<String, Object> setPreAuthorization(boolean enabled) {
+        String url = servicesConfig.getPayment().getUrl() + "/api/config/fina/pre-authorization/" + enabled;
+        log.info("Setting pre-authorization to: {}", enabled);
+        return restTemplate.postForObject(url, null, Map.class);
+    }
+
+    public Map<String, Object> getFinaStatus() {
+        String url = servicesConfig.getPayment().getUrl() + "/api/config/fina/status";
+        log.info("Getting FINA status");
+        return restTemplate.getForObject(url, Map.class);
+    }
+
+    public Map<String, Object> setCarrierAvailability(boolean enabled) {
+        String url = servicesConfig.getShipping().getUrl() + "/api/config/carrier/availability/" + enabled;
+        log.info("Setting carrier availability to: {}", enabled);
+        return restTemplate.postForObject(url, null, Map.class);
+    }
+
+    public Map<String, Object> setCarrierCapacity(boolean enabled) {
+        String url = servicesConfig.getShipping().getUrl() + "/api/config/carrier/capacity/" + enabled;
+        log.info("Setting carrier capacity to: {}", enabled);
+        return restTemplate.postForObject(url, null, Map.class);
+    }
+
+    public Map<String, Object> getCarrierStatus() {
+        String url = servicesConfig.getShipping().getUrl() + "/api/config/carrier/status";
+        log.info("Getting carrier status");
+        return restTemplate.getForObject(url, Map.class);
     }
 }
 

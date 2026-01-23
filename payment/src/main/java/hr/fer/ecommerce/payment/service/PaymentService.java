@@ -114,10 +114,6 @@ public class PaymentService {
     public void validatePaymentReadiness(PaymentRequestDto request) {
         log.info("Validating payment readiness for order: {}", request.getOrderId());
 
-        if (paymentRepository.findByOrderId(request.getOrderId()).isPresent()) {
-            throw new DuplicatePaymentException(request.getOrderId());
-        }
-
         if (!financialAgencyService.validateFinaAvailability()) {
             throw new FinancialAgencyUnavailableException();
         }
