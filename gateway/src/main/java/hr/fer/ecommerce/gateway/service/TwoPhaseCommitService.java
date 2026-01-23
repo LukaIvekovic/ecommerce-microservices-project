@@ -33,7 +33,7 @@ public class TwoPhaseCommitService {
             preparePhase(request, context);
 
             log.info("=== PHASE 2: COMMIT ===");
-            commitPhase(request, context);
+            commitPhase(context);
 
             PlaceOrderResponse response = PlaceOrderResponse.builder()
                     .success(true)
@@ -66,85 +66,115 @@ public class TwoPhaseCommitService {
     }
 
     private void preparePhase(PlaceOrderRequest request, TwoPhaseCommitContext context) {
+        log.info("========================================");
+        log.info("Starting PREPARE phase - All participants will reserve resources");
+        log.info("========================================");
+
         CreateOrderRequest orderRequest = buildOrderRequest(request);
 
-        log.info("Prepare Phase Step 1: Validate stock availability");
-        microserviceClient.validateStockAvailability(orderRequest);
+        // Step 1: Prepare Order (validate and reserve stock)
+        log.info("Prepare Phase Step 1: Preparing order and reserving stock");
+        OrderResponse preparedOrder = microserviceClient.prepareOrder(orderRequest);
+        context.setOrder(preparedOrder);
         context.setOrderPrepared(true);
-        log.info("Stock validation passed");
+        log.info("✓ Order prepared - ID: {}, Status: PREPARED (stock reserved)", preparedOrder.getId());
 
-        log.info("Prepare Phase Step 2: Validate payment");
-        CreatePaymentRequest paymentRequest = buildPaymentRequest(request);
-        microserviceClient.validatePayment(paymentRequest);
+        // Step 2: Prepare Payment (pre-authorize funds)
+        log.info("Prepare Phase Step 2: Pre-authorizing payment");
+        CreatePaymentRequest paymentRequest = buildPaymentRequest(request, preparedOrder);
+        PaymentResponse preparedPayment = microserviceClient.preparePayment(paymentRequest);
+        context.setPayment(preparedPayment);
         context.setPaymentPrepared(true);
-        log.info("Payment validation passed");
+        log.info("✓ Payment pre-authorized - ID: {}, Status: PRE_AUTHORIZED (funds held)", preparedPayment.getId());
 
-        log.info("Prepare Phase Step 3: Validate shipment");
-        CreateShipmentRequest shipmentRequest = buildShipmentRequest(request);
-        microserviceClient.validateShipment(shipmentRequest);
+        // Step 3: Prepare Shipment (reserve carrier capacity)
+        log.info("Prepare Phase Step 3: Reserving shipment capacity");
+        CreateShipmentRequest shipmentRequest = buildShipmentRequest(request, preparedOrder);
+        ShipmentResponse preparedShipment = microserviceClient.prepareShipment(shipmentRequest);
+        context.setShipment(preparedShipment);
         context.setShipmentPrepared(true);
-        log.info("Shipment validation passed");
+        log.info("✓ Shipment reserved - ID: {}, Status: RESERVED (carrier capacity held)", preparedShipment.getId());
 
-        log.info("=== PREPARE PHASE COMPLETED SUCCESSFULLY ===");
+        log.info("========================================");
+        log.info("=== PREPARE PHASE COMPLETED ===");
+        log.info("All participants voted READY - Resources are locked and reserved");
+        log.info("========================================");
     }
 
-    private void commitPhase(PlaceOrderRequest request, TwoPhaseCommitContext context) {
-        log.info("Commit Phase Step 1: Create order");
-        CreateOrderRequest orderRequest = buildOrderRequest(request);
-        OrderResponse order = microserviceClient.createOrder(orderRequest);
-        context.setOrder(order);
+    private void commitPhase(TwoPhaseCommitContext context) {
+        log.info("========================================");
+        log.info("Starting COMMIT phase - Finalizing all prepared transactions");
+        log.info("========================================");
+
+        // Commit Phase Step 1: Commit Order (PREPARED -> CONFIRMED)
+        log.info("Commit Phase Step 1: Committing order");
+        microserviceClient.commitOrder(context.getOrder().getId());
         context.setOrderCommitted(true);
-        log.info("Order {} created", order.getId());
+        log.info("✓ Order committed - ID: {}, Status: CONFIRMED", context.getOrder().getId());
 
-        log.info("Commit Phase Step 2: Create payment");
-        CreatePaymentRequest paymentRequest = buildPaymentRequest(request, order);
-        PaymentResponse payment = microserviceClient.createPayment(paymentRequest);
-        context.setPayment(payment);
+        // Commit Phase Step 2: Commit Payment (PRE_AUTHORIZED -> COMPLETED)
+        log.info("Commit Phase Step 2: Capturing payment");
+        microserviceClient.commitPayment(context.getPayment().getId());
         context.setPaymentCommitted(true);
-        log.info("Payment {} created", payment.getId());
+        log.info("✓ Payment captured - ID: {}, Status: COMPLETED", context.getPayment().getId());
 
-        log.info("Commit Phase Step 3: Create shipment");
-        CreateShipmentRequest shipmentRequest = buildShipmentRequest(request, order);
-        ShipmentResponse shipment = microserviceClient.createShipment(shipmentRequest);
-        context.setShipment(shipment);
+        // Commit Phase Step 3: Commit Shipment (RESERVED -> PREPARING)
+        log.info("Commit Phase Step 3: Confirming shipment");
+        microserviceClient.commitShipment(context.getShipment().getId());
         context.setShipmentCommitted(true);
-        log.info("Shipment {} created", shipment.getId());
+        log.info("✓ Shipment confirmed - ID: {}, Status: PREPARING", context.getShipment().getId());
 
-        log.info("=== COMMIT PHASE COMPLETED SUCCESSFULLY ===");
+        log.info("========================================");
+        log.info("=== COMMIT PHASE COMPLETED ===");
+        log.info("All participants committed successfully - Transaction is atomic and consistent");
+        log.info("========================================");
     }
 
     private void abortPhase(TwoPhaseCommitContext context) {
-        log.warn("=== ABORT PHASE: Rolling back 2PC transaction ===");
+        log.warn("========================================");
+        log.warn("=== ABORT PHASE ===");
+        log.warn("Rolling back all prepared transactions and releasing resources");
+        log.warn("========================================");
 
-        if (context.getShipment() != null) {
+        // Abort in reverse order of preparation to maintain consistency
+
+        // Abort Shipment if prepared (release carrier capacity)
+        if (context.isShipmentPrepared() && context.getShipment() != null) {
             try {
-                log.warn("Aborting shipment {}", context.getShipment().getId());
-                microserviceClient.cancelShipment(context.getShipment().getId());
+                log.warn("Aborting shipment {} (releasing carrier capacity)", context.getShipment().getId());
+                microserviceClient.abortShipment(context.getShipment().getId());
+                log.warn("✓ Shipment aborted - ID: {}", context.getShipment().getId());
             } catch (Exception e) {
-                log.error("Failed to abort shipment", e);
+                log.error("Failed to abort shipment: {}", e.getMessage(), e);
             }
         }
 
-        if (context.getPayment() != null) {
+        // Abort Payment if prepared (release pre-authorization)
+        if (context.isPaymentPrepared() && context.getPayment() != null) {
             try {
-                log.warn("Aborting payment {}", context.getPayment().getId());
-                microserviceClient.refundPayment(context.getPayment().getId());
+                log.warn("Aborting payment {} (releasing pre-authorization)", context.getPayment().getId());
+                microserviceClient.abortPayment(context.getPayment().getId());
+                log.warn("✓ Payment aborted - ID: {}", context.getPayment().getId());
             } catch (Exception e) {
-                log.error("Failed to abort payment", e);
+                log.error("Failed to abort payment: {}", e.getMessage(), e);
             }
         }
 
-        if (context.getOrder() != null) {
+        // Abort Order if prepared (release stock reservation)
+        if (context.isOrderPrepared() && context.getOrder() != null) {
             try {
-                log.warn("Aborting order {}", context.getOrder().getId());
-                microserviceClient.cancelOrder(context.getOrder().getId());
+                log.warn("Aborting order {} (releasing stock reservation)", context.getOrder().getId());
+                microserviceClient.abortOrder(context.getOrder().getId());
+                log.warn("✓ Order aborted - ID: {}", context.getOrder().getId());
             } catch (Exception e) {
-                log.error("Failed to abort order", e);
+                log.error("Failed to abort order: {}", e.getMessage(), e);
             }
         }
 
-
+        log.warn("========================================");
         log.warn("=== ABORT PHASE COMPLETED ===");
+        log.warn("All resources released - Transaction rolled back");
+        log.warn("========================================");
     }
 
     private CreateOrderRequest buildOrderRequest(PlaceOrderRequest request) {
@@ -161,16 +191,6 @@ public class TwoPhaseCommitService {
                 .build();
     }
 
-    private CreatePaymentRequest buildPaymentRequest(PlaceOrderRequest request) {
-        return CreatePaymentRequest.builder()
-                .paidCustomerName(request.getCustomerName())
-                .paidCustomerEmail(request.getCustomerEmail())
-                .paymentMethod(request.getPaymentMethod())
-                .paymentProvider(request.getPaymentProvider())
-                .cardLastFourDigits(request.getCardLastFourDigits())
-                .build();
-    }
-
     private CreatePaymentRequest buildPaymentRequest(PlaceOrderRequest request, OrderResponse order) {
         return CreatePaymentRequest.builder()
                 .orderId(order.getId())
@@ -179,13 +199,6 @@ public class TwoPhaseCommitService {
                 .paymentMethod(request.getPaymentMethod())
                 .paymentProvider(request.getPaymentProvider())
                 .cardLastFourDigits(request.getCardLastFourDigits())
-                .build();
-    }
-
-    private CreateShipmentRequest buildShipmentRequest(PlaceOrderRequest request) {
-        return CreateShipmentRequest.builder()
-                .carrier(request.getCarrier())
-                .estimatedDeliveryDate(LocalDateTime.now().plusDays(7))
                 .build();
     }
 

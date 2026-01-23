@@ -173,5 +173,97 @@ public class OrderService {
                 .items(items)
                 .build();
     }
+
+    @Transactional
+    public OrderDto prepareOrder(OrderRequestDto request) {
+        log.info("2PC PREPARE: Starting order preparation for customer: {}", request.getCustomerEmail());
+
+        StockReservationRequest stockRequest = StockReservationRequest.builder()
+                .items(request.getOrderItems().stream()
+                        .map(item -> StockValidationRequest.builder()
+                                .productId(item.getProductId())
+                                .quantity(item.getQuantity())
+                                .build())
+                        .collect(Collectors.toList()))
+                .build();
+
+        productClient.reserveStock(stockRequest);
+        log.info("Stock reserved for all order items");
+
+        Order order = Order.builder()
+                .customerName(request.getCustomerName())
+                .customerEmail(request.getCustomerEmail())
+                .shippingAddress(request.getShippingAddress())
+                .orderItems(new ArrayList<>())
+                .status(OrderStatus.PREPARED)
+                .build();
+
+        BigDecimal totalAmount = BigDecimal.ZERO;
+
+        for (OrderItemRequestDto itemRequest : request.getOrderItems()) {
+            ProductDto product = productClient.getProduct(itemRequest.getProductId());
+
+            BigDecimal subtotal = product.getPrice()
+                    .multiply(BigDecimal.valueOf(itemRequest.getQuantity()));
+
+            OrderItem orderItem = OrderItem.builder()
+                    .productId(product.getId())
+                    .productName(product.getName())
+                    .quantity(itemRequest.getQuantity())
+                    .unitPrice(product.getPrice())
+                    .subtotal(subtotal)
+                    .build();
+
+            order.addOrderItem(orderItem);
+            totalAmount = totalAmount.add(subtotal);
+        }
+
+        order.setTotalAmount(totalAmount);
+        Order savedOrder = orderRepository.save(order);
+
+        log.info("Prepared order: {}", savedOrder.getId());
+        return OrderMapper.toDTO(savedOrder);
+    }
+
+    @Transactional
+    public void commitOrder(Long id) {
+        log.info("2PC COMMIT: Committing order ID: {}", id);
+        Order order = orderRepository.findById(id)
+                .orElseThrow(() -> new OrderNotFoundException(id));
+
+        if (order.getStatus() != OrderStatus.PREPARED) {
+            throw new IllegalStateException(
+                "Cannot commit order in status: " + order.getStatus() + ". Expected PREPARED."
+            );
+        }
+
+        order.setStatus(OrderStatus.CONFIRMED);
+        orderRepository.save(order);
+        log.info("2PC COMMIT: Order committed - ID: {}, new status: CONFIRMED", id);
+    }
+
+    @Transactional
+    public void abortPreparedOrder(Long id) {
+        log.info("2PC ABORT: Aborting prepared order ID: {}", id);
+        Order order = orderRepository.findById(id)
+                .orElseThrow(() -> new OrderNotFoundException(id));
+
+        if (order.getStatus() != OrderStatus.PREPARED) {
+            log.warn("Order {} is not in PREPARED state, current status: {}", id, order.getStatus());
+            return;
+        }
+
+        StockReservationRequest stockRequest = buildStockReservationRequestFromOrder(order);
+        try {
+            productClient.releaseStock(stockRequest);
+            log.info("Stock released for order ID: {}", id);
+        } catch (Exception e) {
+            log.error("Failed to release stock for order ID: {}", id, e);
+        }
+
+        order.setStatus(OrderStatus.CANCELLED);
+        orderRepository.save(order);
+        log.info("2PC ABORT: Order aborted - ID: {}", id);
+    }
 }
 

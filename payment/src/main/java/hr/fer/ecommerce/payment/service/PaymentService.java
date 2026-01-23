@@ -197,5 +197,79 @@ public class PaymentService {
         paymentRepository.deleteById(id);
         return PaymentMapper.toDTO(payment);
     }
+
+    @Transactional
+    public PaymentDto preparePayment(PaymentRequestDto request) {
+        log.info("2PC PREPARE: Pre-authorizing payment for order: {}", request.getOrderId());
+
+        validatePaymentReadiness(request);
+
+        OrderDto order = orderClient.getOrder(request.getOrderId());
+
+        if (!financialAgencyService.validateFinaAvailability()) {
+            throw new FinancialAgencyUnavailableException();
+        }
+
+        if (!financialAgencyService.validatePaymentMethod(
+                request.getPaymentMethod().toString(),
+                request.getCardLastFourDigits())) {
+            throw new IllegalArgumentException("Invalid payment method or card details");
+        }
+
+        // Creates payment in PRE_AUTHORIZED state (simulating funds hold)
+        Payment payment = Payment.builder()
+                .orderId(request.getOrderId())
+                .paidCustomerName(request.getPaidCustomerName())
+                .paidCustomerEmail(request.getPaidCustomerEmail())
+                .paidAmount(order.getTotalAmount())
+                .paymentMethod(request.getPaymentMethod())
+                .status(PaymentStatus.PRE_AUTHORIZED)
+                .paymentProvider(request.getPaymentProvider() != null ? request.getPaymentProvider() : "FINA")
+                .cardLastFourDigits(request.getCardLastFourDigits())
+                .transactionId("PRE-" + UUID.randomUUID())
+                .build();
+
+        Payment savedPayment = paymentRepository.save(payment);
+        log.info("2PC PREPARE: Payment pre-authorized with ID: {} (status: PRE_AUTHORIZED)", savedPayment.getId());
+        return PaymentMapper.toDTO(savedPayment);
+    }
+
+    @Transactional
+    public void commitPayment(Long id) {
+        log.info("2PC COMMIT: Capturing payment ID: {}", id);
+        Payment payment = paymentRepository.findById(id)
+                .orElseThrow(() -> new PaymentNotFoundException(id));
+
+        if (payment.getStatus() != PaymentStatus.PRE_AUTHORIZED) {
+            throw new IllegalStateException(
+                "Cannot commit payment in status: " + payment.getStatus() + ". Expected PRE_AUTHORIZED."
+            );
+        }
+
+        payment.setStatus(PaymentStatus.COMPLETED);
+        payment.setProcessedAt(LocalDateTime.now());
+        payment.setTransactionId(payment.getTransactionId().replace("PRE-", "CAPTURED-"));
+
+        paymentRepository.save(payment);
+        log.info("2PC COMMIT: Payment captured - ID: {}, new status: COMPLETED", id);
+    }
+
+    @Transactional
+    public void abortPreparedPayment(Long id) {
+        log.info("2PC ABORT: Releasing pre-authorized payment ID: {}", id);
+        Payment payment = paymentRepository.findById(id)
+                .orElseThrow(() -> new PaymentNotFoundException(id));
+
+        if (payment.getStatus() != PaymentStatus.PRE_AUTHORIZED) {
+            log.warn("Payment {} is not in PRE_AUTHORIZED state, current status: {}", id, payment.getStatus());
+            return;
+        }
+
+        payment.setStatus(PaymentStatus.CANCELLED);
+        payment.setFailureReason("Transaction aborted during 2PC");
+
+        paymentRepository.save(payment);
+        log.info("2PC ABORT: Payment authorization released - ID: {}", id);
+    }
 }
 

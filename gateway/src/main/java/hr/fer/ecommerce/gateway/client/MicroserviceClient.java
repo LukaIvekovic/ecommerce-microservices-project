@@ -98,112 +98,122 @@ public class MicroserviceClient {
         }
     }
 
-    public void validateStockAvailability(CreateOrderRequest request) {
-        String url = servicesConfig.getProduct().getUrl() + "/api/products/stock/validate";
-        log.info("Validating stock availability at: {}", url);
+
+    // ===== 2PC Methods =====
+    public OrderResponse prepareOrder(CreateOrderRequest request) {
+        String url = servicesConfig.getOrder().getUrl() + "/api/orders/prepare";
+        log.info("2PC: Preparing order at: {}", url);
 
         try {
-            restTemplate.postForObject(url, buildStockReservationRequest(request), Void.class);
-            log.info("Stock validation passed");
+            OrderResponse response = restTemplate.postForObject(url, request, OrderResponse.class);
+            log.info("2PC: Order prepared with ID: {}", response != null ? response.getId() : "null");
+            return response;
         } catch (Exception e) {
-            log.error("Stock validation failed: {}", e.getMessage(), e);
-            throw new RuntimeException("Stock validation failed: " + e.getMessage(), e);
+            log.error("2PC: Failed to prepare order: {}", e.getMessage(), e);
+            throw new RuntimeException("Failed to prepare order: " + e.getMessage(), e);
         }
     }
 
-    public void reserveStock(CreateOrderRequest request) {
-        String url = servicesConfig.getProduct().getUrl() + "/api/products/stock/reserve";
-        log.info("Reserving stock at: {}", url);
+    public void commitOrder(Long orderId) {
+        String url = servicesConfig.getOrder().getUrl() + "/api/orders/" + orderId + "/commit";
+        log.info("2PC: Committing order at: {}", url);
 
         try {
-            restTemplate.postForObject(url, buildStockReservationRequest(request), Void.class);
-            log.info("Stock reserved successfully");
+            restTemplate.postForObject(url, null, Void.class);
+            log.info("2PC: Order committed - ID: {}", orderId);
         } catch (Exception e) {
-            log.error("Stock reservation failed: {}", e.getMessage(), e);
-            throw new RuntimeException("Stock reservation failed: " + e.getMessage(), e);
+            log.error("2PC: Failed to commit order {}: {}", orderId, e.getMessage(), e);
+            throw new RuntimeException("Failed to commit order: " + e.getMessage(), e);
         }
     }
 
-    public void releaseStock(CreateOrderRequest request) {
-        String url = servicesConfig.getProduct().getUrl() + "/api/products/stock/release";
-        log.info("Releasing stock at: {}", url);
+    public void abortOrder(Long orderId) {
+        String url = servicesConfig.getOrder().getUrl() + "/api/orders/" + orderId + "/abort";
+        log.info("2PC: Aborting order at: {}", url);
 
         try {
-            restTemplate.postForObject(url, buildStockReservationRequest(request), Void.class);
-            log.info("Stock released successfully");
+            restTemplate.postForObject(url, null, Void.class);
+            log.info("2PC: Order aborted - ID: {}", orderId);
         } catch (Exception e) {
-            log.error("Stock release failed: {}", e.getMessage(), e);
+            log.error("2PC: Failed to abort order {}: {}", orderId, e.getMessage(), e);
         }
     }
 
-    public void validatePayment(CreatePaymentRequest request) {
-        String url = servicesConfig.getPayment().getUrl() + "/api/payments/validate";
-        log.info("Validating payment at: {}", url);
+    public PaymentResponse preparePayment(CreatePaymentRequest request) {
+        String url = servicesConfig.getPayment().getUrl() + "/api/payments/prepare";
+        log.info("2PC: Preparing payment at: {}", url);
 
         try {
-            restTemplate.postForObject(url, request, Void.class);
-            log.info("Payment validation passed");
+            PaymentResponse response = restTemplate.postForObject(url, request, PaymentResponse.class);
+            log.info("2PC: Payment prepared with ID: {}", response != null ? response.getId() : "null");
+            return response;
         } catch (Exception e) {
-            log.error("Payment validation failed: {}", e.getMessage(), e);
-            throw new RuntimeException("Payment validation failed: " + e.getMessage(), e);
+            log.error("2PC: Failed to prepare payment: {}", e.getMessage(), e);
+            throw new RuntimeException("Failed to prepare payment: " + e.getMessage(), e);
         }
     }
 
-    public void preAuthorizePayment(Long paymentId) {
-        String url = servicesConfig.getPayment().getUrl() + "/api/payments/" + paymentId + "/pre-authorize";
-        log.info("Pre-authorizing payment at: {}", url);
+    public void commitPayment(Long paymentId) {
+        String url = servicesConfig.getPayment().getUrl() + "/api/payments/" + paymentId + "/commit";
+        log.info("2PC: Committing payment at: {}", url);
 
         try {
-            restTemplate.postForObject(url, null, PaymentResponse.class);
-            log.info("Payment pre-authorized successfully");
+            restTemplate.postForObject(url, null, Void.class);
+            log.info("2PC: Payment committed - ID: {}", paymentId);
         } catch (Exception e) {
-            log.error("Payment pre-authorization failed: {}", e.getMessage(), e);
-            throw new RuntimeException("Payment pre-authorization failed: " + e.getMessage(), e);
+            log.error("2PC: Failed to commit payment {}: {}", paymentId, e.getMessage(), e);
+            throw new RuntimeException("Failed to commit payment: " + e.getMessage(), e);
         }
     }
 
-    public void validateShipment(CreateShipmentRequest request) {
-        String url = servicesConfig.getShipping().getUrl() + "/api/shipments/validate";
-        log.info("Validating shipment at: {}", url);
+    public void abortPayment(Long paymentId) {
+        String url = servicesConfig.getPayment().getUrl() + "/api/payments/" + paymentId + "/abort";
+        log.info("2PC: Aborting payment at: {}", url);
 
         try {
-            restTemplate.postForObject(url, request, Void.class);
-            log.info("Shipment validation passed");
+            restTemplate.postForObject(url, null, Void.class);
+            log.info("2PC: Payment aborted - ID: {}", paymentId);
         } catch (Exception e) {
-            log.error("Shipment validation failed: {}", e.getMessage(), e);
-            throw new RuntimeException("Shipment validation failed: " + e.getMessage(), e);
+            log.error("2PC: Failed to abort payment {}: {}", paymentId, e.getMessage(), e);
         }
     }
 
-    private Object buildStockReservationRequest(CreateOrderRequest request) {
-        return new Object() {
-            public final java.util.List<Object> items = request.getOrderItems().stream()
-                    .map(item -> new Object() {
-                        public final Long productId = item.getProductId();
-                        public final Integer quantity = item.getQuantity();
-                    })
-                    .collect(java.util.stream.Collectors.toList());
-        };
-    }
+    public ShipmentResponse prepareShipment(CreateShipmentRequest request) {
+        String url = servicesConfig.getShipping().getUrl() + "/api/shipments/prepare";
+        log.info("2PC: Preparing shipment at: {}", url);
 
-    private static class OrderStatusUpdateRequest {
-        public final String status;
-        public OrderStatusUpdateRequest(String status) {
-            this.status = status;
+        try {
+            ShipmentResponse response = restTemplate.postForObject(url, request, ShipmentResponse.class);
+            log.info("2PC: Shipment prepared with ID: {}", response != null ? response.getId() : "null");
+            return response;
+        } catch (Exception e) {
+            log.error("2PC: Failed to prepare shipment: {}", e.getMessage(), e);
+            throw new RuntimeException("Failed to prepare shipment: " + e.getMessage(), e);
         }
     }
 
-    private static class PaymentStatusUpdateRequest {
-        public final String status;
-        public PaymentStatusUpdateRequest(String status) {
-            this.status = status;
+    public void commitShipment(Long shipmentId) {
+        String url = servicesConfig.getShipping().getUrl() + "/api/shipments/" + shipmentId + "/commit";
+        log.info("2PC: Committing shipment at: {}", url);
+
+        try {
+            restTemplate.postForObject(url, null, Void.class);
+            log.info("2PC: Shipment committed - ID: {}", shipmentId);
+        } catch (Exception e) {
+            log.error("2PC: Failed to commit shipment {}: {}", shipmentId, e.getMessage(), e);
+            throw new RuntimeException("Failed to commit shipment: " + e.getMessage(), e);
         }
     }
 
-    private static class ShipmentStatusUpdateRequest {
-        public final String status;
-        public ShipmentStatusUpdateRequest(String status) {
-            this.status = status;
+    public void abortShipment(Long shipmentId) {
+        String url = servicesConfig.getShipping().getUrl() + "/api/shipments/" + shipmentId + "/abort";
+        log.info("2PC: Aborting shipment at: {}", url);
+
+        try {
+            restTemplate.postForObject(url, null, Void.class);
+            log.info("2PC: Shipment aborted - ID: {}", shipmentId);
+        } catch (Exception e) {
+            log.error("2PC: Failed to abort shipment {}: {}", shipmentId, e.getMessage(), e);
         }
     }
 }

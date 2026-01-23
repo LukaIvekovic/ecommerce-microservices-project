@@ -69,5 +69,24 @@ public class OrderController {
         orderService.cancelOrder(id);
         return ResponseEntity.noContent().build();
     }
+
+    // 2PC endpoints
+    @PostMapping("/prepare")
+    public ResponseEntity<OrderDto> prepareOrder(@RequestBody @Valid OrderRequestDto request) {
+        OrderDto order = orderService.prepareOrder(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(order);
+    }
+
+    @PostMapping("/{id}/commit")
+    public ResponseEntity<Void> commitOrder(@PathVariable Long id) {
+        orderService.commitOrder(id);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/{id}/abort")
+    public ResponseEntity<Void> abortOrder(@PathVariable Long id) {
+        orderService.abortPreparedOrder(id);
+        return ResponseEntity.ok().build();
+    }
 }
 

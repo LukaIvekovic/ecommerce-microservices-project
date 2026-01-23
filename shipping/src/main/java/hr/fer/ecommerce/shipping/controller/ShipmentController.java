@@ -93,5 +93,24 @@ public class ShipmentController {
         shipmentService.sagaCancel(id);
         return ResponseEntity.ok().build();
     }
+
+    // 2PC endpoints
+    @PostMapping("/prepare")
+    public ResponseEntity<ShipmentDto> prepareShipment(@RequestBody @Valid ShipmentRequestDto request) {
+        ShipmentDto shipment = shipmentService.prepareShipment(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(shipment);
+    }
+
+    @PostMapping("/{id}/commit")
+    public ResponseEntity<Void> commitShipment(@PathVariable Long id) {
+        shipmentService.commitShipment(id);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/{id}/abort")
+    public ResponseEntity<Void> abortShipment(@PathVariable Long id) {
+        shipmentService.abortPreparedShipment(id);
+        return ResponseEntity.ok().build();
+    }
 }
 

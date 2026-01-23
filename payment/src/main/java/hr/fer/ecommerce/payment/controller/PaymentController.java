@@ -89,5 +89,24 @@ public class PaymentController {
     public ResponseEntity<PaymentDto> refund(@PathVariable Long id) {
         return ResponseEntity.ok(paymentService.sagaRefund(id));
     }
+
+    // 2PC endpoints
+    @PostMapping("/prepare")
+    public ResponseEntity<PaymentDto> preparePayment(@RequestBody @Valid PaymentRequestDto request) {
+        PaymentDto payment = paymentService.preparePayment(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(payment);
+    }
+
+    @PostMapping("/{id}/commit")
+    public ResponseEntity<Void> commitPayment(@PathVariable Long id) {
+        paymentService.commitPayment(id);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/{id}/abort")
+    public ResponseEntity<Void> abortPayment(@PathVariable Long id) {
+        paymentService.abortPreparedPayment(id);
+        return ResponseEntity.ok().build();
+    }
 }
 

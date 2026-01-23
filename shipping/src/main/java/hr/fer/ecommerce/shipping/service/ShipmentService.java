@@ -176,6 +176,7 @@ public class ShipmentService {
     private String generateTrackingNumber() {
         return "TRK-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
     }
+
     @Transactional
     public void sagaCancel(Long id) {
         if (!shipmentRepository.existsById(id)) {
@@ -186,5 +187,80 @@ public class ShipmentService {
         log.warn("Saga compensation: cancelled shipment {}", id);
     }
 
+    @Transactional
+    public ShipmentDto prepareShipment(ShipmentRequestDto request) {
+        log.info("2PC PREPARE: Reserving shipment for order: {}", request.getOrderId());
+
+        validateShipmentReadiness(request);
+
+        OrderDto order = orderClient.getOrder(request.getOrderId());
+
+        if (!carrierService.validateCarrierAvailability(request.getCarrier())) {
+            throw new CarrierUnavailableException(request.getCarrier());
+        }
+
+        if (!carrierService.validateShippingAddress(request.getCarrier(), order.getShippingAddress())) {
+            throw new IllegalArgumentException("Invalid shipping address for carrier: " + request.getCarrier());
+        }
+
+        if (!carrierService.checkCarrierCapacity(request.getCarrier())) {
+            throw new CarrierUnavailableException(request.getCarrier(), "Carrier at full capacity");
+        }
+
+        Shipment shipment = Shipment.builder()
+                .orderId(request.getOrderId())
+                .customerName(order.getCustomerName())
+                .customerEmail(order.getCustomerEmail())
+                .shippingAddress(order.getShippingAddress())
+                .carrier(request.getCarrier())
+                .status(ShipmentStatus.RESERVED)
+                .estimatedDeliveryDate(request.getEstimatedDeliveryDate() != null
+                    ? request.getEstimatedDeliveryDate()
+                    : LocalDateTime.now().plusDays(7))
+                .build();
+
+        Shipment savedShipment = shipmentRepository.save(shipment);
+        log.info("2PC PREPARE: Shipment reserved with ID: {} (status: RESERVED)", savedShipment.getId());
+        return ShipmentMapper.toDTO(savedShipment);
+    }
+
+    @Transactional
+    public void commitShipment(Long id) {
+        log.info("2PC COMMIT: Confirming shipment ID: {}", id);
+        Shipment shipment = shipmentRepository.findById(id)
+                .orElseThrow(() -> new ShipmentNotFoundException(id));
+
+        if (shipment.getStatus() != ShipmentStatus.RESERVED) {
+            throw new IllegalStateException(
+                "Cannot commit shipment in status: " + shipment.getStatus() + ". Expected RESERVED."
+            );
+        }
+
+        shipment.setTrackingNumber(generateTrackingNumber());
+        shipment.setStatus(ShipmentStatus.PREPARING);
+
+        shipmentRepository.save(shipment);
+        log.info("2PC COMMIT: Shipment confirmed - ID: {}, tracking: {}, new status: PREPARING",
+                 id, shipment.getTrackingNumber());
+    }
+
+    @Transactional
+    public void abortPreparedShipment(Long id) {
+        log.info("2PC ABORT: Releasing reserved shipment ID: {}", id);
+        Shipment shipment = shipmentRepository.findById(id)
+                .orElseThrow(() -> new ShipmentNotFoundException(id));
+
+        if (shipment.getStatus() != ShipmentStatus.RESERVED) {
+            log.warn("Shipment {} is not in RESERVED state, current status: {}", id, shipment.getStatus());
+            return;
+        }
+
+        shipment.setStatus(ShipmentStatus.FAILED);
+
+        shipmentRepository.save(shipment);
+        log.info("2PC ABORT: Shipment reservation released - ID: {}", id);
+    }
+
 }
+
 
