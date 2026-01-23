@@ -1,18 +1,16 @@
 package hr.fer.ecommerce.gateway.client;
 
-import hr.fer.ecommerce.gateway.config.ServicesConfig;
 import hr.fer.ecommerce.gateway.client.order.CreateOrderRequest;
 import hr.fer.ecommerce.gateway.client.order.OrderResponse;
 import hr.fer.ecommerce.gateway.client.payment.CreatePaymentRequest;
 import hr.fer.ecommerce.gateway.client.payment.PaymentResponse;
 import hr.fer.ecommerce.gateway.client.shipment.CreateShipmentRequest;
 import hr.fer.ecommerce.gateway.client.shipment.ShipmentResponse;
+import hr.fer.ecommerce.gateway.config.ServicesConfig;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

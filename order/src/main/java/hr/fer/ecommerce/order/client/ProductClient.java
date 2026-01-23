@@ -21,5 +21,17 @@ public class ProductClient {
         log.info("Fetching product from: {}", url);
         return restTemplate.getForObject(url, ProductDto.class);
     }
+
+    public void reserveStock(StockReservationRequest request) {
+        String url = productServiceUrl + "/api/products/stock/reserve";
+        log.info("Reserving stock at: {}", url);
+        restTemplate.postForObject(url, request, Void.class);
+    }
+
+    public void releaseStock(StockReservationRequest request) {
+        String url = productServiceUrl + "/api/products/stock/release";
+        log.info("Releasing stock at: {}", url);
+        restTemplate.postForObject(url, request, Void.class);
+    }
 }
 

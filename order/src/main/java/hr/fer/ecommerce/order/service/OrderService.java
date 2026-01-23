@@ -2,6 +2,8 @@ package hr.fer.ecommerce.order.service;
 
 import hr.fer.ecommerce.order.client.ProductClient;
 import hr.fer.ecommerce.order.client.ProductDto;
+import hr.fer.ecommerce.order.client.StockReservationRequest;
+import hr.fer.ecommerce.order.client.StockValidationRequest;
 import hr.fer.ecommerce.order.dto.OrderDto;
 import hr.fer.ecommerce.order.dto.OrderItemRequestDto;
 import hr.fer.ecommerce.order.dto.OrderRequestDto;
@@ -22,6 +24,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -59,38 +62,63 @@ public class OrderService {
 
     @Transactional
     public OrderDto createOrder(OrderRequestDto request) {
-        Order order = Order.builder()
-                .customerName(request.getCustomerName())
-                .customerEmail(request.getCustomerEmail())
-                .shippingAddress(request.getShippingAddress())
-                .orderItems(new ArrayList<>())
-                .build();
+        log.info("Starting order creation for customer: {}", request.getCustomerEmail());
 
-        BigDecimal totalAmount = BigDecimal.ZERO;
+        StockReservationRequest stockRequest = buildStockReservationRequest(request);
+        productClient.reserveStock(stockRequest);
 
-        for (OrderItemRequestDto itemRequest : request.getOrderItems()) {
-            ProductDto product = productClient.getProduct(itemRequest.getProductId());
-
-            BigDecimal subtotal = product.getPrice()
-                    .multiply(BigDecimal.valueOf(itemRequest.getQuantity()));
-
-            OrderItem orderItem = OrderItem.builder()
-                    .productId(product.getId())
-                    .productName(product.getName())
-                    .quantity(itemRequest.getQuantity())
-                    .unitPrice(product.getPrice())
-                    .subtotal(subtotal)
+        try {
+            Order order = Order.builder()
+                    .customerName(request.getCustomerName())
+                    .customerEmail(request.getCustomerEmail())
+                    .shippingAddress(request.getShippingAddress())
+                    .orderItems(new ArrayList<>())
                     .build();
 
-            order.addOrderItem(orderItem);
-            totalAmount = totalAmount.add(subtotal);
+            BigDecimal totalAmount = BigDecimal.ZERO;
+
+            for (OrderItemRequestDto itemRequest : request.getOrderItems()) {
+                ProductDto product = productClient.getProduct(itemRequest.getProductId());
+
+                BigDecimal subtotal = product.getPrice()
+                        .multiply(BigDecimal.valueOf(itemRequest.getQuantity()));
+
+                OrderItem orderItem = OrderItem.builder()
+                        .productId(product.getId())
+                        .productName(product.getName())
+                        .quantity(itemRequest.getQuantity())
+                        .unitPrice(product.getPrice())
+                        .subtotal(subtotal)
+                        .build();
+
+                order.addOrderItem(orderItem);
+                totalAmount = totalAmount.add(subtotal);
+            }
+
+            order.setTotalAmount(totalAmount);
+            Order savedOrder = orderRepository.save(order);
+
+            log.info("Created order: {}", savedOrder.getId());
+            return OrderMapper.toDTO(savedOrder);
+
+        } catch (Exception e) {
+            log.error("Order creation failed, releasing reserved stock: {}", e.getMessage(), e);
+            productClient.releaseStock(stockRequest);
+            throw e;
         }
+    }
 
-        order.setTotalAmount(totalAmount);
-        Order savedOrder = orderRepository.save(order);
+    private StockReservationRequest buildStockReservationRequest(OrderRequestDto request) {
+        List<StockValidationRequest> items = request.getOrderItems().stream()
+                .map(item -> StockValidationRequest.builder()
+                        .productId(item.getProductId())
+                        .quantity(item.getQuantity())
+                        .build())
+                .collect(Collectors.toList());
 
-        log.info("Created order: {}", savedOrder.getId());
-        return OrderMapper.toDTO(savedOrder);
+        return StockReservationRequest.builder()
+                .items(items)
+                .build();
     }
 
     @Transactional
@@ -116,11 +144,33 @@ public class OrderService {
 
     @Transactional
     public void cancelOrder(Long id) {
-        if (!orderRepository.existsById(id)) {
-            throw new OrderNotFoundException(id);
+        Order order = orderRepository.findById(id)
+                .orElseThrow(() -> new OrderNotFoundException(id));
+
+        try {
+            log.info("Releasing stock for cancelled order: {}", id);
+            StockReservationRequest stockRequest = buildStockReservationRequestFromOrder(order);
+            productClient.releaseStock(stockRequest);
+            log.info("Stock released successfully for order: {}", id);
+        } catch (Exception e) {
+            log.error("Failed to release stock for order {}: {}", id, e.getMessage(), e);
         }
+
         orderRepository.deleteById(id);
         log.info("Saga compensation: cancelled order {}", id);
+    }
+
+    private StockReservationRequest buildStockReservationRequestFromOrder(Order order) {
+        List<StockValidationRequest> items = order.getOrderItems().stream()
+                .map(orderItem -> StockValidationRequest.builder()
+                        .productId(orderItem.getProductId())
+                        .quantity(orderItem.getQuantity())
+                        .build())
+                .collect(Collectors.toList());
+
+        return StockReservationRequest.builder()
+                .items(items)
+                .build();
     }
 }
 
