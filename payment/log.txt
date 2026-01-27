@@ -1,0 +1,80 @@
+2026-01-27T16:44:55.741+01:00  INFO 8892 --- [payment] [restartedMain] h.f.e.payment.PaymentsApplication        : Starting PaymentsApplication using Java 21.0.8 with PID 8892 (C:\DiplProj\ecommerce-microservices-project\payment\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\payment)
+2026-01-27T16:44:55.757+01:00  INFO 8892 --- [payment] [restartedMain] h.f.e.payment.PaymentsApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-01-27T16:44:55.873+01:00  INFO 8892 --- [payment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-27T16:44:55.886+01:00  INFO 8892 --- [payment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-27T16:44:57.021+01:00  INFO 8892 --- [payment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-27T16:44:57.150+01:00  INFO 8892 --- [payment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interface.
+2026-01-27T16:44:58.083+01:00  INFO 8892 --- [payment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-01-27T16:44:58.107+01:00  INFO 8892 --- [payment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-27T16:44:58.107+01:00  INFO 8892 --- [payment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-01-27T16:44:58.154+01:00  INFO 8892 --- [payment] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-27T16:44:58.154+01:00  INFO 8892 --- [payment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2262 ms
+2026-01-27T16:44:58.505+01:00  INFO 8892 --- [payment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-27T16:44:59.003+01:00  INFO 8892 --- [payment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=SA
+2026-01-27T16:44:59.003+01:00  INFO 8892 --- [payment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-27T16:44:59.079+01:00  INFO 8892 --- [payment] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:paymentdb (H2 2.3)
+2026-01-27T16:44:59.177+01:00  INFO 8892 --- [payment] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-01-27T16:44:59.186+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.078s)
+2026-01-27T16:44:59.206+01:00  INFO 8892 --- [payment] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-01-27T16:44:59.212+01:00  INFO 8892 --- [payment] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-01-27T16:44:59.279+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-01-27T16:44:59.310+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create payments table"
+2026-01-27T16:44:59.345+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed payments"
+2026-01-27T16:44:59.380+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.037s)
+2026-01-27T16:44:59.531+01:00  INFO 8892 --- [payment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-27T16:44:59.661+01:00  INFO 8892 --- [payment] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-01-27T16:44:59.739+01:00  INFO 8892 --- [payment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-27T16:45:00.339+01:00  INFO 8892 --- [payment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-27T16:45:00.701+01:00  INFO 8892 --- [payment] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-27T16:45:02.326+01:00  INFO 8892 --- [payment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-27T16:45:02.368+01:00  INFO 8892 --- [payment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:45:03.454+01:00  WARN 8892 --- [payment] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-27T16:45:04.210+01:00  INFO 8892 --- [payment] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-01-27T16:45:04.341+01:00  WARN 8892 --- [payment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-27T16:45:04.459+01:00  INFO 8892 --- [payment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
+2026-01-27T16:45:04.459+01:00  INFO 8892 --- [payment] [restartedMain] h.f.e.payment.PaymentsApplication        : Started PaymentsApplication in 9.914 seconds (process running for 10.511)
+2026-01-27T16:45:24.701+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-27T16:45:24.717+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-27T16:45:24.717+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-01-27T16:45:24.894+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/6
+2026-01-27T16:45:24.964+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-27T16:45:24.964+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-27T16:45:24.965+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-27T16:45:24.965+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-27T16:45:24.994+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Created payment: 6 for order: 6
+2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 7
+2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 7
+2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 7
+2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/7
+2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 7 (status: PRE_AUTHORIZED)
+2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 18 ms for order 7
+2026-01-27T16:45:28.858+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 7
+2026-01-27T16:45:28.875+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 7, new status: COMPLETED
+2026-01-27T16:45:28.875+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 17 ms for payment 7
+2026-01-27T16:45:30.467+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/8
+2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Created payment: 8 for order: 8
+2026-01-27T16:53:05.070+01:00  INFO 8892 --- [payment] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-27T16:53:05.086+01:00  INFO 8892 --- [payment] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-27T16:53:05.105+01:00  INFO 8892 --- [payment] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:53:05.151+01:00  WARN 8892 --- [payment] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-01-27T16:53:05.151+01:00  INFO 8892 --- [payment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-27T16:53:05.191+01:00  INFO 8892 --- [payment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

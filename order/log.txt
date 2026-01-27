@@ -1,0 +1,327 @@
+2026-01-27T16:04:18.905+01:00  INFO 11756 --- [order] [restartedMain] h.fer.ecommerce.order.OrdersApplication  : Starting OrdersApplication using Java 21.0.8 with PID 11756 (C:\DiplProj\ecommerce-microservices-project\order\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\order)
+2026-01-27T16:04:18.913+01:00  INFO 11756 --- [order] [restartedMain] h.fer.ecommerce.order.OrdersApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-01-27T16:04:18.945+01:00  INFO 11756 --- [order] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-27T16:04:18.945+01:00  INFO 11756 --- [order] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-27T16:04:19.402+01:00  INFO 11756 --- [order] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-27T16:04:19.498+01:00  INFO 11756 --- [order] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
+2026-01-27T16:04:19.862+01:00  INFO 11756 --- [order] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-01-27T16:04:19.878+01:00  INFO 11756 --- [order] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-27T16:04:19.878+01:00  INFO 11756 --- [order] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-01-27T16:04:19.915+01:00  INFO 11756 --- [order] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-27T16:04:19.915+01:00  INFO 11756 --- [order] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 970 ms
+2026-01-27T16:04:20.061+01:00  INFO 11756 --- [order] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-27T16:04:20.185+01:00  INFO 11756 --- [order] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:orderdb user=SA
+2026-01-27T16:04:20.185+01:00  INFO 11756 --- [order] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-27T16:04:20.216+01:00  INFO 11756 --- [order] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:orderdb (H2 2.3)
+2026-01-27T16:04:20.252+01:00  INFO 11756 --- [order] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-01-27T16:04:20.255+01:00  INFO 11756 --- [order] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.011s)
+2026-01-27T16:04:20.260+01:00  INFO 11756 --- [order] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-01-27T16:04:20.262+01:00  INFO 11756 --- [order] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-01-27T16:04:20.280+01:00  INFO 11756 --- [order] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-01-27T16:04:20.296+01:00  INFO 11756 --- [order] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create orders tables"
+2026-01-27T16:04:20.315+01:00  INFO 11756 --- [order] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed orders"
+2026-01-27T16:04:20.315+01:00  INFO 11756 --- [order] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.016s)
+2026-01-27T16:04:20.374+01:00  INFO 11756 --- [order] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-27T16:04:20.416+01:00  INFO 11756 --- [order] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-01-27T16:04:20.431+01:00  INFO 11756 --- [order] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-27T16:04:20.592+01:00  INFO 11756 --- [order] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-27T16:04:20.632+01:00  INFO 11756 --- [order] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-27T16:04:21.216+01:00  INFO 11756 --- [order] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-27T16:04:21.238+01:00  INFO 11756 --- [order] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:04:21.495+01:00  WARN 11756 --- [order] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-27T16:04:21.648+01:00  INFO 11756 --- [order] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:orderdb'
+2026-01-27T16:04:21.695+01:00  INFO 11756 --- [order] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-01-27T16:04:21.748+01:00  INFO 11756 --- [order] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-01-27T16:04:21.748+01:00  INFO 11756 --- [order] [restartedMain] h.fer.ecommerce.order.OrdersApplication  : Started OrdersApplication in 3.171 seconds (process running for 3.455)
+2026-01-27T16:04:25.527+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-27T16:04:25.528+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-27T16:04:25.528+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-01-27T16:04:25.736+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:04:25.736+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:04:25.743+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:04:25.775+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:04:25.791+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:04:25.855+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : Created order: 6
+2026-01-27T16:04:25.855+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 115 ms
+2026-01-27T16:04:26.233+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : SAGA | START cancelOrder for order ID: 6
+2026-01-27T16:04:26.236+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : Releasing stock for cancelled order: 6
+2026-01-27T16:04:26.239+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Releasing stock at: http://localhost:8081/api/products/stock/release
+2026-01-27T16:04:26.263+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : Stock released successfully for order: 6
+2026-01-27T16:04:26.279+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : Saga compensation: cancelled order 6
+2026-01-27T16:04:26.279+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : SAGA | DURATION cancelOrder = 48 ms
+2026-01-27T16:05:12.565+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:05:12.566+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:05:12.568+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:05:12.673+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:05:12.684+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:05:12.696+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : Created order: 7
+2026-01-27T16:05:12.696+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 134 ms
+2026-01-27T16:05:12.729+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : SAGA | START cancelOrder for order ID: 7
+2026-01-27T16:05:12.738+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : Releasing stock for cancelled order: 7
+2026-01-27T16:05:12.738+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.client.ProductClient         : Releasing stock at: http://localhost:8081/api/products/stock/release
+2026-01-27T16:05:12.755+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : Stock released successfully for order: 7
+2026-01-27T16:05:12.755+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : Saga compensation: cancelled order 7
+2026-01-27T16:05:12.755+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : SAGA | DURATION cancelOrder = 24 ms
+2026-01-27T16:05:13.982+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.service.OrderService         : 2PC PREPARE: Starting order preparation for customer: john.doe@example.com
+2026-01-27T16:05:13.987+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.service.OrderService         : 2PC | START prepareOrder for customer: john.doe@example.com
+2026-01-27T16:05:13.991+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:05:14.038+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.service.OrderService         : Stock reserved for all order items
+2026-01-27T16:05:14.038+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:05:14.073+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:05:14.109+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.service.OrderService         : Prepared order: 8
+2026-01-27T16:05:14.112+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.service.OrderService         : 2PC | DURATION prepareOrder = 124 ms
+2026-01-27T16:05:14.213+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC COMMIT: Committing order ID: 8
+2026-01-27T16:05:14.213+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC | START commitOrder for order ID: 8
+2026-01-27T16:05:14.213+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC COMMIT: Order committed - ID: 8, new status: CONFIRMED
+2026-01-27T16:05:14.219+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC | DURATION commitOrder = 4 ms
+2026-01-27T16:05:15.742+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:05:15.742+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:05:15.742+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:05:15.766+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:05:15.766+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:05:15.783+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : Created order: 9
+2026-01-27T16:05:15.783+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 42 ms
+2026-01-27T16:05:15.822+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : SAGA | START cancelOrder for order ID: 9
+2026-01-27T16:05:15.826+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : Releasing stock for cancelled order: 9
+2026-01-27T16:05:15.826+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.client.ProductClient         : Releasing stock at: http://localhost:8081/api/products/stock/release
+2026-01-27T16:05:15.850+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : Stock released successfully for order: 9
+2026-01-27T16:05:15.850+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : Saga compensation: cancelled order 9
+2026-01-27T16:05:15.850+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : SAGA | DURATION cancelOrder = 33 ms
+2026-01-27T16:05:17.376+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC PREPARE: Starting order preparation for customer: john.doe@example.com
+2026-01-27T16:05:17.376+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC | START prepareOrder for customer: john.doe@example.com
+2026-01-27T16:05:17.376+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:05:17.447+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : Stock reserved for all order items
+2026-01-27T16:05:17.447+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:05:17.447+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:05:17.462+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : Prepared order: 10
+2026-01-27T16:05:17.462+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC | DURATION prepareOrder = 93 ms
+2026-01-27T16:05:17.528+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : 2PC ABORT: Aborting prepared order ID: 10
+2026-01-27T16:05:17.529+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : 2PC | START abortPreparedOrder for order ID: 10
+2026-01-27T16:05:17.532+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.client.ProductClient         : Releasing stock at: http://localhost:8081/api/products/stock/release
+2026-01-27T16:05:17.560+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : Stock released for order ID: 10
+2026-01-27T16:05:17.560+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : 2PC ABORT: Order aborted - ID: 10
+2026-01-27T16:05:17.560+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : 2PC | DURATION abortPreparedOrder = 39 ms
+2026-01-27T16:05:19.860+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:05:19.860+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:05:19.860+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:05:19.912+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:05:19.939+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:05:19.970+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.service.OrderService         : Created order: 11
+2026-01-27T16:05:19.970+01:00  INFO 11756 --- [order] [http-nio-8082-exec-2] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 106 ms
+2026-01-27T16:05:20.054+01:00  INFO 11756 --- [order] [http-nio-8082-exec-7] h.f.e.order.service.OrderService         : SAGA | START cancelOrder for order ID: 11
+2026-01-27T16:05:20.054+01:00  INFO 11756 --- [order] [http-nio-8082-exec-7] h.f.e.order.service.OrderService         : Releasing stock for cancelled order: 11
+2026-01-27T16:05:20.061+01:00  INFO 11756 --- [order] [http-nio-8082-exec-7] h.f.e.order.client.ProductClient         : Releasing stock at: http://localhost:8081/api/products/stock/release
+2026-01-27T16:05:20.086+01:00  INFO 11756 --- [order] [http-nio-8082-exec-7] h.f.e.order.service.OrderService         : Stock released successfully for order: 11
+2026-01-27T16:05:20.086+01:00  INFO 11756 --- [order] [http-nio-8082-exec-7] h.f.e.order.service.OrderService         : Saga compensation: cancelled order 11
+2026-01-27T16:05:20.086+01:00  INFO 11756 --- [order] [http-nio-8082-exec-7] h.f.e.order.service.OrderService         : SAGA | DURATION cancelOrder = 32 ms
+2026-01-27T16:05:52.798+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:05:52.798+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:05:52.798+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:05:52.823+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:05:52.828+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:05:52.843+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : Created order: 12
+2026-01-27T16:05:52.843+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 42 ms
+2026-01-27T16:05:52.873+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : SAGA | START cancelOrder for order ID: 12
+2026-01-27T16:05:52.873+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : Releasing stock for cancelled order: 12
+2026-01-27T16:05:52.873+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.client.ProductClient         : Releasing stock at: http://localhost:8081/api/products/stock/release
+2026-01-27T16:05:52.890+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : Stock released successfully for order: 12
+2026-01-27T16:05:52.890+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : Saga compensation: cancelled order 12
+2026-01-27T16:05:52.890+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : SAGA | DURATION cancelOrder = 20 ms
+2026-01-27T16:05:53.927+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC PREPARE: Starting order preparation for customer: john.doe@example.com
+2026-01-27T16:05:53.927+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC | START prepareOrder for customer: john.doe@example.com
+2026-01-27T16:05:53.928+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:05:53.948+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : Stock reserved for all order items
+2026-01-27T16:05:53.948+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:05:53.957+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:05:53.973+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : Prepared order: 13
+2026-01-27T16:05:53.973+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC | DURATION prepareOrder = 49 ms
+2026-01-27T16:05:54.048+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : 2PC ABORT: Aborting prepared order ID: 13
+2026-01-27T16:05:54.048+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : 2PC | START abortPreparedOrder for order ID: 13
+2026-01-27T16:05:54.048+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.client.ProductClient         : Releasing stock at: http://localhost:8081/api/products/stock/release
+2026-01-27T16:05:54.065+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : Stock released for order ID: 13
+2026-01-27T16:05:54.068+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : 2PC ABORT: Order aborted - ID: 13
+2026-01-27T16:05:54.068+01:00  INFO 11756 --- [order] [http-nio-8082-exec-3] h.f.e.order.service.OrderService         : 2PC | DURATION abortPreparedOrder = 19 ms
+2026-01-27T16:06:05.358+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:06:05.358+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:06:05.358+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:06:05.375+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:06:05.388+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:06:05.392+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : Created order: 14
+2026-01-27T16:06:05.399+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 36 ms
+2026-01-27T16:06:05.434+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : SAGA | START cancelOrder for order ID: 14
+2026-01-27T16:06:05.434+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : Releasing stock for cancelled order: 14
+2026-01-27T16:06:05.434+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Releasing stock at: http://localhost:8081/api/products/stock/release
+2026-01-27T16:06:05.453+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : Stock released successfully for order: 14
+2026-01-27T16:06:05.454+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : Saga compensation: cancelled order 14
+2026-01-27T16:06:05.454+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : SAGA | DURATION cancelOrder = 19 ms
+2026-01-27T16:06:06.534+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : 2PC PREPARE: Starting order preparation for customer: john.doe@example.com
+2026-01-27T16:06:06.534+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : 2PC | START prepareOrder for customer: john.doe@example.com
+2026-01-27T16:06:06.534+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:06:06.551+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : Stock reserved for all order items
+2026-01-27T16:06:06.551+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:06:06.559+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:06:06.574+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : Prepared order: 15
+2026-01-27T16:06:06.575+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : 2PC | DURATION prepareOrder = 37 ms
+2026-01-27T16:06:06.660+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : 2PC COMMIT: Committing order ID: 15
+2026-01-27T16:06:06.661+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : 2PC | START commitOrder for order ID: 15
+2026-01-27T16:06:06.663+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : 2PC COMMIT: Order committed - ID: 15, new status: CONFIRMED
+2026-01-27T16:06:06.663+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : 2PC | DURATION commitOrder = 2 ms
+2026-01-27T16:06:09.066+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC PREPARE: Starting order preparation for customer: john.doe@example.com
+2026-01-27T16:06:09.066+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC | START prepareOrder for customer: john.doe@example.com
+2026-01-27T16:06:09.066+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:06:09.082+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : Stock reserved for all order items
+2026-01-27T16:06:09.082+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:06:09.097+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:06:09.108+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : Prepared order: 16
+2026-01-27T16:06:09.108+01:00  INFO 11756 --- [order] [http-nio-8082-exec-10] h.f.e.order.service.OrderService         : 2PC | DURATION prepareOrder = 41 ms
+2026-01-27T16:06:09.207+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC COMMIT: Committing order ID: 16
+2026-01-27T16:06:09.207+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC | START commitOrder for order ID: 16
+2026-01-27T16:06:09.207+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC COMMIT: Order committed - ID: 16, new status: CONFIRMED
+2026-01-27T16:06:09.207+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC | DURATION commitOrder = 2 ms
+2026-01-27T16:06:10.238+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:06:10.238+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:06:10.238+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:06:10.263+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:06:10.274+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:06:10.288+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : Created order: 17
+2026-01-27T16:06:10.288+01:00  INFO 11756 --- [order] [http-nio-8082-exec-6] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 50 ms
+2026-01-27T16:06:11.420+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:06:11.420+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:06:11.420+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:06:11.446+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:06:11.464+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:06:11.477+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : Created order: 18
+2026-01-27T16:06:11.479+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 53 ms
+2026-01-27T16:06:13.910+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:06:13.910+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:06:13.910+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:06:13.926+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:06:13.942+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:06:13.966+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : Created order: 19
+2026-01-27T16:06:13.969+01:00  INFO 11756 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 57 ms
+2026-01-27T16:06:15.052+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC PREPARE: Starting order preparation for customer: john.doe@example.com
+2026-01-27T16:06:15.052+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC | START prepareOrder for customer: john.doe@example.com
+2026-01-27T16:06:15.052+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:06:15.068+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : Stock reserved for all order items
+2026-01-27T16:06:15.068+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:06:15.076+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:06:15.084+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : Prepared order: 20
+2026-01-27T16:06:15.084+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC | DURATION prepareOrder = 33 ms
+2026-01-27T16:06:15.158+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC COMMIT: Committing order ID: 20
+2026-01-27T16:06:15.158+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC | START commitOrder for order ID: 20
+2026-01-27T16:06:15.158+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC COMMIT: Order committed - ID: 20, new status: CONFIRMED
+2026-01-27T16:06:15.158+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC | DURATION commitOrder = 1 ms
+2026-01-27T16:06:16.062+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : 2PC PREPARE: Starting order preparation for customer: john.doe@example.com
+2026-01-27T16:06:16.062+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : 2PC | START prepareOrder for customer: john.doe@example.com
+2026-01-27T16:06:16.062+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:06:16.078+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : Stock reserved for all order items
+2026-01-27T16:06:16.078+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:06:16.089+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:06:16.095+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : Prepared order: 21
+2026-01-27T16:06:16.095+01:00  INFO 11756 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : 2PC | DURATION prepareOrder = 35 ms
+2026-01-27T16:06:16.187+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC COMMIT: Committing order ID: 21
+2026-01-27T16:06:16.187+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC | START commitOrder for order ID: 21
+2026-01-27T16:06:16.187+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC COMMIT: Order committed - ID: 21, new status: CONFIRMED
+2026-01-27T16:06:16.187+01:00  INFO 11756 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC | DURATION commitOrder = 2 ms
+2026-01-27T16:06:17.111+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC PREPARE: Starting order preparation for customer: john.doe@example.com
+2026-01-27T16:06:17.111+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC | START prepareOrder for customer: john.doe@example.com
+2026-01-27T16:06:17.111+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:06:17.128+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : Stock reserved for all order items
+2026-01-27T16:06:17.128+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:06:17.128+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:06:17.144+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : Prepared order: 22
+2026-01-27T16:06:17.144+01:00  INFO 11756 --- [order] [http-nio-8082-exec-5] h.f.e.order.service.OrderService         : 2PC | DURATION prepareOrder = 29 ms
+2026-01-27T16:06:17.216+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC COMMIT: Committing order ID: 22
+2026-01-27T16:06:17.219+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC | START commitOrder for order ID: 22
+2026-01-27T16:06:17.220+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC COMMIT: Order committed - ID: 22, new status: CONFIRMED
+2026-01-27T16:06:17.220+01:00  INFO 11756 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC | DURATION commitOrder = 3 ms
+2026-01-27T16:44:34.065+01:00  INFO 11756 --- [order] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-27T16:44:34.097+01:00  INFO 11756 --- [order] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-27T16:44:34.160+01:00  INFO 11756 --- [order] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:44:34.170+01:00  WARN 11756 --- [order] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-01-27T16:44:34.170+01:00  INFO 11756 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-27T16:44:34.170+01:00  INFO 11756 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-27T16:44:43.875+01:00  INFO 12640 --- [order] [restartedMain] h.fer.ecommerce.order.OrdersApplication  : Starting OrdersApplication using Java 21.0.8 with PID 12640 (C:\DiplProj\ecommerce-microservices-project\order\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\order)
+2026-01-27T16:44:43.878+01:00  INFO 12640 --- [order] [restartedMain] h.fer.ecommerce.order.OrdersApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-01-27T16:44:43.946+01:00  INFO 12640 --- [order] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-27T16:44:43.947+01:00  INFO 12640 --- [order] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-27T16:44:44.988+01:00  INFO 12640 --- [order] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-27T16:44:45.185+01:00  INFO 12640 --- [order] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 193 ms. Found 1 JPA repository interface.
+2026-01-27T16:44:46.379+01:00  INFO 12640 --- [order] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-01-27T16:44:46.402+01:00  INFO 12640 --- [order] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-27T16:44:46.404+01:00  INFO 12640 --- [order] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-01-27T16:44:46.465+01:00  INFO 12640 --- [order] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-27T16:44:46.466+01:00  INFO 12640 --- [order] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2515 ms
+2026-01-27T16:44:46.961+01:00  INFO 12640 --- [order] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-27T16:44:47.334+01:00  INFO 12640 --- [order] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:orderdb user=SA
+2026-01-27T16:44:47.336+01:00  INFO 12640 --- [order] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-27T16:44:47.427+01:00  INFO 12640 --- [order] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:orderdb (H2 2.3)
+2026-01-27T16:44:47.501+01:00  INFO 12640 --- [order] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-01-27T16:44:47.507+01:00  INFO 12640 --- [order] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.049s)
+2026-01-27T16:44:47.546+01:00  INFO 12640 --- [order] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-01-27T16:44:47.548+01:00  INFO 12640 --- [order] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-01-27T16:44:47.649+01:00  INFO 12640 --- [order] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-01-27T16:44:47.664+01:00  INFO 12640 --- [order] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create orders tables"
+2026-01-27T16:44:47.715+01:00  INFO 12640 --- [order] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed orders"
+2026-01-27T16:44:47.732+01:00  INFO 12640 --- [order] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.031s)
+2026-01-27T16:44:47.846+01:00  INFO 12640 --- [order] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-27T16:44:47.946+01:00  INFO 12640 --- [order] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-01-27T16:44:48.002+01:00  INFO 12640 --- [order] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-27T16:44:48.323+01:00  INFO 12640 --- [order] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-27T16:44:48.405+01:00  INFO 12640 --- [order] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-27T16:44:49.755+01:00  INFO 12640 --- [order] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-27T16:44:49.786+01:00  INFO 12640 --- [order] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:44:50.505+01:00  WARN 12640 --- [order] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-27T16:44:51.049+01:00  INFO 12640 --- [order] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:orderdb'
+2026-01-27T16:44:51.704+01:00  WARN 12640 --- [order] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-27T16:44:51.888+01:00  INFO 12640 --- [order] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-01-27T16:44:51.920+01:00  INFO 12640 --- [order] [restartedMain] h.fer.ecommerce.order.OrdersApplication  : Started OrdersApplication in 8.795 seconds (process running for 9.24)
+2026-01-27T16:45:23.941+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-27T16:45:23.941+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-27T16:45:23.941+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-01-27T16:45:24.041+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:45:24.041+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:45:24.041+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:45:24.544+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:45:24.568+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:45:24.634+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : Created order: 6
+2026-01-27T16:45:24.635+01:00  INFO 12640 --- [order] [http-nio-8082-exec-1] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 589 ms
+2026-01-27T16:45:28.657+01:00  INFO 12640 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC PREPARE: Starting order preparation for customer: john.doe@example.com
+2026-01-27T16:45:28.657+01:00  INFO 12640 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC | START prepareOrder for customer: john.doe@example.com
+2026-01-27T16:45:28.657+01:00  INFO 12640 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:45:28.682+01:00  INFO 12640 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : Stock reserved for all order items
+2026-01-27T16:45:28.684+01:00  INFO 12640 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:45:28.689+01:00  INFO 12640 --- [order] [http-nio-8082-exec-4] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:45:28.703+01:00  INFO 12640 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : Prepared order: 7
+2026-01-27T16:45:28.703+01:00  INFO 12640 --- [order] [http-nio-8082-exec-4] h.f.e.order.service.OrderService         : 2PC | DURATION prepareOrder = 41 ms
+2026-01-27T16:45:28.819+01:00  INFO 12640 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC COMMIT: Committing order ID: 7
+2026-01-27T16:45:28.819+01:00  INFO 12640 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC | START commitOrder for order ID: 7
+2026-01-27T16:45:28.826+01:00  INFO 12640 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC COMMIT: Order committed - ID: 7, new status: CONFIRMED
+2026-01-27T16:45:28.827+01:00  INFO 12640 --- [order] [http-nio-8082-exec-8] h.f.e.order.service.OrderService         : 2PC | DURATION commitOrder = 7 ms
+2026-01-27T16:45:30.274+01:00  INFO 12640 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : Starting order creation for customer: john.doe@example.com
+2026-01-27T16:45:30.274+01:00  INFO 12640 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : SAGA | START createOrder for customer: john.doe@example.com
+2026-01-27T16:45:30.274+01:00  INFO 12640 --- [order] [http-nio-8082-exec-9] h.f.e.order.client.ProductClient         : Reserving stock at: http://localhost:8081/api/products/stock/reserve
+2026-01-27T16:45:30.341+01:00  INFO 12640 --- [order] [http-nio-8082-exec-9] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/1
+2026-01-27T16:45:30.361+01:00  INFO 12640 --- [order] [http-nio-8082-exec-9] h.f.e.order.client.ProductClient         : Fetching product from: http://localhost:8081/api/products/2
+2026-01-27T16:45:30.401+01:00  INFO 12640 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : Created order: 8
+2026-01-27T16:45:30.401+01:00  INFO 12640 --- [order] [http-nio-8082-exec-9] h.f.e.order.service.OrderService         : SAGA | DURATION createOrder = 131 ms
+2026-01-27T16:53:01.307+01:00  INFO 12640 --- [order] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-27T16:53:01.354+01:00  INFO 12640 --- [order] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-27T16:53:01.513+01:00  INFO 12640 --- [order] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:53:01.514+01:00  WARN 12640 --- [order] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-01-27T16:53:01.514+01:00  INFO 12640 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-27T16:53:01.514+01:00  INFO 12640 --- [order] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

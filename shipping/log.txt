@@ -1,0 +1,87 @@
+2026-01-27T16:45:11.973+01:00  INFO 10360 --- [shipping] [restartedMain] h.f.e.shipping.ShippingApplication       : Starting ShippingApplication using Java 21.0.8 with PID 10360 (C:\DiplProj\ecommerce-microservices-project\shipping\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\shipping)
+2026-01-27T16:45:11.983+01:00  INFO 10360 --- [shipping] [restartedMain] h.f.e.shipping.ShippingApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-27T16:45:12.091+01:00  INFO 10360 --- [shipping] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-27T16:45:12.091+01:00  INFO 10360 --- [shipping] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-27T16:45:13.677+01:00  INFO 10360 --- [shipping] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-27T16:45:13.881+01:00  INFO 10360 --- [shipping] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 1 JPA repository interface.
+2026-01-27T16:45:14.357+01:00  INFO 10360 --- [shipping] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-01-27T16:45:14.383+01:00  INFO 10360 --- [shipping] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-27T16:45:14.383+01:00  INFO 10360 --- [shipping] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-01-27T16:45:14.425+01:00  INFO 10360 --- [shipping] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-27T16:45:14.426+01:00  INFO 10360 --- [shipping] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2319 ms
+2026-01-27T16:45:14.870+01:00  INFO 10360 --- [shipping] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-27T16:45:15.143+01:00  INFO 10360 --- [shipping] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:shippingdb user=SA
+2026-01-27T16:45:15.146+01:00  INFO 10360 --- [shipping] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-27T16:45:15.187+01:00  INFO 10360 --- [shipping] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:shippingdb (H2 2.3)
+2026-01-27T16:45:15.226+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-01-27T16:45:15.226+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.032s)
+2026-01-27T16:45:15.226+01:00  INFO 10360 --- [shipping] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-01-27T16:45:15.226+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-01-27T16:45:15.253+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-01-27T16:45:15.269+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create shipments table"
+2026-01-27T16:45:15.291+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed shipments"
+2026-01-27T16:45:15.296+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.011s)
+2026-01-27T16:45:15.354+01:00  INFO 10360 --- [shipping] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-27T16:45:15.405+01:00  INFO 10360 --- [shipping] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-01-27T16:45:15.441+01:00  INFO 10360 --- [shipping] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-27T16:45:15.672+01:00  INFO 10360 --- [shipping] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-27T16:45:15.724+01:00  INFO 10360 --- [shipping] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-27T16:45:16.660+01:00  INFO 10360 --- [shipping] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-27T16:45:16.660+01:00  INFO 10360 --- [shipping] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:45:16.972+01:00  WARN 10360 --- [shipping] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-27T16:45:17.373+01:00  INFO 10360 --- [shipping] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:shippingdb'
+2026-01-27T16:45:17.457+01:00  WARN 10360 --- [shipping] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-27T16:45:17.520+01:00  INFO 10360 --- [shipping] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-01-27T16:45:17.520+01:00  INFO 10360 --- [shipping] [restartedMain] h.f.e.shipping.ShippingApplication       : Started ShippingApplication in 6.964 seconds (process running for 7.984)
+2026-01-27T16:45:25.087+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-27T16:45:25.088+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-27T16:45:25.091+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-27T16:45:25.337+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/6
+2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-27T16:45:25.552+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-27T16:45:25.746+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Created shipment: 6 for order: 6
+2026-01-27T16:45:28.758+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 7
+2026-01-27T16:45:28.758+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 7
+2026-01-27T16:45:28.758+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/7
+2026-01-27T16:45:28.766+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 7
+2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/7
+2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-27T16:45:28.791+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 7 (status: RESERVED) in 30 ms
+2026-01-27T16:45:28.924+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 7
+2026-01-27T16:45:28.981+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 7, tracking: TRK-39F9D2FC, new status: PREPARING in 58 ms
+2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/8
+2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-27T16:45:30.522+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Created shipment: 8 for order: 8
+2026-01-27T16:53:11.865+01:00  INFO 10360 --- [shipping] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-27T16:53:11.881+01:00  INFO 10360 --- [shipping] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-27T16:53:11.918+01:00  INFO 10360 --- [shipping] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:53:11.934+01:00  WARN 10360 --- [shipping] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-01-27T16:53:11.950+01:00  INFO 10360 --- [shipping] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-27T16:53:11.950+01:00  INFO 10360 --- [shipping] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

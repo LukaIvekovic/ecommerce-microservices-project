@@ -1,0 +1,64 @@
+2026-01-27T16:45:03.561+01:00  INFO 8940 --- [product] [restartedMain] h.f.e.product.ProductApplication         : Starting ProductApplication using Java 21.0.8 with PID 8940 (C:\DiplProj\ecommerce-microservices-project\product\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\product)
+2026-01-27T16:45:03.561+01:00  INFO 8940 --- [product] [restartedMain] h.f.e.product.ProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-01-27T16:45:03.650+01:00  INFO 8940 --- [product] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-27T16:45:03.651+01:00  INFO 8940 --- [product] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-27T16:45:04.842+01:00  INFO 8940 --- [product] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-27T16:45:05.007+01:00  INFO 8940 --- [product] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 1 JPA repository interface.
+2026-01-27T16:45:05.994+01:00  INFO 8940 --- [product] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-01-27T16:45:06.025+01:00  INFO 8940 --- [product] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-27T16:45:06.025+01:00  INFO 8940 --- [product] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-01-27T16:45:06.063+01:00  INFO 8940 --- [product] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-27T16:45:06.063+01:00  INFO 8940 --- [product] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2409 ms
+2026-01-27T16:45:06.405+01:00  INFO 8940 --- [product] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-27T16:45:06.664+01:00  INFO 8940 --- [product] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:productdb user=SA
+2026-01-27T16:45:06.664+01:00  INFO 8940 --- [product] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-27T16:45:06.710+01:00  INFO 8940 --- [product] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:productdb (H2 2.3)
+2026-01-27T16:45:06.764+01:00  INFO 8940 --- [product] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-01-27T16:45:06.781+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.042s)
+2026-01-27T16:45:06.791+01:00  INFO 8940 --- [product] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-01-27T16:45:06.794+01:00  INFO 8940 --- [product] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-01-27T16:45:06.856+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-01-27T16:45:06.878+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create products table"
+2026-01-27T16:45:06.936+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed products"
+2026-01-27T16:45:06.985+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.044s)
+2026-01-27T16:45:07.195+01:00  INFO 8940 --- [product] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-27T16:45:07.338+01:00  INFO 8940 --- [product] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-01-27T16:45:07.389+01:00  INFO 8940 --- [product] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-27T16:45:08.155+01:00  INFO 8940 --- [product] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-27T16:45:08.282+01:00  INFO 8940 --- [product] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-27T16:45:09.772+01:00  INFO 8940 --- [product] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-27T16:45:09.811+01:00  INFO 8940 --- [product] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:45:10.804+01:00  WARN 8940 --- [product] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-27T16:45:10.943+01:00  INFO 8940 --- [product] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-27T16:45:11.776+01:00  INFO 8940 --- [product] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:productdb'
+2026-01-27T16:45:11.953+01:00  WARN 8940 --- [product] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-27T16:45:12.284+01:00  INFO 8940 --- [product] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-01-27T16:45:12.382+01:00  INFO 8940 --- [product] [restartedMain] h.f.e.product.ProductApplication         : Started ProductApplication in 9.975 seconds (process running for 10.616)
+2026-01-27T16:45:24.119+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-27T16:45:24.120+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-27T16:45:24.121+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-27T16:45:24.234+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-27T16:45:24.508+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 48
+2026-01-27T16:45:24.510+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 99
+2026-01-27T16:45:24.511+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-27T16:45:28.666+01:00  INFO 8940 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-27T16:45:28.666+01:00  INFO 8940 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 46
+2026-01-27T16:45:28.676+01:00  INFO 8940 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 98
+2026-01-27T16:45:28.677+01:00  INFO 8940 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-27T16:45:30.282+01:00  INFO 8940 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-27T16:45:30.311+01:00  INFO 8940 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 44
+2026-01-27T16:45:30.325+01:00  INFO 8940 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 97
+2026-01-27T16:45:30.325+01:00  INFO 8940 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-27T16:53:08.190+01:00  INFO 8940 --- [product] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-27T16:53:08.196+01:00  INFO 8940 --- [product] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-27T16:53:08.228+01:00  INFO 8940 --- [product] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-27T16:53:08.228+01:00  WARN 8940 --- [product] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-01-27T16:53:08.228+01:00  INFO 8940 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-27T16:53:08.228+01:00  INFO 8940 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

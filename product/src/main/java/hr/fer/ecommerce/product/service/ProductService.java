@@ -68,6 +68,7 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public void validateStockAvailability(StockReservationRequest request) {
+        long startTime = System.nanoTime();
         log.info("Validating stock availability for {} items", request.getItems().size());
 
         for (StockValidationRequest item : request.getItems()) {
@@ -76,17 +77,15 @@ public class ProductService {
 
             if (product.getStockQuantity() < item.getQuantity()) {
                 log.warn("Insufficient stock for product {}: requested={}, available={}",
-                    product.getId(), item.getQuantity(), product.getStockQuantity());
-                throw new InsufficientStockException(
-                    product.getId(),
-                    item.getQuantity(),
-                    product.getStockQuantity()
-                );
+                        product.getId(), item.getQuantity(), product.getStockQuantity());
+                throw new InsufficientStockException(product.getId(), item.getQuantity(), product.getStockQuantity());
             }
         }
 
-        log.info("Stock validation passed for all items");
+        long duration = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("Stock validation for {} items passed in {} ms", request.getItems().size(), duration);
     }
+
 
     @Transactional
     public void reserveStock(StockReservationRequest request) {

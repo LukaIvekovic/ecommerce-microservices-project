@@ -177,26 +177,36 @@ public class PaymentService {
 
     @Transactional
     public void deletePayment(Long id) {
+        long startTime = System.nanoTime();
+
         if (!paymentRepository.existsById(id)) {
             throw new PaymentNotFoundException(id);
         }
         paymentRepository.deleteById(id);
-        log.info("Deleted payment: {}", id);
+
+        long duration = (System.nanoTime() - startTime) / 1_000_000; // u milisekundama
+        log.info("Deleted payment: {}, duration: {} ms", id, duration);
     }
 
     @Transactional
     public PaymentDto sagaRefund(Long id) {
+        long startTime = System.nanoTime();
 
         Payment payment = paymentRepository.findById(id)
                 .orElseThrow(() -> new PaymentNotFoundException(id));
 
         paymentRepository.deleteById(id);
+
+        long duration = (System.nanoTime() - startTime) / 1_000_000; // u milisekundama
+        log.info("Saga refund executed for payment: {}, duration: {} ms", id, duration);
+
         return PaymentMapper.toDTO(payment);
     }
 
     @Transactional
     public PaymentDto preparePayment(PaymentRequestDto request) {
         log.info("2PC PREPARE: Pre-authorizing payment for order: {}", request.getOrderId());
+        long startTime = System.nanoTime();
 
         validatePaymentReadiness(request);
 
@@ -227,12 +237,15 @@ public class PaymentService {
 
         Payment savedPayment = paymentRepository.save(payment);
         log.info("2PC PREPARE: Payment pre-authorized with ID: {} (status: PRE_AUTHORIZED)", savedPayment.getId());
+        long durationMs = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("2PC PREPARE DURATION: {} ms for order {}", durationMs, request.getOrderId());
         return PaymentMapper.toDTO(savedPayment);
     }
 
     @Transactional
     public PaymentDto commitPayment(Long id) {
         log.info("2PC COMMIT: Capturing payment ID: {}", id);
+        long startTime = System.nanoTime();
         Payment payment = paymentRepository.findById(id)
                 .orElseThrow(() -> new PaymentNotFoundException(id));
 
@@ -248,17 +261,23 @@ public class PaymentService {
 
         Payment savedPayment = paymentRepository.save(payment);
         log.info("2PC COMMIT: Payment captured - ID: {}, new status: COMPLETED", id);
+        long durationMs = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("2PC COMMIT DURATION: {} ms for payment {}", durationMs, id);
         return PaymentMapper.toDTO(savedPayment);
     }
 
     @Transactional
     public void abortPreparedPayment(Long id) {
         log.info("2PC ABORT: Releasing pre-authorized payment ID: {}", id);
+        long startTime = System.nanoTime(); // start mjerenja
+
         Payment payment = paymentRepository.findById(id)
                 .orElseThrow(() -> new PaymentNotFoundException(id));
 
         if (payment.getStatus() != PaymentStatus.PRE_AUTHORIZED) {
             log.warn("Payment {} is not in PRE_AUTHORIZED state, current status: {}", id, payment.getStatus());
+            long duration = (System.nanoTime() - startTime) / 1_000_000; // trajanje u ms
+            log.info("2PC ABORT finished in {} ms (no action taken)", duration);
             return;
         }
 
@@ -266,7 +285,10 @@ public class PaymentService {
         payment.setFailureReason("Transaction aborted during 2PC");
 
         paymentRepository.save(payment);
-        log.info("2PC ABORT: Payment authorization released - ID: {}", id);
+
+        long duration = (System.nanoTime() - startTime) / 1_000_000; // trajanje u ms
+        log.info("2PC ABORT: Payment authorization released - ID: {}, duration: {} ms", id, duration);
     }
+
 }
 

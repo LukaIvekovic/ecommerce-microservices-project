@@ -24,10 +24,19 @@ public class GatewayController {
     private final TwoPhaseCommitService twoPhaseCommitService;
 
     @PostMapping("/place-order-saga")
-    public ResponseEntity<PlaceOrderResponse> placeOrder(@RequestBody @Valid PlaceOrderRequest request) {
+    public ResponseEntity<PlaceOrderResponse> placeOrder(
+            @RequestBody @Valid PlaceOrderRequest request) {
+
         log.info("Received place order request for customer: {}", request.getCustomerEmail());
 
+        // ✅ MORA BITI OVDJE
+        long startTime = System.nanoTime();
+
         PlaceOrderResponse response = sagaService.placeOrder(request);
+
+        long durationMs = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("GATEWAY | SAGA | totalDuration={} ms | success={}",
+                durationMs, response.isSuccess());
 
         if (response.isSuccess()) {
             return ResponseEntity.status(HttpStatus.CREATED).body(response);
@@ -37,10 +46,19 @@ public class GatewayController {
     }
 
     @PostMapping("/place-order-2pc")
-    public ResponseEntity<PlaceOrderResponse> placeOrderWith2PC(@RequestBody @Valid PlaceOrderRequest request) {
+    public ResponseEntity<PlaceOrderResponse> placeOrderWith2PC(
+            @RequestBody @Valid PlaceOrderRequest request) {
+
         log.info("Received 2PC place order request for customer: {}", request.getCustomerEmail());
 
+        // ✅ I OVDJE
+        long startTime = System.nanoTime();
+
         PlaceOrderResponse response = twoPhaseCommitService.placeOrderWith2PC(request);
+
+        long durationMs = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("GATEWAY | 2PC | totalDuration={} ms | success={}",
+                durationMs, response.isSuccess());
 
         if (response.isSuccess()) {
             return ResponseEntity.status(HttpStatus.CREATED).body(response);
@@ -49,4 +67,3 @@ public class GatewayController {
         }
     }
 }
-

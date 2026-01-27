@@ -14,4 +14,8 @@ service:
     url: http://localhost:8084
   shipping:
     url: http://localhost:8083
-
+logging:
+  level:
+    root: INFO
+  file:
+    name: log.txt

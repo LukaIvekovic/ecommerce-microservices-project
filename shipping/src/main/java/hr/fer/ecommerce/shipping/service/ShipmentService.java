@@ -162,11 +162,16 @@ public class ShipmentService {
 
     @Transactional
     public void deleteShipment(Long id) {
+        long startTime = System.nanoTime();
+
         if (!shipmentRepository.existsById(id)) {
             throw new ShipmentNotFoundException(id);
         }
+
         shipmentRepository.deleteById(id);
-        log.info("Deleted shipment: {}", id);
+
+        long duration = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("Deleted shipment: {} in {} ms", id, duration);
     }
 
     private String generateTrackingNumber() {
@@ -175,16 +180,23 @@ public class ShipmentService {
 
     @Transactional
     public void sagaCancel(Long id) {
+        long startTime = System.nanoTime();
+
         if (!shipmentRepository.existsById(id)) {
             throw new ShipmentNotFoundException(id);
         }
 
         shipmentRepository.deleteById(id);
-        log.warn("Saga compensation: cancelled shipment {}", id);
+
+        long duration = (System.nanoTime() - startTime) / 1_000_000;
+        log.warn("Saga compensation: cancelled shipment {} in {} ms", id, duration);
     }
+
 
     @Transactional
     public ShipmentDto prepareShipment(ShipmentRequestDto request) {
+        long startTime = System.nanoTime();
+
         log.info("2PC PREPARE: Reserving shipment for order: {}", request.getOrderId());
 
         validateShipmentReadiness(request);
@@ -216,12 +228,16 @@ public class ShipmentService {
                 .build();
 
         Shipment savedShipment = shipmentRepository.save(shipment);
-        log.info("2PC PREPARE: Shipment reserved with ID: {} (status: RESERVED)", savedShipment.getId());
+        long duration = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("2PC PREPARE: Shipment reserved with ID: {} (status: RESERVED) in {} ms", savedShipment.getId(), duration);
+
         return ShipmentMapper.toDTO(savedShipment);
     }
 
     @Transactional
     public ShipmentDto commitShipment(Long id) {
+        long startTime = System.nanoTime();
+
         log.info("2PC COMMIT: Confirming shipment ID: {}", id);
         Shipment shipment = shipmentRepository.findById(id)
                 .orElseThrow(() -> new ShipmentNotFoundException(id));
@@ -236,13 +252,16 @@ public class ShipmentService {
         shipment.setStatus(ShipmentStatus.PREPARING);
 
         Shipment savedShipment = shipmentRepository.save(shipment);
-        log.info("2PC COMMIT: Shipment confirmed - ID: {}, tracking: {}, new status: PREPARING",
-                 id, savedShipment.getTrackingNumber());
+        long duration = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("2PC COMMIT: Shipment confirmed - ID: {}, tracking: {}, new status: PREPARING in {} ms",
+                id, savedShipment.getTrackingNumber(), duration);
         return ShipmentMapper.toDTO(savedShipment);
     }
 
     @Transactional
     public void abortPreparedShipment(Long id) {
+        long startTime = System.nanoTime();
+
         log.info("2PC ABORT: Releasing reserved shipment ID: {}", id);
         Shipment shipment = shipmentRepository.findById(id)
                 .orElseThrow(() -> new ShipmentNotFoundException(id));
@@ -255,7 +274,8 @@ public class ShipmentService {
         shipment.setStatus(ShipmentStatus.FAILED);
 
         shipmentRepository.save(shipment);
-        log.info("2PC ABORT: Shipment reservation released - ID: {}", id);
+        long duration = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("2PC ABORT: Shipment reservation released - ID: {} in {} ms", id, duration);
     }
 
 }

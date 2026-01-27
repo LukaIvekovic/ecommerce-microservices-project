@@ -63,6 +63,8 @@ public class OrderService {
     @Transactional
     public OrderDto createOrder(OrderRequestDto request) {
         log.info("Starting order creation for customer: {}", request.getCustomerEmail());
+        long startTime = System.nanoTime();
+        log.info("SAGA | START createOrder for customer: {}", request.getCustomerEmail());
 
         StockReservationRequest stockRequest = buildStockReservationRequest(request);
         productClient.reserveStock(stockRequest);
@@ -100,6 +102,9 @@ public class OrderService {
             Order savedOrder = orderRepository.save(order);
 
             log.info("Created order: {}", savedOrder.getId());
+            long durationMs = (System.nanoTime() - startTime) / 1_000_000;
+            log.info("SAGA | DURATION createOrder = {} ms", durationMs);
+
             return OrderMapper.toDTO(savedOrder);
 
         } catch (Exception e) {
@@ -145,6 +150,9 @@ public class OrderService {
 
     @Transactional
     public void cancelOrder(Long id) {
+        long startTime = System.nanoTime();
+        log.info("SAGA | START cancelOrder for order ID: {}", id);
+
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new OrderNotFoundException(id));
 
@@ -159,6 +167,9 @@ public class OrderService {
 
         orderRepository.deleteById(id);
         log.info("Saga compensation: cancelled order {}", id);
+        long durationMs = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("SAGA | DURATION cancelOrder = {} ms", durationMs);
+
     }
 
     private StockReservationRequest buildStockReservationRequestFromOrder(Order order) {
@@ -177,6 +188,8 @@ public class OrderService {
     @Transactional
     public OrderDto prepareOrder(OrderRequestDto request) {
         log.info("2PC PREPARE: Starting order preparation for customer: {}", request.getCustomerEmail());
+        long startTime = System.nanoTime();
+        log.info("2PC | START prepareOrder for customer: {}", request.getCustomerEmail());
 
         StockReservationRequest stockRequest = StockReservationRequest.builder()
                 .items(request.getOrderItems().stream()
@@ -222,12 +235,19 @@ public class OrderService {
         Order savedOrder = orderRepository.save(order);
 
         log.info("Prepared order: {}", savedOrder.getId());
+        long durationMs = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("2PC | DURATION prepareOrder = {} ms", durationMs);
+
         return OrderMapper.toDTO(savedOrder);
     }
 
     @Transactional
     public OrderDto commitOrder(Long id) {
+
         log.info("2PC COMMIT: Committing order ID: {}", id);
+        long startTime = System.nanoTime();
+        log.info("2PC | START commitOrder for order ID: {}", id);
+
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new OrderNotFoundException(id));
 
@@ -240,12 +260,18 @@ public class OrderService {
         order.setStatus(OrderStatus.CONFIRMED);
         Order savedOrder = orderRepository.save(order);
         log.info("2PC COMMIT: Order committed - ID: {}, new status: CONFIRMED", id);
+        long durationMs = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("2PC | DURATION commitOrder = {} ms", durationMs);
+
         return OrderMapper.toDTO(savedOrder);
     }
 
     @Transactional
     public void abortPreparedOrder(Long id) {
         log.info("2PC ABORT: Aborting prepared order ID: {}", id);
+        long startTime = System.nanoTime();
+        log.info("2PC | START abortPreparedOrder for order ID: {}", id);
+
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new OrderNotFoundException(id));
 
@@ -265,6 +291,9 @@ public class OrderService {
         order.setStatus(OrderStatus.CANCELLED);
         orderRepository.save(order);
         log.info("2PC ABORT: Order aborted - ID: {}", id);
+        long durationMs = (System.nanoTime() - startTime) / 1_000_000;
+        log.info("2PC | DURATION abortPreparedOrder = {} ms", durationMs);
+
     }
 }
 
