@@ -1,31 +1,31 @@
-2026-01-27T16:44:55.741+01:00  INFO 8892 --- [payment] [restartedMain] h.f.e.payment.PaymentsApplication        : Starting PaymentsApplication using Java 21.0.8 with PID 8892 (C:\DiplProj\ecommerce-microservices-project\payment\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\payment)
-2026-01-27T16:44:55.757+01:00  INFO 8892 --- [payment] [restartedMain] h.f.e.payment.PaymentsApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-01-27T16:44:55.873+01:00  INFO 8892 --- [payment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-01-27T16:44:55.886+01:00  INFO 8892 --- [payment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-01-27T16:44:57.021+01:00  INFO 8892 --- [payment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-27T16:44:57.150+01:00  INFO 8892 --- [payment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interface.
-2026-01-27T16:44:58.083+01:00  INFO 8892 --- [payment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
-2026-01-27T16:44:58.107+01:00  INFO 8892 --- [payment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-27T16:44:58.107+01:00  INFO 8892 --- [payment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
-2026-01-27T16:44:58.154+01:00  INFO 8892 --- [payment] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-27T16:44:58.154+01:00  INFO 8892 --- [payment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2262 ms
-2026-01-27T16:44:58.505+01:00  INFO 8892 --- [payment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-27T16:44:59.003+01:00  INFO 8892 --- [payment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=SA
-2026-01-27T16:44:59.003+01:00  INFO 8892 --- [payment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-27T16:44:59.079+01:00  INFO 8892 --- [payment] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:paymentdb (H2 2.3)
-2026-01-27T16:44:59.177+01:00  INFO 8892 --- [payment] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
-2026-01-27T16:44:59.186+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.078s)
-2026-01-27T16:44:59.206+01:00  INFO 8892 --- [payment] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
-2026-01-27T16:44:59.212+01:00  INFO 8892 --- [payment] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
-2026-01-27T16:44:59.279+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
-2026-01-27T16:44:59.310+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create payments table"
-2026-01-27T16:44:59.345+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed payments"
-2026-01-27T16:44:59.380+01:00  INFO 8892 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.037s)
-2026-01-27T16:44:59.531+01:00  INFO 8892 --- [payment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-27T16:44:59.661+01:00  INFO 8892 --- [payment] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
-2026-01-27T16:44:59.739+01:00  INFO 8892 --- [payment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-01-27T16:45:00.339+01:00  INFO 8892 --- [payment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-27T16:45:00.701+01:00  INFO 8892 --- [payment] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-01-29T15:17:26.268+01:00  INFO 4616 --- [payment] [restartedMain] h.f.e.payment.PaymentsApplication        : Starting PaymentsApplication using Java 21.0.8 with PID 4616 (C:\DiplProj\ecommerce-microservices-project\payment\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\payment)
+2026-01-29T15:17:26.268+01:00  INFO 4616 --- [payment] [restartedMain] h.f.e.payment.PaymentsApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-01-29T15:17:26.330+01:00  INFO 4616 --- [payment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-29T15:17:26.331+01:00  INFO 4616 --- [payment] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-29T15:17:26.999+01:00  INFO 4616 --- [payment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-29T15:17:27.317+01:00  INFO 4616 --- [payment] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 297 ms. Found 1 JPA repository interface.
+2026-01-29T15:17:28.118+01:00  INFO 4616 --- [payment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-01-29T15:17:28.134+01:00  INFO 4616 --- [payment] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-29T15:17:28.134+01:00  INFO 4616 --- [payment] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-01-29T15:17:28.180+01:00  INFO 4616 --- [payment] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-29T15:17:28.180+01:00  INFO 4616 --- [payment] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1847 ms
+2026-01-29T15:17:28.690+01:00  INFO 4616 --- [payment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-29T15:17:28.954+01:00  INFO 4616 --- [payment] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=SA
+2026-01-29T15:17:28.954+01:00  INFO 4616 --- [payment] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-29T15:17:29.017+01:00  INFO 4616 --- [payment] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:paymentdb (H2 2.3)
+2026-01-29T15:17:29.092+01:00  INFO 4616 --- [payment] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-01-29T15:17:29.092+01:00  INFO 4616 --- [payment] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.052s)
+2026-01-29T15:17:29.109+01:00  INFO 4616 --- [payment] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-01-29T15:17:29.111+01:00  INFO 4616 --- [payment] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-01-29T15:17:29.154+01:00  INFO 4616 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-01-29T15:17:29.155+01:00  INFO 4616 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create payments table"
+2026-01-29T15:17:29.187+01:00  INFO 4616 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed payments"
+2026-01-29T15:17:29.202+01:00  INFO 4616 --- [payment] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.019s)
+2026-01-29T15:17:29.279+01:00  INFO 4616 --- [payment] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-29T15:17:29.363+01:00  INFO 4616 --- [payment] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-01-29T15:17:29.419+01:00  INFO 4616 --- [payment] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-29T15:17:30.436+01:00  INFO 4616 --- [payment] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-29T15:17:30.605+01:00  INFO 4616 --- [payment] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -33,48 +33,866 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-27T16:45:02.326+01:00  INFO 8892 --- [payment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-27T16:45:02.368+01:00  INFO 8892 --- [payment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-27T16:45:03.454+01:00  WARN 8892 --- [payment] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-27T16:45:04.210+01:00  INFO 8892 --- [payment] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
-2026-01-27T16:45:04.341+01:00  WARN 8892 --- [payment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-01-27T16:45:04.459+01:00  INFO 8892 --- [payment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
-2026-01-27T16:45:04.459+01:00  INFO 8892 --- [payment] [restartedMain] h.f.e.payment.PaymentsApplication        : Started PaymentsApplication in 9.914 seconds (process running for 10.511)
-2026-01-27T16:45:24.701+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-27T16:45:24.717+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-27T16:45:24.717+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-01-27T16:45:24.894+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/6
-2026-01-27T16:45:24.964+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
-2026-01-27T16:45:24.964+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
-2026-01-27T16:45:24.965+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
-2026-01-27T16:45:24.965+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
-2026-01-27T16:45:24.994+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Created payment: 6 for order: 6
-2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 7
-2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 7
-2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
-2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
-2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
-2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
-2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 7
-2026-01-27T16:45:28.724+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/7
-2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
-2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
-2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
-2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
-2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 7 (status: PRE_AUTHORIZED)
-2026-01-27T16:45:28.744+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 18 ms for order 7
-2026-01-27T16:45:28.858+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 7
-2026-01-27T16:45:28.875+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 7, new status: COMPLETED
-2026-01-27T16:45:28.875+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 17 ms for payment 7
-2026-01-27T16:45:30.467+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/8
-2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
-2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
-2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
-2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
-2026-01-27T16:45:30.483+01:00  INFO 8892 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Created payment: 8 for order: 8
-2026-01-27T16:53:05.070+01:00  INFO 8892 --- [payment] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-27T16:53:05.086+01:00  INFO 8892 --- [payment] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-01-27T16:53:05.105+01:00  INFO 8892 --- [payment] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-27T16:53:05.151+01:00  WARN 8892 --- [payment] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
-2026-01-27T16:53:05.151+01:00  INFO 8892 --- [payment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-27T16:53:05.191+01:00  INFO 8892 --- [payment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-29T15:17:31.906+01:00  INFO 4616 --- [payment] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-29T15:17:31.937+01:00  INFO 4616 --- [payment] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29T15:17:32.775+01:00  WARN 4616 --- [payment] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-29T15:17:33.109+01:00  INFO 4616 --- [payment] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-01-29T15:17:33.248+01:00  WARN 4616 --- [payment] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-29T15:17:33.404+01:00  INFO 4616 --- [payment] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
+2026-01-29T15:17:33.420+01:00  INFO 4616 --- [payment] [restartedMain] h.f.e.payment.PaymentsApplication        : Started PaymentsApplication in 7.734 seconds (process running for 8.091)
+2026-01-29T15:28:29.833+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-29T15:28:29.843+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-29T15:28:29.995+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 141 ms
+2026-01-29T15:28:30.550+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/6
+2026-01-29T15:28:30.647+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:28:30.647+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:28:30.647+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:28:30.647+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:28:30.690+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Created payment: 6 for order: 6
+2026-01-29T15:28:42.224+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 7
+2026-01-29T15:28:42.225+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 7
+2026-01-29T15:28:42.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:28:42.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:28:42.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:28:42.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:28:42.227+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 7
+2026-01-29T15:28:42.227+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/7
+2026-01-29T15:28:42.235+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:28:42.235+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:28:42.235+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:28:42.237+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:28:42.242+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 7 (status: PRE_AUTHORIZED)
+2026-01-29T15:28:42.243+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 17 ms for order 7
+2026-01-29T15:28:42.329+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 7
+2026-01-29T15:28:42.346+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 7, new status: COMPLETED
+2026-01-29T15:28:42.347+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 14 ms for payment 7
+2026-01-29T15:28:44.514+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 8
+2026-01-29T15:28:44.515+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 8
+2026-01-29T15:28:44.516+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:28:44.516+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:28:44.517+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:28:44.517+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:28:44.518+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 8
+2026-01-29T15:28:44.518+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/8
+2026-01-29T15:28:44.587+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:28:44.587+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:28:44.587+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:28:44.587+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:28:44.587+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 8 (status: PRE_AUTHORIZED)
+2026-01-29T15:28:44.587+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 87 ms for order 8
+2026-01-29T15:28:44.686+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 8
+2026-01-29T15:28:44.686+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 8, new status: COMPLETED
+2026-01-29T15:28:44.686+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 3 ms for payment 8
+2026-01-29T15:28:46.921+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/9
+2026-01-29T15:28:46.938+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:28:46.938+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:28:46.938+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:28:46.938+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:28:46.938+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Created payment: 9 for order: 9
+2026-01-29T15:32:26.216+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 10
+2026-01-29T15:32:26.216+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 10
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 10
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/10
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 10 (status: PRE_AUTHORIZED)
+2026-01-29T15:32:26.218+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 14 ms for order 10
+2026-01-29T15:32:26.316+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 10
+2026-01-29T15:32:26.316+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 10, new status: COMPLETED
+2026-01-29T15:32:26.316+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 10
+2026-01-29T15:32:30.192+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/11
+2026-01-29T15:32:30.200+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:32:30.200+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:32:30.208+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:32:30.208+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:32:30.208+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Created payment: 11 for order: 11
+2026-01-29T15:32:32.007+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 12
+2026-01-29T15:32:32.007+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 12
+2026-01-29T15:32:32.008+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:32:32.010+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:32:32.010+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:32:32.010+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:32:32.011+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 12
+2026-01-29T15:32:32.011+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/12
+2026-01-29T15:32:32.019+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:32:32.023+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:32:32.023+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:32:32.024+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:32:32.027+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 12 (status: PRE_AUTHORIZED)
+2026-01-29T15:32:32.027+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 18 ms for order 12
+2026-01-29T15:32:32.103+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 12
+2026-01-29T15:32:32.103+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 12, new status: COMPLETED
+2026-01-29T15:32:32.103+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 12
+2026-01-29T15:32:35.824+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/13
+2026-01-29T15:32:35.846+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:32:35.846+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:32:35.847+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:32:35.847+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:32:35.852+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Created payment: 13 for order: 13
+2026-01-29T15:33:25.665+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 14
+2026-01-29T15:33:25.665+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 14
+2026-01-29T15:33:25.666+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:33:25.666+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:33:25.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:33:25.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:33:25.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 14
+2026-01-29T15:33:25.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/14
+2026-01-29T15:33:25.679+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:33:25.679+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:33:25.679+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:33:25.680+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:33:25.682+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 14 (status: PRE_AUTHORIZED)
+2026-01-29T15:33:25.682+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 15 ms for order 14
+2026-01-29T15:33:25.754+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 14
+2026-01-29T15:33:25.757+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 14, new status: COMPLETED
+2026-01-29T15:33:25.757+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 14
+2026-01-29T15:58:26.135+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/15
+2026-01-29T15:58:26.239+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:58:26.240+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:58:26.244+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:58:26.244+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:58:26.329+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Created payment: 15 for order: 15
+2026-01-29T15:58:29.243+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 16
+2026-01-29T15:58:29.244+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 16
+2026-01-29T15:58:29.244+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:58:29.245+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:58:29.245+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:58:29.245+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:58:29.245+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 16
+2026-01-29T15:58:29.245+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/16
+2026-01-29T15:58:29.253+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:58:29.253+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:58:29.254+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:58:29.254+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:58:29.260+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 16 (status: PRE_AUTHORIZED)
+2026-01-29T15:58:29.260+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 16 ms for order 16
+2026-01-29T15:58:29.354+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 16
+2026-01-29T15:58:29.360+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 16, new status: COMPLETED
+2026-01-29T15:58:29.360+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 6 ms for payment 16
+2026-01-29T15:58:32.695+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 17
+2026-01-29T15:58:32.695+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 17
+2026-01-29T15:58:32.695+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:58:32.695+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:58:32.695+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:58:32.695+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:58:32.695+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 17
+2026-01-29T15:58:32.695+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/17
+2026-01-29T15:58:32.711+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:58:32.711+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:58:32.711+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:58:32.711+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:58:32.711+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 17 (status: PRE_AUTHORIZED)
+2026-01-29T15:58:32.711+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 15 ms for order 17
+2026-01-29T15:58:32.779+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 17
+2026-01-29T15:58:32.779+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 17, new status: COMPLETED
+2026-01-29T15:58:32.779+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 17
+2026-01-29T15:59:02.597+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 18
+2026-01-29T15:59:02.598+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 18
+2026-01-29T15:59:02.601+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:59:02.601+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:59:02.601+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:59:02.602+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:59:02.602+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 18
+2026-01-29T15:59:02.602+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/18
+2026-01-29T15:59:02.615+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:59:02.616+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:59:02.617+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:59:02.617+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:59:02.619+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 18 (status: PRE_AUTHORIZED)
+2026-01-29T15:59:02.620+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 21 ms for order 18
+2026-01-29T15:59:02.817+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 18
+2026-01-29T15:59:02.820+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 18, new status: COMPLETED
+2026-01-29T15:59:02.820+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 18
+2026-01-29T15:59:04.955+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 19
+2026-01-29T15:59:04.955+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 19
+2026-01-29T15:59:04.955+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:59:04.955+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:59:04.955+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:59:04.955+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:59:04.955+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 19
+2026-01-29T15:59:04.955+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/19
+2026-01-29T15:59:04.961+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:59:04.961+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:59:04.961+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:59:04.961+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:59:04.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 19 (status: PRE_AUTHORIZED)
+2026-01-29T15:59:04.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 16 ms for order 19
+2026-01-29T15:59:05.177+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 19
+2026-01-29T15:59:05.177+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 19, new status: COMPLETED
+2026-01-29T15:59:05.177+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 19
+2026-01-29T15:59:07.605+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/20
+2026-01-29T15:59:07.613+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:59:07.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:59:07.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:59:07.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:59:07.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : Created payment: 20 for order: 20
+2026-01-29T15:59:10.001+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/21
+2026-01-29T15:59:10.019+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:59:10.019+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:59:10.019+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:59:10.019+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:59:10.019+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Created payment: 21 for order: 21
+2026-01-29T15:59:13.438+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 22
+2026-01-29T15:59:13.438+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 22
+2026-01-29T15:59:13.438+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:59:13.438+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:59:13.438+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:59:13.438+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:59:13.438+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 22
+2026-01-29T15:59:13.438+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/22
+2026-01-29T15:59:13.450+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T15:59:13.450+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T15:59:13.450+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T15:59:13.450+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T15:59:13.450+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 22 (status: PRE_AUTHORIZED)
+2026-01-29T15:59:13.455+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 12 ms for order 22
+2026-01-29T15:59:13.532+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 22
+2026-01-29T15:59:13.532+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 22, new status: COMPLETED
+2026-01-29T15:59:13.532+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 22
+2026-01-29T16:01:09.004+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/23
+2026-01-29T16:01:09.018+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:09.018+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:09.018+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:09.028+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:09.028+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Created payment: 23 for order: 23
+2026-01-29T16:01:10.940+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/24
+2026-01-29T16:01:10.955+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:10.956+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:10.957+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:10.957+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:10.957+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Created payment: 24 for order: 24
+2026-01-29T16:01:13.175+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 25
+2026-01-29T16:01:13.175+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 25
+2026-01-29T16:01:13.175+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:13.175+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:13.175+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:13.175+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:13.183+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 25
+2026-01-29T16:01:13.184+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/25
+2026-01-29T16:01:13.192+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:13.192+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:13.192+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:13.192+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:13.200+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 25 (status: PRE_AUTHORIZED)
+2026-01-29T16:01:13.200+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 24 ms for order 25
+2026-01-29T16:01:13.301+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 25
+2026-01-29T16:01:13.301+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 25, new status: COMPLETED
+2026-01-29T16:01:13.301+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 25
+2026-01-29T16:01:14.781+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 26
+2026-01-29T16:01:14.781+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 26
+2026-01-29T16:01:14.785+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:14.785+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:14.785+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:14.785+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:14.792+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 26
+2026-01-29T16:01:14.793+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/26
+2026-01-29T16:01:14.811+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:14.811+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:14.812+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:14.816+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:14.823+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 26 (status: PRE_AUTHORIZED)
+2026-01-29T16:01:14.823+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 40 ms for order 26
+2026-01-29T16:01:14.974+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 26
+2026-01-29T16:01:14.974+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 26, new status: COMPLETED
+2026-01-29T16:01:14.974+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 26
+2026-01-29T16:01:16.416+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 27
+2026-01-29T16:01:16.416+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 27
+2026-01-29T16:01:16.416+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:16.416+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:16.416+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:16.416+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:16.416+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 27
+2026-01-29T16:01:16.416+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/27
+2026-01-29T16:01:16.424+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:16.424+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:16.424+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:16.424+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:16.432+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 27 (status: PRE_AUTHORIZED)
+2026-01-29T16:01:16.435+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 15 ms for order 27
+2026-01-29T16:01:16.491+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 27
+2026-01-29T16:01:16.493+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 27, new status: COMPLETED
+2026-01-29T16:01:16.494+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 27
+2026-01-29T16:01:18.555+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 28
+2026-01-29T16:01:18.555+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 28
+2026-01-29T16:01:18.555+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:18.555+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:18.555+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:18.555+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:18.555+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 28
+2026-01-29T16:01:18.555+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/28
+2026-01-29T16:01:18.566+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:01:18.566+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:01:18.566+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:01:18.566+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:01:18.566+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 28 (status: PRE_AUTHORIZED)
+2026-01-29T16:01:18.566+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 16 ms for order 28
+2026-01-29T16:01:18.792+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 28
+2026-01-29T16:01:18.796+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 28, new status: COMPLETED
+2026-01-29T16:01:18.798+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 5 ms for payment 28
+2026-01-29T16:08:18.789+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.DuplicatePaymentException: Payment already exists for order: 6]
+2026-01-29T16:08:22.343+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.DuplicatePaymentException: Payment already exists for order: 7]
+2026-01-29T16:08:23.311+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 8
+2026-01-29T16:08:23.311+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 8
+2026-01-29T16:08:23.313+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:08:23.313+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:08:23.313+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:08:23.313+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:08:23.313+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 8
+2026-01-29T16:08:23.313+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/8
+2026-01-29T16:08:23.321+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:08:23.321+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:08:23.328+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:08:23.328+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:08:23.402+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2026-01-29T16:08:23.402+01:00 ERROR 4616 --- [payment] [http-nio-8084-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_8 ON PUBLIC.PAYMENTS(ORDER_ID NULLS FIRST) VALUES ( /* 8 */ CAST(8 AS BIGINT) )"; SQL statement:
+insert into payments (card_last_four_digits,created_at,failure_reason,order_id,paid_amount,paid_customer_email,paid_customer_name,payment_method,payment_provider,processed_at,status,transaction_id,updated_at,version,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,default) [23505-232]
+2026-01-29T16:08:23.445+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_8 ON PUBLIC.PAYMENTS(ORDER_ID NULLS FIRST) VALUES ( /* 8 */ CAST(8 AS BIGINT) )"; SQL statement:<EOL>insert into payments (card_last_four_digits,created_at,failure_reason,order_id,paid_amount,paid_customer_email,paid_customer_name,payment_method,payment_provider,processed_at,status,transaction_id,updated_at,version,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,default) [23505-232]] [insert into payments (card_last_four_digits,created_at,failure_reason,order_id,paid_amount,paid_customer_email,paid_customer_name,payment_method,payment_provider,processed_at,status,transaction_id,updated_at,version,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,default)]; SQL [insert into payments (card_last_four_digits,created_at,failure_reason,order_id,paid_amount,paid_customer_email,paid_customer_name,payment_method,payment_provider,processed_at,status,transaction_id,updated_at,version,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,default)]; constraint [PUBLIC.CONSTRAINT_INDEX_8]]
+2026-01-29T16:08:32.924+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.DuplicatePaymentException: Payment already exists for order: 9]
+2026-01-29T16:10:37.021+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:10:42.751+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:12:05.856+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/10
+2026-01-29T16:12:05.880+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:12:05.880+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:12:05.880+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:12:05.880+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:12:05.880+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Created payment: 30 for order: 10
+2026-01-29T16:12:10.448+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 11
+2026-01-29T16:12:10.448+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 11
+2026-01-29T16:12:10.448+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:12:10.464+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:12:10.464+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:12:10.464+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:12:10.464+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 11
+2026-01-29T16:12:10.464+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/11
+2026-01-29T16:12:10.482+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:12:10.482+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:12:10.482+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:12:10.482+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:12:10.503+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 31 (status: PRE_AUTHORIZED)
+2026-01-29T16:12:10.503+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 51 ms for order 11
+2026-01-29T16:12:10.651+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 31
+2026-01-29T16:12:10.655+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 31, new status: COMPLETED
+2026-01-29T16:12:10.656+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 4 ms for payment 31
+2026-01-29T16:12:55.071+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/12
+2026-01-29T16:12:55.080+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:12:55.080+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:12:55.080+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:12:55.080+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:12:55.084+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : Created payment: 32 for order: 12
+2026-01-29T16:12:57.773+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 13
+2026-01-29T16:12:57.773+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 13
+2026-01-29T16:12:57.773+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:12:57.773+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:12:57.773+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:12:57.773+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:12:57.773+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 13
+2026-01-29T16:12:57.773+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/13
+2026-01-29T16:12:57.785+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:12:57.786+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:12:57.786+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:12:57.787+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:12:57.790+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 33 (status: PRE_AUTHORIZED)
+2026-01-29T16:12:57.790+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 16 ms for order 13
+2026-01-29T16:12:57.854+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 33
+2026-01-29T16:12:57.854+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 33, new status: COMPLETED
+2026-01-29T16:12:57.854+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 33
+2026-01-29T16:13:04.659+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 14
+2026-01-29T16:13:04.659+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 14
+2026-01-29T16:13:04.659+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:13:04.659+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:13:04.659+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:13:04.659+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:13:04.659+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 14
+2026-01-29T16:13:04.659+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/14
+2026-01-29T16:13:04.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:13:04.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:13:04.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:13:04.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:13:04.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 34 (status: PRE_AUTHORIZED)
+2026-01-29T16:13:04.667+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 13 ms for order 14
+2026-01-29T16:13:04.742+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 34
+2026-01-29T16:13:04.742+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 34, new status: COMPLETED
+2026-01-29T16:13:04.742+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 1 ms for payment 34
+2026-01-29T16:13:07.058+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/15
+2026-01-29T16:13:07.074+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:13:07.074+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:13:07.075+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:13:07.075+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:13:07.076+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Created payment: 35 for order: 15
+2026-01-29T16:14:04.870+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/16
+2026-01-29T16:14:04.879+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:14:04.880+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:14:04.880+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:14:14.842+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 17
+2026-01-29T16:14:14.843+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 17
+2026-01-29T16:14:14.844+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:14:14.844+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:14:14.845+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:14:17.314+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/18
+2026-01-29T16:14:17.323+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:14:17.323+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:14:17.332+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:14:20.529+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/19
+2026-01-29T16:14:20.546+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:14:20.546+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:14:20.546+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:14:20.546+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:14:20.546+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Created payment: 36 for order: 19
+2026-01-29T16:25:50.161+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/20
+2026-01-29T16:25:50.177+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:25:50.178+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:25:50.178+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:25:50.178+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:25:50.178+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Created payment: 37 for order: 20
+2026-01-29T16:25:59.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 21
+2026-01-29T16:25:59.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 21
+2026-01-29T16:25:59.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:25:59.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:25:59.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:25:59.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:25:59.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 21
+2026-01-29T16:25:59.226+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/21
+2026-01-29T16:25:59.239+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:25:59.242+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:25:59.242+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:25:59.243+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:25:59.243+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 38 (status: PRE_AUTHORIZED)
+2026-01-29T16:25:59.243+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 17 ms for order 21
+2026-01-29T16:25:59.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 38
+2026-01-29T16:25:59.431+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 38, new status: COMPLETED
+2026-01-29T16:25:59.431+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 5 ms for payment 38
+2026-01-29T16:26:03.842+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 22
+2026-01-29T16:26:03.842+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 22
+2026-01-29T16:26:03.842+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:26:03.842+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:26:03.842+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:26:03.842+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:26:03.842+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 22
+2026-01-29T16:26:03.842+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/22
+2026-01-29T16:26:03.853+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:26:03.853+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:26:03.853+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:26:03.853+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:26:03.853+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 39 (status: PRE_AUTHORIZED)
+2026-01-29T16:26:03.853+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 14 ms for order 22
+2026-01-29T16:26:03.936+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 39
+2026-01-29T16:26:03.936+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 39, new status: COMPLETED
+2026-01-29T16:26:03.936+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 39
+2026-01-29T16:26:05.812+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/23
+2026-01-29T16:26:05.830+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:26:05.830+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:26:05.830+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:26:05.830+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:26:05.830+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Created payment: 40 for order: 23
+2026-01-29T16:26:14.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 24
+2026-01-29T16:26:14.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 24
+2026-01-29T16:26:14.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:26:14.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:26:14.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:26:14.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:26:14.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 24
+2026-01-29T16:26:14.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/24
+2026-01-29T16:26:14.978+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:26:14.978+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:26:14.978+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:26:14.978+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:26:14.985+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 41 (status: PRE_AUTHORIZED)
+2026-01-29T16:26:14.988+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 15 ms for order 24
+2026-01-29T16:26:15.061+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 41
+2026-01-29T16:26:15.061+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 41, new status: COMPLETED
+2026-01-29T16:26:15.061+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 3 ms for payment 41
+2026-01-29T16:26:24.037+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/25
+2026-01-29T16:26:24.045+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:26:24.045+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:26:24.045+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:26:24.045+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:26:24.052+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Created payment: 42 for order: 25
+2026-01-29T16:26:50.962+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/26
+2026-01-29T16:26:50.970+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:26:50.970+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:26:50.971+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:26:50.972+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:26:50.975+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Created payment: 43 for order: 26
+2026-01-29T16:26:51.079+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Saga refund executed for payment: 43, duration: 41 ms
+2026-01-29T16:27:10.221+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 27
+2026-01-29T16:27:10.221+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 27
+2026-01-29T16:27:10.222+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:27:10.223+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:27:10.223+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:27:10.223+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:27:10.224+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 27
+2026-01-29T16:27:10.224+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/27
+2026-01-29T16:27:10.233+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:27:10.235+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:27:10.236+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:27:10.236+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:27:10.239+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 44 (status: PRE_AUTHORIZED)
+2026-01-29T16:27:10.240+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 18 ms for order 27
+2026-01-29T16:27:10.288+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC ABORT: Releasing pre-authorized payment ID: 44
+2026-01-29T16:27:10.294+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC ABORT: Payment authorization released - ID: 44, duration: 4 ms
+2026-01-29T16:27:16.081+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/28
+2026-01-29T16:27:16.096+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:27:16.098+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:27:16.098+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:27:16.098+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:27:16.105+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Created payment: 45 for order: 28
+2026-01-29T16:27:16.156+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : Saga refund executed for payment: 45, duration: 2 ms
+2026-01-29T16:27:21.926+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/29
+2026-01-29T16:27:21.943+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:27:21.943+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:27:21.943+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:27:21.943+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:27:21.943+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Created payment: 46 for order: 29
+2026-01-29T16:35:00.497+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/30
+2026-01-29T16:35:00.512+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:35:00.513+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:35:00.514+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:35:00.514+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:35:00.522+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Created payment: 47 for order: 30
+2026-01-29T16:35:03.435+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 31
+2026-01-29T16:35:03.435+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 31
+2026-01-29T16:35:03.435+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:35:03.435+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:35:03.435+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:35:03.435+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:35:03.435+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 31
+2026-01-29T16:35:03.435+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/31
+2026-01-29T16:35:03.444+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:35:03.444+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:35:03.444+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:35:03.444+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:35:03.444+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 48 (status: PRE_AUTHORIZED)
+2026-01-29T16:35:03.444+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 12 ms for order 31
+2026-01-29T16:35:03.542+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 48
+2026-01-29T16:35:03.545+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 48, new status: COMPLETED
+2026-01-29T16:35:03.546+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 4 ms for payment 48
+2026-01-29T16:35:05.744+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 32
+2026-01-29T16:35:05.745+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 32
+2026-01-29T16:35:05.747+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:35:05.747+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:35:05.748+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:35:05.748+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:35:05.749+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 32
+2026-01-29T16:35:05.750+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/32
+2026-01-29T16:35:05.753+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:35:05.761+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:35:05.762+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:35:05.762+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:35:05.762+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 49 (status: PRE_AUTHORIZED)
+2026-01-29T16:35:05.769+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 24 ms for order 32
+2026-01-29T16:35:05.886+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 49
+2026-01-29T16:35:05.890+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 49, new status: COMPLETED
+2026-01-29T16:35:05.890+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 3 ms for payment 49
+2026-01-29T16:35:12.328+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 33
+2026-01-29T16:35:12.329+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 33
+2026-01-29T16:35:12.330+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:35:12.330+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:35:12.334+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:35:16.371+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/34
+2026-01-29T16:35:16.386+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:35:16.386+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:35:16.386+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:37:25.966+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/35
+2026-01-29T16:37:25.977+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:37:25.977+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:37:25.977+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:37:25.977+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:37:25.984+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Created payment: 50 for order: 35
+2026-01-29T16:37:29.507+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/36
+2026-01-29T16:37:29.518+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:37:29.518+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:37:29.526+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:37:38.947+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 37
+2026-01-29T16:37:38.947+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 37
+2026-01-29T16:37:38.960+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:37:38.960+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:37:38.960+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:37:45.253+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 38
+2026-01-29T16:37:45.253+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 38
+2026-01-29T16:37:45.253+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:37:45.260+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:37:45.261+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:37:50.507+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/39
+2026-01-29T16:37:50.515+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:37:50.515+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:37:50.525+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:40:15.357+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/40
+2026-01-29T16:40:15.362+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:15.362+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:40:15.362+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:40:17.162+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 41
+2026-01-29T16:40:17.162+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 41
+2026-01-29T16:40:17.165+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:17.168+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T16:40:17.170+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T16:40:23.377+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/42
+2026-01-29T16:40:23.398+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:23.412+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:40:23.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:40:23.419+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:40:23.452+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Created payment: 51 for order: 42
+2026-01-29T16:40:23.555+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : Saga refund executed for payment: 51, duration: 7 ms
+2026-01-29T16:40:25.098+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 43
+2026-01-29T16:40:25.098+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 43
+2026-01-29T16:40:25.099+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:25.099+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:40:25.100+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:40:25.101+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:40:25.101+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 43
+2026-01-29T16:40:25.101+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/43
+2026-01-29T16:40:25.108+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:25.108+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:40:25.109+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:40:25.110+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:40:25.112+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 52 (status: PRE_AUTHORIZED)
+2026-01-29T16:40:25.113+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 14 ms for order 43
+2026-01-29T16:40:25.146+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC ABORT: Releasing pre-authorized payment ID: 52
+2026-01-29T16:40:25.150+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC ABORT: Payment authorization released - ID: 52, duration: 2 ms
+2026-01-29T16:40:31.730+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/44
+2026-01-29T16:40:31.744+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:31.744+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:40:31.745+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:40:31.745+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:40:31.747+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Created payment: 53 for order: 44
+2026-01-29T16:40:31.808+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Saga refund executed for payment: 53, duration: 3 ms
+2026-01-29T16:40:36.564+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/45
+2026-01-29T16:40:36.581+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:36.581+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:40:36.581+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:40:36.581+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:40:36.581+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : Created payment: 54 for order: 45
+2026-01-29T16:40:36.640+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Saga refund executed for payment: 54, duration: 2 ms
+2026-01-29T16:40:38.498+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 46
+2026-01-29T16:40:38.498+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 46
+2026-01-29T16:40:38.498+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:38.498+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:40:38.498+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:40:38.498+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:40:38.498+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 46
+2026-01-29T16:40:38.507+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/46
+2026-01-29T16:40:38.516+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:38.516+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:40:38.516+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:40:38.516+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:40:38.516+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 55 (status: PRE_AUTHORIZED)
+2026-01-29T16:40:38.516+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 18 ms for order 46
+2026-01-29T16:40:38.568+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC ABORT: Releasing pre-authorized payment ID: 55
+2026-01-29T16:40:38.570+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC ABORT: Payment authorization released - ID: 55, duration: 2 ms
+2026-01-29T16:40:39.173+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/47
+2026-01-29T16:40:39.182+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T16:40:39.182+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T16:40:39.182+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T16:40:39.182+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T16:40:39.182+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Created payment: 56 for order: 47
+2026-01-29T16:40:39.232+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : Saga refund executed for payment: 56, duration: 2 ms
+2026-01-29T17:09:55.280+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/48
+2026-01-29T17:09:55.311+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:09:55.311+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:09:55.311+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:09:55.311+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:09:55.351+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Created payment: 57 for order: 48
+2026-01-29T17:09:55.757+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Saga refund executed for payment: 57, duration: 6 ms
+2026-01-29T17:10:01.114+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/49
+2026-01-29T17:10:01.125+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:10:01.126+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:10:01.126+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:10:01.126+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:10:01.126+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Created payment: 58 for order: 49
+2026-01-29T17:10:02.197+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 50
+2026-01-29T17:10:02.197+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 50
+2026-01-29T17:10:02.197+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:10:02.197+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:10:02.197+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:10:02.197+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:10:02.197+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 50
+2026-01-29T17:10:02.197+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/50
+2026-01-29T17:10:02.207+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:10:02.207+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:10:02.207+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:10:02.207+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:10:02.207+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 59 (status: PRE_AUTHORIZED)
+2026-01-29T17:10:02.207+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 11 ms for order 50
+2026-01-29T17:10:02.281+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 59
+2026-01-29T17:10:02.281+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 59, new status: COMPLETED
+2026-01-29T17:10:02.281+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 3 ms for payment 59
+2026-01-29T17:11:38.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 51
+2026-01-29T17:11:38.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 51
+2026-01-29T17:11:38.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:11:38.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:11:38.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:11:38.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:11:38.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 51
+2026-01-29T17:11:38.614+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/51
+2026-01-29T17:11:38.643+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:11:38.649+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:11:38.649+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:11:38.649+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:11:38.649+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 60 (status: PRE_AUTHORIZED)
+2026-01-29T17:11:38.649+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 36 ms for order 51
+2026-01-29T17:11:38.798+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 60
+2026-01-29T17:11:38.801+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 60, new status: COMPLETED
+2026-01-29T17:11:38.802+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 3 ms for payment 60
+2026-01-29T17:11:45.920+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/52
+2026-01-29T17:11:45.926+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:11:45.926+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:11:45.926+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:11:45.926+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:11:45.926+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Created payment: 61 for order: 52
+2026-01-29T17:11:51.190+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 53
+2026-01-29T17:11:51.190+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 53
+2026-01-29T17:11:51.190+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:11:51.190+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:11:51.190+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:11:51.190+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:11:51.190+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 53
+2026-01-29T17:11:51.190+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/53
+2026-01-29T17:11:51.198+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:11:51.198+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:11:51.205+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:11:51.205+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:11:51.206+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 62 (status: PRE_AUTHORIZED)
+2026-01-29T17:11:51.206+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 17 ms for order 53
+2026-01-29T17:11:51.284+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 62
+2026-01-29T17:11:51.286+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 62, new status: COMPLETED
+2026-01-29T17:11:51.286+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 2 ms for payment 62
+2026-01-29T17:12:56.519+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 54
+2026-01-29T17:12:56.519+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 54
+2026-01-29T17:12:56.519+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:12:56.519+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T17:12:56.526+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T17:13:06.848+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 55
+2026-01-29T17:13:06.848+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 55
+2026-01-29T17:13:06.851+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:13:06.851+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T17:13:06.853+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T17:13:12.409+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 56
+2026-01-29T17:13:12.409+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 56
+2026-01-29T17:13:12.409+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:13:12.409+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:13:12.409+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:13:12.409+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:13:12.409+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 56
+2026-01-29T17:13:12.409+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/56
+2026-01-29T17:13:12.425+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:13:12.425+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:13:12.425+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:13:12.425+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:13:12.425+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 63 (status: PRE_AUTHORIZED)
+2026-01-29T17:13:12.425+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 26 ms for order 56
+2026-01-29T17:13:12.489+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC ABORT: Releasing pre-authorized payment ID: 63
+2026-01-29T17:13:12.489+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC ABORT: Payment authorization released - ID: 63, duration: 3 ms
+2026-01-29T17:15:46.508+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/57
+2026-01-29T17:15:46.516+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:15:46.517+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:15:46.517+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:15:46.518+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:15:46.522+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Created payment: 64 for order: 57
+2026-01-29T17:15:46.583+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Saga refund executed for payment: 64, duration: 12 ms
+2026-01-29T17:15:49.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 58
+2026-01-29T17:15:49.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 58
+2026-01-29T17:15:49.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:15:49.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:15:49.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:15:49.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:15:49.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 58
+2026-01-29T17:15:49.415+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/58
+2026-01-29T17:15:49.424+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:15:49.424+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:15:49.424+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:15:49.424+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:15:49.433+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 65 (status: PRE_AUTHORIZED)
+2026-01-29T17:15:49.433+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 17 ms for order 58
+2026-01-29T17:15:49.476+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC ABORT: Releasing pre-authorized payment ID: 65
+2026-01-29T17:15:49.477+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC ABORT: Payment authorization released - ID: 65, duration: 2 ms
+2026-01-29T17:16:05.288+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 59
+2026-01-29T17:16:05.288+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 59
+2026-01-29T17:16:05.288+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:16:05.288+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T17:16:05.295+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T17:16:09.788+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/60
+2026-01-29T17:16:09.804+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:16:09.804+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-10] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T17:16:09.804+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T17:20:06.010+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 61
+2026-01-29T17:20:06.010+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 61
+2026-01-29T17:20:06.010+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:20:06.011+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-1] h.f.e.p.service.FinancialAgencyService   : FINA service is currently unavailable (validation disabled)
+2026-01-29T17:20:06.013+01:00  WARN 4616 --- [payment] [http-nio-8084-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.payment.exception.FinancialAgencyUnavailableException: FINA service is currently unavailable]
+2026-01-29T17:20:14.925+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 62
+2026-01-29T17:20:14.925+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 62
+2026-01-29T17:20:14.927+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:20:14.927+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:20:14.927+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:20:14.928+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:20:14.928+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 62
+2026-01-29T17:20:14.929+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/62
+2026-01-29T17:20:14.937+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:20:14.937+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:20:14.943+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:20:14.943+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:20:14.963+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 66 (status: PRE_AUTHORIZED)
+2026-01-29T17:20:14.964+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-2] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 38 ms for order 62
+2026-01-29T17:20:15.190+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 66
+2026-01-29T17:20:15.203+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 66, new status: COMPLETED
+2026-01-29T17:20:15.203+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-8] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 16 ms for payment 66
+2026-01-29T17:22:57.308+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 63
+2026-01-29T17:22:57.312+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 63
+2026-01-29T17:22:57.316+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:22:57.316+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:22:57.317+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:22:57.317+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:22:57.317+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 63
+2026-01-29T17:22:57.323+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/63
+2026-01-29T17:22:57.352+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:22:57.353+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:22:57.362+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:22:57.362+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:22:57.368+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 67 (status: PRE_AUTHORIZED)
+2026-01-29T17:22:57.368+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-4] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 56 ms for order 63
+2026-01-29T17:22:57.484+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC ABORT: Releasing pre-authorized payment ID: 67
+2026-01-29T17:22:57.491+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-3] h.f.e.payment.service.PaymentService     : 2PC ABORT: Payment authorization released - ID: 67, duration: 6 ms
+2026-01-29T17:23:27.193+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 64
+2026-01-29T17:23:27.193+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 64
+2026-01-29T17:23:27.193+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:23:27.193+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:23:27.193+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:23:27.193+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:23:27.193+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 64
+2026-01-29T17:23:27.193+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/64
+2026-01-29T17:23:27.208+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:23:27.208+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:23:27.208+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:23:27.208+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:23:27.208+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 68 (status: PRE_AUTHORIZED)
+2026-01-29T17:23:27.208+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-7] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 15 ms for order 64
+2026-01-29T17:23:27.259+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC ABORT: Releasing pre-authorized payment ID: 68
+2026-01-29T17:23:27.259+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-5] h.f.e.payment.service.PaymentService     : 2PC ABORT: Payment authorization released - ID: 68, duration: 2 ms
+2026-01-29T17:23:30.760+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Pre-authorizing payment for order: 65
+2026-01-29T17:23:30.760+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Validating payment readiness for order: 65
+2026-01-29T17:23:30.760+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:23:30.760+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:23:30.760+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:23:30.760+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:23:30.760+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : Payment validation passed for order: 65
+2026-01-29T17:23:30.760+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.client.OrderClient         : Fetching order from: http://localhost:8082/api/orders/65
+2026-01-29T17:23:30.765+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating FINA service availability
+2026-01-29T17:23:30.765+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : FINA service is available
+2026-01-29T17:23:30.765+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Validating payment method: CREDIT_CARD
+2026-01-29T17:23:30.765+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.p.service.FinancialAgencyService   : Payment method validation passed
+2026-01-29T17:23:30.784+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE: Payment pre-authorized with ID: 69 (status: PRE_AUTHORIZED)
+2026-01-29T17:23:30.785+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-9] h.f.e.payment.service.PaymentService     : 2PC PREPARE DURATION: 24 ms for order 65
+2026-01-29T17:23:30.859+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Capturing payment ID: 69
+2026-01-29T17:23:30.859+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT: Payment captured - ID: 69, new status: COMPLETED
+2026-01-29T17:23:30.859+01:00  INFO 4616 --- [payment] [http-nio-8084-exec-6] h.f.e.payment.service.PaymentService     : 2PC COMMIT DURATION: 3 ms for payment 69
+2026-01-29T17:25:06.695+01:00  INFO 4616 --- [payment] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-29T17:25:06.806+01:00  INFO 4616 --- [payment] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-29T17:25:07.161+01:00  INFO 4616 --- [payment] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29T17:25:07.211+01:00  WARN 4616 --- [payment] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-01-29T17:25:07.212+01:00  INFO 4616 --- [payment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-29T17:25:07.218+01:00  INFO 4616 --- [payment] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

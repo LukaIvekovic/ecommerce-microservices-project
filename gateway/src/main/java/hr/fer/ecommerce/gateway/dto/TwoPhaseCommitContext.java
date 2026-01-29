@@ -24,4 +24,18 @@ public class TwoPhaseCommitContext {
     private boolean orderCommitted;
     private boolean paymentCommitted;
     private boolean shipmentCommitted;
+
+    private long orderLatency;
+    private long paymentLatency;
+    private long shippingLatency;
+    private long totalLatency;
+    private long prepareLatency;
+    private long commitLatency;
+    private long abortLatency;
+
+
+    // helper metoda za zbrajanje ukupne latencije commit faze
+    public void addToTotalLatency(long delta) {
+        this.totalLatency += delta;
+    }
 }

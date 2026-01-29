@@ -1,31 +1,31 @@
-2026-01-27T16:45:03.561+01:00  INFO 8940 --- [product] [restartedMain] h.f.e.product.ProductApplication         : Starting ProductApplication using Java 21.0.8 with PID 8940 (C:\DiplProj\ecommerce-microservices-project\product\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\product)
-2026-01-27T16:45:03.561+01:00  INFO 8940 --- [product] [restartedMain] h.f.e.product.ProductApplication         : No active profile set, falling back to 1 default profile: "default"
-2026-01-27T16:45:03.650+01:00  INFO 8940 --- [product] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-01-27T16:45:03.651+01:00  INFO 8940 --- [product] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-01-27T16:45:04.842+01:00  INFO 8940 --- [product] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-27T16:45:05.007+01:00  INFO 8940 --- [product] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 1 JPA repository interface.
-2026-01-27T16:45:05.994+01:00  INFO 8940 --- [product] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2026-01-27T16:45:06.025+01:00  INFO 8940 --- [product] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-27T16:45:06.025+01:00  INFO 8940 --- [product] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
-2026-01-27T16:45:06.063+01:00  INFO 8940 --- [product] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-27T16:45:06.063+01:00  INFO 8940 --- [product] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2409 ms
-2026-01-27T16:45:06.405+01:00  INFO 8940 --- [product] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-27T16:45:06.664+01:00  INFO 8940 --- [product] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:productdb user=SA
-2026-01-27T16:45:06.664+01:00  INFO 8940 --- [product] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-27T16:45:06.710+01:00  INFO 8940 --- [product] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:productdb (H2 2.3)
-2026-01-27T16:45:06.764+01:00  INFO 8940 --- [product] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
-2026-01-27T16:45:06.781+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.042s)
-2026-01-27T16:45:06.791+01:00  INFO 8940 --- [product] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
-2026-01-27T16:45:06.794+01:00  INFO 8940 --- [product] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
-2026-01-27T16:45:06.856+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
-2026-01-27T16:45:06.878+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create products table"
-2026-01-27T16:45:06.936+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed products"
-2026-01-27T16:45:06.985+01:00  INFO 8940 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.044s)
-2026-01-27T16:45:07.195+01:00  INFO 8940 --- [product] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-27T16:45:07.338+01:00  INFO 8940 --- [product] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
-2026-01-27T16:45:07.389+01:00  INFO 8940 --- [product] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-01-27T16:45:08.155+01:00  INFO 8940 --- [product] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-27T16:45:08.282+01:00  INFO 8940 --- [product] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-01-29T15:17:33.938+01:00  INFO 424 --- [product] [restartedMain] h.f.e.product.ProductApplication         : Starting ProductApplication using Java 21.0.8 with PID 424 (C:\DiplProj\ecommerce-microservices-project\product\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\product)
+2026-01-29T15:17:33.953+01:00  INFO 424 --- [product] [restartedMain] h.f.e.product.ProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-01-29T15:17:34.051+01:00  INFO 424 --- [product] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-29T15:17:34.051+01:00  INFO 424 --- [product] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-29T15:17:35.553+01:00  INFO 424 --- [product] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-29T15:17:35.900+01:00  INFO 424 --- [product] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 293 ms. Found 1 JPA repository interface.
+2026-01-29T15:17:37.061+01:00  INFO 424 --- [product] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-01-29T15:17:37.092+01:00  INFO 424 --- [product] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-29T15:17:37.092+01:00  INFO 424 --- [product] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-01-29T15:17:37.174+01:00  INFO 424 --- [product] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-29T15:17:37.174+01:00  INFO 424 --- [product] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3123 ms
+2026-01-29T15:17:37.663+01:00  INFO 424 --- [product] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-29T15:17:37.894+01:00  INFO 424 --- [product] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:productdb user=SA
+2026-01-29T15:17:37.897+01:00  INFO 424 --- [product] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-29T15:17:37.936+01:00  INFO 424 --- [product] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:productdb (H2 2.3)
+2026-01-29T15:17:37.983+01:00  INFO 424 --- [product] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-01-29T15:17:37.983+01:00  INFO 424 --- [product] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.019s)
+2026-01-29T15:17:37.983+01:00  INFO 424 --- [product] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-01-29T15:17:37.983+01:00  INFO 424 --- [product] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-01-29T15:17:38.029+01:00  INFO 424 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-01-29T15:17:38.045+01:00  INFO 424 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create products table"
+2026-01-29T15:17:38.061+01:00  INFO 424 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed products"
+2026-01-29T15:17:38.076+01:00  INFO 424 --- [product] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.016s)
+2026-01-29T15:17:38.171+01:00  INFO 424 --- [product] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-29T15:17:38.250+01:00  INFO 424 --- [product] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-01-29T15:17:38.281+01:00  INFO 424 --- [product] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-29T15:17:38.717+01:00  INFO 424 --- [product] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-29T15:17:38.795+01:00  INFO 424 --- [product] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -33,32 +33,509 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-27T16:45:09.772+01:00  INFO 8940 --- [product] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-27T16:45:09.811+01:00  INFO 8940 --- [product] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-27T16:45:10.804+01:00  WARN 8940 --- [product] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-27T16:45:10.943+01:00  INFO 8940 --- [product] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2026-01-27T16:45:11.776+01:00  INFO 8940 --- [product] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:productdb'
-2026-01-27T16:45:11.953+01:00  WARN 8940 --- [product] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-01-27T16:45:12.284+01:00  INFO 8940 --- [product] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2026-01-27T16:45:12.382+01:00  INFO 8940 --- [product] [restartedMain] h.f.e.product.ProductApplication         : Started ProductApplication in 9.975 seconds (process running for 10.616)
-2026-01-27T16:45:24.119+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-27T16:45:24.120+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-27T16:45:24.121+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-01-27T16:45:24.234+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
-2026-01-27T16:45:24.508+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 48
-2026-01-27T16:45:24.510+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 99
-2026-01-27T16:45:24.511+01:00  INFO 8940 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
-2026-01-27T16:45:28.666+01:00  INFO 8940 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
-2026-01-27T16:45:28.666+01:00  INFO 8940 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 46
-2026-01-27T16:45:28.676+01:00  INFO 8940 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 98
-2026-01-27T16:45:28.677+01:00  INFO 8940 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
-2026-01-27T16:45:30.282+01:00  INFO 8940 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserving stock for 2 items
-2026-01-27T16:45:30.311+01:00  INFO 8940 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 44
-2026-01-27T16:45:30.325+01:00  INFO 8940 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 97
-2026-01-27T16:45:30.325+01:00  INFO 8940 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock reservation completed successfully
-2026-01-27T16:53:08.190+01:00  INFO 8940 --- [product] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-27T16:53:08.196+01:00  INFO 8940 --- [product] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-01-27T16:53:08.228+01:00  INFO 8940 --- [product] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-27T16:53:08.228+01:00  WARN 8940 --- [product] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
-2026-01-27T16:53:08.228+01:00  INFO 8940 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-27T16:53:08.228+01:00  INFO 8940 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-29T15:17:39.544+01:00  INFO 424 --- [product] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-29T15:17:39.573+01:00  INFO 424 --- [product] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29T15:17:40.181+01:00  WARN 424 --- [product] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-29T15:17:40.217+01:00  INFO 424 --- [product] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-29T15:17:40.436+01:00  INFO 424 --- [product] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:productdb'
+2026-01-29T15:17:40.514+01:00  WARN 424 --- [product] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-29T15:17:40.592+01:00  INFO 424 --- [product] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-01-29T15:17:40.592+01:00  INFO 424 --- [product] [restartedMain] h.f.e.product.ProductApplication         : Started ProductApplication in 7.499 seconds (process running for 8.308)
+2026-01-29T15:28:27.641+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-29T15:28:27.641+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-29T15:28:27.672+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
+2026-01-29T15:28:27.904+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:28:28.191+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 48
+2026-01-29T15:28:28.195+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 99
+2026-01-29T15:28:28.196+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:28:42.180+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:28:42.180+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 46
+2026-01-29T15:28:42.180+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 98
+2026-01-29T15:28:42.180+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:28:44.437+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:28:44.437+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 44
+2026-01-29T15:28:44.437+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 97
+2026-01-29T15:28:44.437+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:28:46.880+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:28:46.880+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 42
+2026-01-29T15:28:46.880+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 96
+2026-01-29T15:28:46.880+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:32:26.158+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:32:26.158+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 40
+2026-01-29T15:32:26.158+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 95
+2026-01-29T15:32:26.158+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:32:30.150+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:32:30.150+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 38
+2026-01-29T15:32:30.150+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 94
+2026-01-29T15:32:30.158+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:32:31.957+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:32:31.961+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 36
+2026-01-29T15:32:31.964+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 93
+2026-01-29T15:32:31.965+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:32:35.775+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:32:35.775+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 34
+2026-01-29T15:32:35.782+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 92
+2026-01-29T15:32:35.782+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:33:25.604+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:33:25.607+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 32
+2026-01-29T15:33:25.609+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 91
+2026-01-29T15:33:25.610+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:58:25.717+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:58:25.759+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 30
+2026-01-29T15:58:25.761+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 90
+2026-01-29T15:58:25.762+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:58:29.198+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:58:29.198+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 28
+2026-01-29T15:58:29.206+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 89
+2026-01-29T15:58:29.206+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:58:32.623+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:58:32.623+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 26
+2026-01-29T15:58:32.623+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 88
+2026-01-29T15:58:32.623+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:59:02.536+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:59:02.540+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 24
+2026-01-29T15:59:02.543+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 87
+2026-01-29T15:59:02.543+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:59:04.902+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:59:04.911+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 22
+2026-01-29T15:59:04.911+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 86
+2026-01-29T15:59:04.911+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:59:07.556+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:59:07.556+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 20
+2026-01-29T15:59:07.563+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 85
+2026-01-29T15:59:07.563+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:59:09.942+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:59:09.942+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 18
+2026-01-29T15:59:09.942+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 84
+2026-01-29T15:59:09.942+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T15:59:13.397+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T15:59:13.397+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 16
+2026-01-29T15:59:13.397+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 83
+2026-01-29T15:59:13.397+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:01:08.954+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:01:08.958+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 14
+2026-01-29T16:01:08.961+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 82
+2026-01-29T16:01:08.962+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:01:10.900+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:01:10.901+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 12
+2026-01-29T16:01:10.905+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 81
+2026-01-29T16:01:10.906+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:01:13.128+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:01:13.133+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 10
+2026-01-29T16:01:13.133+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 80
+2026-01-29T16:01:13.133+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:01:14.709+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:01:14.709+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 8
+2026-01-29T16:01:14.719+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 79
+2026-01-29T16:01:14.719+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:01:16.366+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:01:16.366+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 6
+2026-01-29T16:01:16.378+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 78
+2026-01-29T16:01:16.379+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:01:18.428+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:01:18.438+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 4
+2026-01-29T16:01:18.445+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 77
+2026-01-29T16:01:18.446+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:08:18.530+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:08:18.530+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 2
+2026-01-29T16:08:18.530+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 76
+2026-01-29T16:08:18.530+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:08:18.946+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:08:18.956+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 4
+2026-01-29T16:08:18.958+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 77
+2026-01-29T16:08:18.959+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:08:22.288+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:08:22.290+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 2
+2026-01-29T16:08:22.292+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 76
+2026-01-29T16:08:22.293+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:08:22.375+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:08:22.375+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 4
+2026-01-29T16:08:22.381+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 77
+2026-01-29T16:08:22.382+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:08:23.221+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:08:23.221+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 2
+2026-01-29T16:08:23.221+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 76
+2026-01-29T16:08:23.221+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:08:23.479+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:08:23.479+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 4
+2026-01-29T16:08:23.479+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 77
+2026-01-29T16:08:23.479+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:08:32.865+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:08:32.868+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 2
+2026-01-29T16:08:32.870+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 76
+2026-01-29T16:08:32.871+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:08:32.958+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:08:32.958+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 4
+2026-01-29T16:08:32.958+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 77
+2026-01-29T16:08:32.958+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:10:50.403+01:00  WARN 424 --- [product] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:10:56.215+01:00  WARN 424 --- [product] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:12:05.717+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:12:05.721+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 2
+2026-01-29T16:12:05.734+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 76
+2026-01-29T16:12:05.740+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:12:10.311+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:12:10.328+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 0
+2026-01-29T16:12:10.332+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 75
+2026-01-29T16:12:10.334+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:12:13.490+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:12:13.490+01:00 ERROR 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Insufficient stock during reservation for product 1: requested=2, available=0
+2026-01-29T16:12:13.507+01:00  WARN 424 --- [product] [http-nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.product.exception.InsufficientStockException: Insufficient stock for product 1. Requested: 2, Available: 0]
+2026-01-29T16:12:17.944+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:12:17.947+01:00 ERROR 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Insufficient stock during reservation for product 1: requested=2, available=0
+2026-01-29T16:12:17.952+01:00  WARN 424 --- [product] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.product.exception.InsufficientStockException: Insufficient stock for product 1. Requested: 2, Available: 0]
+2026-01-29T16:12:19.496+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:12:19.505+01:00 ERROR 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Insufficient stock during reservation for product 1: requested=2, available=0
+2026-01-29T16:12:19.505+01:00  WARN 424 --- [product] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.product.exception.InsufficientStockException: Insufficient stock for product 1. Requested: 2, Available: 0]
+2026-01-29T16:12:21.233+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:12:21.242+01:00 ERROR 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Insufficient stock during reservation for product 1: requested=2, available=0
+2026-01-29T16:12:21.242+01:00  WARN 424 --- [product] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.product.exception.InsufficientStockException: Insufficient stock for product 1. Requested: 2, Available: 0]
+2026-01-29T16:12:55.024+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:12:55.034+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 23
+2026-01-29T16:12:55.035+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 74
+2026-01-29T16:12:55.035+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:12:57.676+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:12:57.680+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 21
+2026-01-29T16:12:57.683+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 73
+2026-01-29T16:12:57.683+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:13:04.559+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:13:04.559+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 19
+2026-01-29T16:13:04.566+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 72
+2026-01-29T16:13:04.567+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:13:07.017+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:13:07.021+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 17
+2026-01-29T16:13:07.023+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 71
+2026-01-29T16:13:07.023+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:14:04.824+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:14:04.826+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 15
+2026-01-29T16:14:04.829+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 70
+2026-01-29T16:14:04.829+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:14:04.908+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:14:04.912+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 17
+2026-01-29T16:14:04.914+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 71
+2026-01-29T16:14:04.914+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:14:14.744+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:14:14.744+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 15
+2026-01-29T16:14:14.751+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 70
+2026-01-29T16:14:14.751+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:14:14.875+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:14:14.875+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 17
+2026-01-29T16:14:14.875+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 71
+2026-01-29T16:14:14.875+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:14:17.264+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:14:17.264+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 15
+2026-01-29T16:14:17.273+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 70
+2026-01-29T16:14:17.273+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:14:17.364+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:14:17.364+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 17
+2026-01-29T16:14:17.374+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 71
+2026-01-29T16:14:17.374+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:14:20.489+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:14:20.490+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 15
+2026-01-29T16:14:20.490+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 70
+2026-01-29T16:14:20.490+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:25:50.118+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:25:50.123+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 13
+2026-01-29T16:25:50.124+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 69
+2026-01-29T16:25:50.125+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:25:59.127+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:25:59.127+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 11
+2026-01-29T16:25:59.134+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 68
+2026-01-29T16:25:59.135+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:26:03.750+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:26:03.750+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 9
+2026-01-29T16:26:03.750+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 67
+2026-01-29T16:26:03.750+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:26:05.780+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:26:05.780+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 7
+2026-01-29T16:26:05.780+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 66
+2026-01-29T16:26:05.780+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:26:14.846+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:26:14.864+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 5
+2026-01-29T16:26:14.868+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 65
+2026-01-29T16:26:14.868+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:26:24.004+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:26:24.006+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 3
+2026-01-29T16:26:24.007+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 64
+2026-01-29T16:26:24.007+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:26:50.916+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:26:50.917+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 1
+2026-01-29T16:26:50.919+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 63
+2026-01-29T16:26:50.920+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:26:51.105+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:26:51.105+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 3
+2026-01-29T16:26:51.105+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 64
+2026-01-29T16:26:51.105+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:27:10.130+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:27:10.131+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 1
+2026-01-29T16:27:10.132+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 63
+2026-01-29T16:27:10.133+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:27:10.319+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:27:10.319+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 3
+2026-01-29T16:27:10.319+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 64
+2026-01-29T16:27:10.326+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:27:16.048+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:27:16.048+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 1
+2026-01-29T16:27:16.048+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 63
+2026-01-29T16:27:16.048+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:27:16.181+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:27:16.181+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 3
+2026-01-29T16:27:16.189+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 64
+2026-01-29T16:27:16.190+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:27:21.884+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:27:21.884+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 1
+2026-01-29T16:27:21.884+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 63
+2026-01-29T16:27:21.884+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:34:35.274+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:34:35.277+01:00 ERROR 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Insufficient stock during reservation for product 1: requested=2, available=1
+2026-01-29T16:34:35.293+01:00  WARN 424 --- [product] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.product.exception.InsufficientStockException: Insufficient stock for product 1. Requested: 2, Available: 1]
+2026-01-29T16:35:00.431+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:35:00.431+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 148
+2026-01-29T16:35:00.439+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 62
+2026-01-29T16:35:00.439+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:35:03.302+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:35:03.310+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 146
+2026-01-29T16:35:03.320+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 61
+2026-01-29T16:35:03.328+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:35:05.590+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:35:05.607+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 144
+2026-01-29T16:35:05.607+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 60
+2026-01-29T16:35:05.612+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:35:12.222+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:35:12.225+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 142
+2026-01-29T16:35:12.229+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 59
+2026-01-29T16:35:12.229+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:35:12.367+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:35:12.367+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 144
+2026-01-29T16:35:12.367+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 60
+2026-01-29T16:35:12.367+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:35:16.342+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:35:16.342+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 142
+2026-01-29T16:35:16.342+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 59
+2026-01-29T16:35:16.342+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:35:16.417+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:35:16.417+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 144
+2026-01-29T16:35:16.417+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 60
+2026-01-29T16:35:16.417+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:37:25.911+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:37:25.911+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 142
+2026-01-29T16:37:25.911+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 59
+2026-01-29T16:37:25.911+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:37:29.410+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:37:29.410+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:37:29.410+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:37:29.410+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:37:29.560+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:37:29.569+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:37:29.569+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:37:29.569+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:37:38.848+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:37:38.848+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:37:38.848+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:37:38.848+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:37:38.992+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:37:38.992+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:37:38.992+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:37:38.992+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:37:45.153+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:37:45.153+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:37:45.160+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:37:45.160+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:37:45.319+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:37:45.320+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:37:45.336+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:37:45.336+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:37:50.457+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:37:50.457+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:37:50.467+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:37:50.467+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:37:50.557+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:37:50.563+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:37:50.567+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:37:50.567+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:40:15.295+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:40:15.306+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:40:15.307+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:40:15.307+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:40:15.387+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:40:15.387+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:40:15.396+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:40:15.396+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:40:17.064+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:40:17.064+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:40:17.064+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:40:17.064+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:40:17.197+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:40:17.197+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:40:17.197+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:40:17.197+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:40:23.297+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:40:23.300+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:40:23.303+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:40:23.304+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:40:23.582+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:40:23.591+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:40:23.602+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:40:23.602+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:40:25.004+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:40:25.006+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:40:25.007+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:40:25.008+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:40:25.192+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:40:25.195+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:40:25.196+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:40:25.196+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:40:31.675+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:40:31.675+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:40:31.682+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:40:31.683+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:40:31.834+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:40:31.837+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:40:31.839+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:40:31.839+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:40:36.523+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:40:36.523+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:40:36.523+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:40:36.523+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:40:36.664+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:40:36.664+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:40:36.664+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:40:36.664+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:40:38.407+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:40:38.407+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:40:38.407+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:40:38.407+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:40:38.590+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:40:38.590+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:40:38.590+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:40:38.590+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T16:40:39.131+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T16:40:39.131+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T16:40:39.131+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T16:40:39.131+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T16:40:39.260+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T16:40:39.260+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T16:40:39.260+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T16:40:39.260+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:09:54.639+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:09:54.803+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T17:09:54.819+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T17:09:54.819+01:00  INFO 424 --- [product] [http-nio-8081-exec-5] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:09:55.775+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:09:55.777+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 142
+2026-01-29T17:09:55.780+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 59
+2026-01-29T17:09:55.780+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:10:01.048+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:10:01.048+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 140
+2026-01-29T17:10:01.056+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 58
+2026-01-29T17:10:01.056+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:10:02.067+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:10:02.073+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 138
+2026-01-29T17:10:02.098+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 57
+2026-01-29T17:10:02.098+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:11:38.480+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:11:38.489+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 136
+2026-01-29T17:11:38.492+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 56
+2026-01-29T17:11:38.493+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:11:45.879+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:11:45.880+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 134
+2026-01-29T17:11:45.881+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 55
+2026-01-29T17:11:45.882+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:11:51.081+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:11:51.081+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 132
+2026-01-29T17:11:51.081+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 54
+2026-01-29T17:11:51.081+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:12:56.411+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:12:56.423+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 130
+2026-01-29T17:12:56.427+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 53
+2026-01-29T17:12:56.427+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:12:56.569+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:12:56.571+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 132
+2026-01-29T17:12:56.573+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 54
+2026-01-29T17:12:56.573+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:13:06.755+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:13:06.759+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 130
+2026-01-29T17:13:06.761+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 53
+2026-01-29T17:13:06.762+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:13:06.893+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:13:06.896+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 132
+2026-01-29T17:13:06.897+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 54
+2026-01-29T17:13:06.897+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:13:12.325+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:13:12.327+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 130
+2026-01-29T17:13:12.328+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 53
+2026-01-29T17:13:12.328+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:13:12.522+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:13:12.522+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 132
+2026-01-29T17:13:12.522+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 54
+2026-01-29T17:13:12.522+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:15:46.469+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:15:46.473+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 130
+2026-01-29T17:15:46.473+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 53
+2026-01-29T17:15:46.473+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:15:46.600+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:15:46.601+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 132
+2026-01-29T17:15:46.603+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 54
+2026-01-29T17:15:46.603+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:15:49.333+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:15:49.333+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 130
+2026-01-29T17:15:49.333+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 53
+2026-01-29T17:15:49.333+01:00  INFO 424 --- [product] [http-nio-8081-exec-10] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:15:49.499+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:15:49.499+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 132
+2026-01-29T17:15:49.499+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 54
+2026-01-29T17:15:49.499+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:16:05.186+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:16:05.186+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 130
+2026-01-29T17:16:05.193+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 53
+2026-01-29T17:16:05.193+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:16:05.310+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:16:05.310+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 132
+2026-01-29T17:16:05.310+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 54
+2026-01-29T17:16:05.310+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:16:09.771+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:16:09.771+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 130
+2026-01-29T17:16:09.771+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 53
+2026-01-29T17:16:09.771+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:16:09.835+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:16:09.835+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 132
+2026-01-29T17:16:09.835+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 54
+2026-01-29T17:16:09.835+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:20:05.917+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:20:05.921+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 130
+2026-01-29T17:20:05.922+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 53
+2026-01-29T17:20:05.922+01:00  INFO 424 --- [product] [http-nio-8081-exec-2] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:20:06.042+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:20:06.045+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 132
+2026-01-29T17:20:06.045+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 54
+2026-01-29T17:20:06.045+01:00  INFO 424 --- [product] [http-nio-8081-exec-1] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:20:14.823+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:20:14.825+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 130
+2026-01-29T17:20:14.826+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 53
+2026-01-29T17:20:14.826+01:00  INFO 424 --- [product] [http-nio-8081-exec-6] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:22:57.162+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:22:57.165+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 128
+2026-01-29T17:22:57.167+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 52
+2026-01-29T17:22:57.168+01:00  INFO 424 --- [product] [http-nio-8081-exec-3] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:22:57.537+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:22:57.537+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 130
+2026-01-29T17:22:57.553+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 53
+2026-01-29T17:22:57.553+01:00  INFO 424 --- [product] [http-nio-8081-exec-4] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:23:27.074+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:23:27.077+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 128
+2026-01-29T17:23:27.077+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 52
+2026-01-29T17:23:27.077+01:00  INFO 424 --- [product] [http-nio-8081-exec-8] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:23:27.291+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Releasing stock for 2 items (rollback)
+2026-01-29T17:23:27.291+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Released 2 units of product 1, new stock: 130
+2026-01-29T17:23:27.291+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Released 1 units of product 2, new stock: 53
+2026-01-29T17:23:27.291+01:00  INFO 424 --- [product] [http-nio-8081-exec-7] h.f.e.product.service.ProductService     : Stock release completed
+2026-01-29T17:23:30.676+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserving stock for 2 items
+2026-01-29T17:23:30.678+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 2 units of product 1, remaining stock: 128
+2026-01-29T17:23:30.679+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Reserved 1 units of product 2, remaining stock: 52
+2026-01-29T17:23:30.679+01:00  INFO 424 --- [product] [http-nio-8081-exec-9] h.f.e.product.service.ProductService     : Stock reservation completed successfully
+2026-01-29T17:25:10.763+01:00  INFO 424 --- [product] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-29T17:25:10.873+01:00  INFO 424 --- [product] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-29T17:25:11.031+01:00  INFO 424 --- [product] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29T17:25:11.045+01:00  WARN 424 --- [product] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-01-29T17:25:11.045+01:00  INFO 424 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-29T17:25:11.061+01:00  INFO 424 --- [product] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

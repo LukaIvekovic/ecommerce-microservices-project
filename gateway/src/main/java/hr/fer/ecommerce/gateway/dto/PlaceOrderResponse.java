@@ -32,5 +32,15 @@ public class PlaceOrderResponse {
     private LocalDateTime timestamp;
 
     private String errorDetails;
+
+    private long orderLatency;
+    private long paymentLatency;
+    private long shippingLatency;
+    private long totalLatency;
+    private int compensations;
+    private long prepareLatency;
+    private long commitLatency;
+    private long abortLatency;
+
 }
 

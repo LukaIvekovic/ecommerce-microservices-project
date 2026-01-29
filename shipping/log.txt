@@ -1,31 +1,31 @@
-2026-01-27T16:45:11.973+01:00  INFO 10360 --- [shipping] [restartedMain] h.f.e.shipping.ShippingApplication       : Starting ShippingApplication using Java 21.0.8 with PID 10360 (C:\DiplProj\ecommerce-microservices-project\shipping\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\shipping)
-2026-01-27T16:45:11.983+01:00  INFO 10360 --- [shipping] [restartedMain] h.f.e.shipping.ShippingApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-01-27T16:45:12.091+01:00  INFO 10360 --- [shipping] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-01-27T16:45:12.091+01:00  INFO 10360 --- [shipping] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-01-27T16:45:13.677+01:00  INFO 10360 --- [shipping] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-27T16:45:13.881+01:00  INFO 10360 --- [shipping] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 1 JPA repository interface.
-2026-01-27T16:45:14.357+01:00  INFO 10360 --- [shipping] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
-2026-01-27T16:45:14.383+01:00  INFO 10360 --- [shipping] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-27T16:45:14.383+01:00  INFO 10360 --- [shipping] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
-2026-01-27T16:45:14.425+01:00  INFO 10360 --- [shipping] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-01-27T16:45:14.426+01:00  INFO 10360 --- [shipping] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2319 ms
-2026-01-27T16:45:14.870+01:00  INFO 10360 --- [shipping] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-27T16:45:15.143+01:00  INFO 10360 --- [shipping] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:shippingdb user=SA
-2026-01-27T16:45:15.146+01:00  INFO 10360 --- [shipping] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-27T16:45:15.187+01:00  INFO 10360 --- [shipping] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:shippingdb (H2 2.3)
-2026-01-27T16:45:15.226+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
-2026-01-27T16:45:15.226+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.032s)
-2026-01-27T16:45:15.226+01:00  INFO 10360 --- [shipping] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
-2026-01-27T16:45:15.226+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
-2026-01-27T16:45:15.253+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
-2026-01-27T16:45:15.269+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create shipments table"
-2026-01-27T16:45:15.291+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed shipments"
-2026-01-27T16:45:15.296+01:00  INFO 10360 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.011s)
-2026-01-27T16:45:15.354+01:00  INFO 10360 --- [shipping] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-27T16:45:15.405+01:00  INFO 10360 --- [shipping] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
-2026-01-27T16:45:15.441+01:00  INFO 10360 --- [shipping] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-01-27T16:45:15.672+01:00  INFO 10360 --- [shipping] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-27T16:45:15.724+01:00  INFO 10360 --- [shipping] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-01-29T15:17:39.406+01:00  INFO 2276 --- [shipping] [restartedMain] h.f.e.shipping.ShippingApplication       : Starting ShippingApplication using Java 21.0.8 with PID 2276 (C:\DiplProj\ecommerce-microservices-project\shipping\target\classes started by K76 in C:\DiplProj\ecommerce-microservices-project\shipping)
+2026-01-29T15:17:39.427+01:00  INFO 2276 --- [shipping] [restartedMain] h.f.e.shipping.ShippingApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-01-29T15:17:39.465+01:00  INFO 2276 --- [shipping] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-29T15:17:39.465+01:00  INFO 2276 --- [shipping] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-29T15:17:40.405+01:00  INFO 2276 --- [shipping] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-29T15:17:40.529+01:00  INFO 2276 --- [shipping] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interface.
+2026-01-29T15:17:41.200+01:00  INFO 2276 --- [shipping] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-01-29T15:17:41.216+01:00  INFO 2276 --- [shipping] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-29T15:17:41.216+01:00  INFO 2276 --- [shipping] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-01-29T15:17:41.248+01:00  INFO 2276 --- [shipping] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-29T15:17:41.248+01:00  INFO 2276 --- [shipping] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1783 ms
+2026-01-29T15:17:41.420+01:00  INFO 2276 --- [shipping] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-29T15:17:41.562+01:00  INFO 2276 --- [shipping] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:shippingdb user=SA
+2026-01-29T15:17:41.578+01:00  INFO 2276 --- [shipping] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-29T15:17:41.620+01:00  INFO 2276 --- [shipping] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:shippingdb (H2 2.3)
+2026-01-29T15:17:41.656+01:00  INFO 2276 --- [shipping] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-01-29T15:17:41.656+01:00  INFO 2276 --- [shipping] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.032s)
+2026-01-29T15:17:41.656+01:00  INFO 2276 --- [shipping] [restartedMain] org.flywaydb.core.Flyway                 : All configured schemas are empty; baseline operation skipped. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended.
+2026-01-29T15:17:41.671+01:00  INFO 2276 --- [shipping] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-01-29T15:17:41.709+01:00  INFO 2276 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-01-29T15:17:41.718+01:00  INFO 2276 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create shipments table"
+2026-01-29T15:17:41.739+01:00  INFO 2276 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "2 - seed shipments"
+2026-01-29T15:17:41.759+01:00  INFO 2276 --- [shipping] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "PUBLIC", now at version v2 (execution time 00:00.020s)
+2026-01-29T15:17:41.888+01:00  INFO 2276 --- [shipping] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-29T15:17:41.937+01:00  INFO 2276 --- [shipping] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2026-01-29T15:17:41.966+01:00  INFO 2276 --- [shipping] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-29T15:17:42.310+01:00  INFO 2276 --- [shipping] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-29T15:17:42.357+01:00  INFO 2276 --- [shipping] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -33,55 +33,835 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-27T16:45:16.660+01:00  INFO 10360 --- [shipping] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-27T16:45:16.660+01:00  INFO 10360 --- [shipping] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-27T16:45:16.972+01:00  WARN 10360 --- [shipping] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-27T16:45:17.373+01:00  INFO 10360 --- [shipping] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:shippingdb'
-2026-01-27T16:45:17.457+01:00  WARN 10360 --- [shipping] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2026-01-27T16:45:17.520+01:00  INFO 10360 --- [shipping] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
-2026-01-27T16:45:17.520+01:00  INFO 10360 --- [shipping] [restartedMain] h.f.e.shipping.ShippingApplication       : Started ShippingApplication in 6.964 seconds (process running for 7.984)
-2026-01-27T16:45:25.087+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-27T16:45:25.088+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-27T16:45:25.091+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-01-27T16:45:25.337+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/6
-2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
-2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
-2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
-2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
-2026-01-27T16:45:25.510+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
-2026-01-27T16:45:25.552+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
-2026-01-27T16:45:25.746+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Created shipment: 6 for order: 6
-2026-01-27T16:45:28.758+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 7
-2026-01-27T16:45:28.758+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 7
-2026-01-27T16:45:28.758+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/7
-2026-01-27T16:45:28.766+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
-2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
-2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
-2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
-2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
-2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
-2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 7
-2026-01-27T16:45:28.774+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/7
-2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
-2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
-2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
-2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
-2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
-2026-01-27T16:45:28.783+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
-2026-01-27T16:45:28.791+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 7 (status: RESERVED) in 30 ms
-2026-01-27T16:45:28.924+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 7
-2026-01-27T16:45:28.981+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 7, tracking: TRK-39F9D2FC, new status: PREPARING in 58 ms
-2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/8
-2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
-2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
-2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
-2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
-2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
-2026-01-27T16:45:30.506+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
-2026-01-27T16:45:30.522+01:00  INFO 10360 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Created shipment: 8 for order: 8
-2026-01-27T16:53:11.865+01:00  INFO 10360 --- [shipping] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2026-01-27T16:53:11.881+01:00  INFO 10360 --- [shipping] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2026-01-27T16:53:11.918+01:00  INFO 10360 --- [shipping] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-01-27T16:53:11.934+01:00  WARN 10360 --- [shipping] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
-2026-01-27T16:53:11.950+01:00  INFO 10360 --- [shipping] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-01-27T16:53:11.950+01:00  INFO 10360 --- [shipping] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-29T15:17:43.020+01:00  INFO 2276 --- [shipping] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-29T15:17:43.035+01:00  INFO 2276 --- [shipping] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29T15:17:43.669+01:00  WARN 2276 --- [shipping] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-29T15:17:43.999+01:00  INFO 2276 --- [shipping] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:shippingdb'
+2026-01-29T15:17:44.202+01:00  WARN 2276 --- [shipping] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-29T15:17:44.318+01:00  INFO 2276 --- [shipping] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-01-29T15:17:44.334+01:00  INFO 2276 --- [shipping] [restartedMain] h.f.e.shipping.ShippingApplication       : Started ShippingApplication in 5.335 seconds (process running for 5.824)
+2026-01-29T15:28:31.013+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-29T15:28:31.029+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-29T15:28:31.145+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 116 ms
+2026-01-29T15:28:31.625+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/6
+2026-01-29T15:28:31.686+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:28:31.686+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:28:31.686+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:28:31.686+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:28:31.686+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:28:31.686+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:28:31.733+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Created shipment: 6 for order: 6
+2026-01-29T15:28:42.255+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 7
+2026-01-29T15:28:42.255+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 7
+2026-01-29T15:28:42.255+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/7
+2026-01-29T15:28:42.263+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:28:42.263+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:28:42.263+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:28:42.263+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:28:42.263+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:28:42.263+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:28:42.263+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 7
+2026-01-29T15:28:42.270+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/7
+2026-01-29T15:28:42.278+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:28:42.280+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:28:42.280+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:28:42.280+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:28:42.280+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:28:42.280+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:28:42.280+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 7 (status: RESERVED) in 25 ms
+2026-01-29T15:28:42.371+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 7
+2026-01-29T15:28:42.388+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 7, tracking: TRK-572C2C44, new status: PREPARING in 15 ms
+2026-01-29T15:28:44.620+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 8
+2026-01-29T15:28:44.620+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 8
+2026-01-29T15:28:44.620+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/8
+2026-01-29T15:28:44.620+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:28:44.620+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:28:44.620+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:28:44.620+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:28:44.620+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 8
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/8
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:28:44.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 8 (status: RESERVED) in 25 ms
+2026-01-29T15:28:44.702+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 8
+2026-01-29T15:28:44.702+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 8, tracking: TRK-62BCB955, new status: PREPARING in 2 ms
+2026-01-29T15:28:46.954+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/9
+2026-01-29T15:28:46.971+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:28:46.971+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:28:46.971+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:28:46.971+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:28:46.971+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:28:46.971+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:28:46.971+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : Created shipment: 9 for order: 9
+2026-01-29T15:32:26.233+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 10
+2026-01-29T15:32:26.233+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 10
+2026-01-29T15:32:26.233+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/10
+2026-01-29T15:32:26.249+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:32:26.249+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:32:26.249+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:32:26.249+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:32:26.249+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:32:26.249+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:32:26.249+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 10
+2026-01-29T15:32:26.249+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/10
+2026-01-29T15:32:26.270+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:32:26.270+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:32:26.271+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:32:26.271+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:32:26.271+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:32:26.271+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:32:26.274+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 10 (status: RESERVED) in 31 ms
+2026-01-29T15:32:26.352+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 10
+2026-01-29T15:32:26.352+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 10, tracking: TRK-7E94FC7B, new status: PREPARING in 3 ms
+2026-01-29T15:32:30.220+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/11
+2026-01-29T15:32:30.232+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:32:30.233+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:32:30.233+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:32:30.234+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:32:30.235+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:32:30.235+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:32:30.237+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : Created shipment: 11 for order: 11
+2026-01-29T15:32:32.040+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 12
+2026-01-29T15:32:32.040+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 12
+2026-01-29T15:32:32.041+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/12
+2026-01-29T15:32:32.050+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:32:32.052+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:32:32.053+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:32:32.055+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:32:32.056+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:32:32.056+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:32:32.057+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 12
+2026-01-29T15:32:32.057+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/12
+2026-01-29T15:32:32.065+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:32:32.066+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:32:32.066+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:32:32.067+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:32:32.070+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:32:32.070+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:32:32.074+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 12 (status: RESERVED) in 33 ms
+2026-01-29T15:32:32.120+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 12
+2026-01-29T15:32:32.120+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 12, tracking: TRK-E4D725BE, new status: PREPARING in 3 ms
+2026-01-29T15:32:35.918+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/13
+2026-01-29T15:32:35.935+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:32:35.935+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:32:35.935+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:32:35.935+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:32:35.935+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:32:35.935+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:32:35.940+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : Created shipment: 13 for order: 13
+2026-01-29T15:33:25.698+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 14
+2026-01-29T15:33:25.699+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 14
+2026-01-29T15:33:25.700+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/14
+2026-01-29T15:33:25.707+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:33:25.707+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:33:25.708+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:33:25.709+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:33:25.709+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:33:25.709+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:33:25.709+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 14
+2026-01-29T15:33:25.709+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/14
+2026-01-29T15:33:25.717+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:33:25.718+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:33:25.718+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:33:25.718+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:33:25.718+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:33:25.718+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:33:25.720+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 14 (status: RESERVED) in 22 ms
+2026-01-29T15:33:25.770+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 14
+2026-01-29T15:33:25.772+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 14, tracking: TRK-13F58875, new status: PREPARING in 2 ms
+2026-01-29T15:58:26.843+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/15
+2026-01-29T15:58:26.858+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:58:26.858+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:58:26.858+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:58:26.858+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:58:26.858+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:58:26.858+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:58:26.895+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : Created shipment: 15 for order: 15
+2026-01-29T15:58:29.273+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 16
+2026-01-29T15:58:29.273+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 16
+2026-01-29T15:58:29.273+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/16
+2026-01-29T15:58:29.290+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:58:29.290+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:58:29.290+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:58:29.290+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:58:29.290+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:58:29.290+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:58:29.290+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 16
+2026-01-29T15:58:29.290+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/16
+2026-01-29T15:58:29.298+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:58:29.298+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:58:29.298+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:58:29.298+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:58:29.298+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:58:29.306+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:58:29.307+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 16 (status: RESERVED) in 33 ms
+2026-01-29T15:58:29.385+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 16
+2026-01-29T15:58:29.391+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 16, tracking: TRK-6D4DD732, new status: PREPARING in 5 ms
+2026-01-29T15:58:32.727+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 17
+2026-01-29T15:58:32.731+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 17
+2026-01-29T15:58:32.733+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/17
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 17
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/17
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:58:32.734+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:58:32.749+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 17 (status: RESERVED) in 22 ms
+2026-01-29T15:58:32.799+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 17
+2026-01-29T15:58:32.802+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 17, tracking: TRK-CA312CD8, new status: PREPARING in 2 ms
+2026-01-29T15:59:02.649+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 18
+2026-01-29T15:59:02.653+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 18
+2026-01-29T15:59:02.658+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/18
+2026-01-29T15:59:02.698+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:59:02.699+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:59:02.702+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:59:02.702+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:59:02.703+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:59:02.705+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:59:02.705+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 18
+2026-01-29T15:59:02.708+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/18
+2026-01-29T15:59:02.717+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:59:02.717+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:59:02.717+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:59:02.718+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:59:02.718+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:59:02.718+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:59:02.726+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 18 (status: RESERVED) in 77 ms
+2026-01-29T15:59:02.831+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 18
+2026-01-29T15:59:02.831+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 18, tracking: TRK-E848E034, new status: PREPARING in 2 ms
+2026-01-29T15:59:04.997+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 19
+2026-01-29T15:59:05.000+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 19
+2026-01-29T15:59:05.004+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/19
+2026-01-29T15:59:05.038+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:59:05.038+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:59:05.046+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:59:05.046+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:59:05.046+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:59:05.046+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:59:05.053+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 19
+2026-01-29T15:59:05.053+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/19
+2026-01-29T15:59:05.087+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:59:05.087+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:59:05.091+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:59:05.092+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:59:05.092+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:59:05.093+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:59:05.098+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 19 (status: RESERVED) in 100 ms
+2026-01-29T15:59:05.194+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 19
+2026-01-29T15:59:05.194+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 19, tracking: TRK-5D6A698B, new status: PREPARING in 2 ms
+2026-01-29T15:59:07.630+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/20
+2026-01-29T15:59:07.647+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:59:07.647+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:59:07.647+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:59:07.647+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:59:07.647+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:59:07.647+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:59:07.647+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : Created shipment: 20 for order: 20
+2026-01-29T15:59:10.034+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/21
+2026-01-29T15:59:10.051+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:59:10.052+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:59:10.052+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:59:10.052+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:59:10.052+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:59:10.052+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:59:10.052+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : Created shipment: 21 for order: 21
+2026-01-29T15:59:13.467+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 22
+2026-01-29T15:59:13.467+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 22
+2026-01-29T15:59:13.467+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/22
+2026-01-29T15:59:13.472+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:59:13.472+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:59:13.472+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:59:13.479+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:59:13.479+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:59:13.483+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:59:13.483+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 22
+2026-01-29T15:59:13.483+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/22
+2026-01-29T15:59:13.488+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T15:59:13.488+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T15:59:13.488+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T15:59:13.488+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T15:59:13.488+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T15:59:13.488+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T15:59:13.488+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 22 (status: RESERVED) in 26 ms
+2026-01-29T15:59:13.555+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 22
+2026-01-29T15:59:13.555+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 22, tracking: TRK-7EA7ECA4, new status: PREPARING in 2 ms
+2026-01-29T16:01:09.051+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/23
+2026-01-29T16:01:09.060+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:09.060+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:09.060+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:09.060+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:09.060+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:09.060+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:09.067+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : Created shipment: 23 for order: 23
+2026-01-29T16:01:10.973+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/24
+2026-01-29T16:01:10.990+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:10.990+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:10.990+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:10.990+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:10.990+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:10.990+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:10.990+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : Created shipment: 24 for order: 24
+2026-01-29T16:01:13.221+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 25
+2026-01-29T16:01:13.222+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 25
+2026-01-29T16:01:13.223+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/25
+2026-01-29T16:01:13.236+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:13.236+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:13.236+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:13.236+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:13.236+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:13.243+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:13.243+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 25
+2026-01-29T16:01:13.243+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/25
+2026-01-29T16:01:13.251+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:13.251+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:13.251+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:13.251+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:13.251+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:13.258+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:13.259+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 25 (status: RESERVED) in 39 ms
+2026-01-29T16:01:13.335+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 25
+2026-01-29T16:01:13.337+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 25, tracking: TRK-AD09782B, new status: PREPARING in 2 ms
+2026-01-29T16:01:14.887+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 26
+2026-01-29T16:01:14.887+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 26
+2026-01-29T16:01:14.893+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/26
+2026-01-29T16:01:14.930+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:14.930+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:14.931+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:14.932+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:14.932+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:14.932+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:14.933+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 26
+2026-01-29T16:01:14.933+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/26
+2026-01-29T16:01:14.941+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:14.941+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:14.941+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:14.941+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:14.941+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:14.941+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:14.941+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 26 (status: RESERVED) in 60 ms
+2026-01-29T16:01:15.041+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 26
+2026-01-29T16:01:15.050+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 26, tracking: TRK-88637294, new status: PREPARING in 9 ms
+2026-01-29T16:01:16.441+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 27
+2026-01-29T16:01:16.441+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 27
+2026-01-29T16:01:16.441+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/27
+2026-01-29T16:01:16.453+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:16.453+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:16.453+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:16.453+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:16.453+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:16.453+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:16.453+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 27
+2026-01-29T16:01:16.453+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/27
+2026-01-29T16:01:16.463+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:16.463+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:16.464+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:16.464+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:16.464+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:16.464+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:16.467+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 27 (status: RESERVED) in 23 ms
+2026-01-29T16:01:16.506+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 27
+2026-01-29T16:01:16.511+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 27, tracking: TRK-812CBBE5, new status: PREPARING in 4 ms
+2026-01-29T16:01:18.616+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 28
+2026-01-29T16:01:18.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 28
+2026-01-29T16:01:18.636+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/28
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 28
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/28
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:01:18.650+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:01:18.698+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 28 (status: RESERVED) in 87 ms
+2026-01-29T16:01:18.814+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 28
+2026-01-29T16:01:18.816+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 28, tracking: TRK-3F5D99A7, new status: PREPARING in 2 ms
+2026-01-29T16:09:44.226+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:09:58.364+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:10:06.632+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:10:12.089+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:10:30.921+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:11:07.046+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-29T16:12:05.983+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/10
+2026-01-29T16:12:06.001+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:12:06.001+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:12:06.002+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:12:06.003+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:12:06.003+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:12:06.003+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:12:06.005+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Created shipment: 29 for order: 10
+2026-01-29T16:12:10.521+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 11
+2026-01-29T16:12:10.521+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 11
+2026-01-29T16:12:10.522+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/11
+2026-01-29T16:12:10.552+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:12:10.553+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:12:10.557+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:12:10.564+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:12:10.566+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:12:10.569+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:12:10.570+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 11
+2026-01-29T16:12:10.570+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/11
+2026-01-29T16:12:10.580+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:12:10.580+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:12:10.582+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:12:10.582+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:12:10.582+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:12:10.582+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:12:10.587+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 30 (status: RESERVED) in 65 ms
+2026-01-29T16:12:10.669+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 30
+2026-01-29T16:12:10.675+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 30, tracking: TRK-D042690C, new status: PREPARING in 6 ms
+2026-01-29T16:12:55.099+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/12
+2026-01-29T16:12:55.108+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:12:55.108+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:12:55.108+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:12:55.108+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:12:55.115+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:12:55.115+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:12:55.119+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : Created shipment: 31 for order: 12
+2026-01-29T16:12:57.804+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 13
+2026-01-29T16:12:57.804+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 13
+2026-01-29T16:12:57.804+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/13
+2026-01-29T16:12:57.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:12:57.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:12:57.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:12:57.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:12:57.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:12:57.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:12:57.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 13
+2026-01-29T16:12:57.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/13
+2026-01-29T16:12:57.820+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:12:57.820+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:12:57.820+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:12:57.820+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:12:57.820+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:12:57.820+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:12:57.828+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 32 (status: RESERVED) in 20 ms
+2026-01-29T16:12:57.873+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 32
+2026-01-29T16:12:57.873+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 32, tracking: TRK-F9F1C95B, new status: PREPARING in 2 ms
+2026-01-29T16:13:04.684+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 14
+2026-01-29T16:13:04.684+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 14
+2026-01-29T16:13:04.684+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/14
+2026-01-29T16:13:04.692+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:13:04.692+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:13:04.692+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:13:04.692+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:13:04.692+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:13:04.692+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:13:04.692+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 14
+2026-01-29T16:13:04.692+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/14
+2026-01-29T16:13:04.708+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:13:04.708+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:13:04.708+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:13:04.708+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:13:04.708+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:13:04.708+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:13:04.708+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 33 (status: RESERVED) in 25 ms
+2026-01-29T16:13:04.767+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 33
+2026-01-29T16:13:04.767+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 33, tracking: TRK-FFC11A1E, new status: PREPARING in 3 ms
+2026-01-29T16:13:07.092+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/15
+2026-01-29T16:13:07.101+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:13:07.101+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:13:07.107+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:13:07.108+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:13:07.108+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:13:07.109+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:13:07.109+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Created shipment: 34 for order: 15
+2026-01-29T16:14:20.562+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/19
+2026-01-29T16:14:20.581+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:14:20.581+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:14:20.581+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:14:20.582+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:14:20.582+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:14:20.582+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:14:20.584+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : Created shipment: 35 for order: 19
+2026-01-29T16:25:50.194+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/20
+2026-01-29T16:25:50.203+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:25:50.203+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:25:50.203+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:25:50.203+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:25:50.210+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:25:50.211+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:25:50.211+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Created shipment: 36 for order: 20
+2026-01-29T16:25:59.273+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 21
+2026-01-29T16:25:59.273+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 21
+2026-01-29T16:25:59.274+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/21
+2026-01-29T16:25:59.279+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:25:59.279+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:25:59.279+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:25:59.279+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:25:59.279+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:25:59.279+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:25:59.279+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 21
+2026-01-29T16:25:59.279+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/21
+2026-01-29T16:25:59.299+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:25:59.299+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:25:59.299+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:25:59.299+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:25:59.299+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:25:59.299+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:25:59.299+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 37 (status: RESERVED) in 40 ms
+2026-01-29T16:25:59.471+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 37
+2026-01-29T16:25:59.492+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 37, tracking: TRK-2C515E7D, new status: PREPARING in 20 ms
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 22
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 22
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/22
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 22
+2026-01-29T16:26:03.869+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/22
+2026-01-29T16:26:03.886+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:26:03.886+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:26:03.886+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:26:03.886+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:26:03.886+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:26:03.886+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:26:03.886+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 38 (status: RESERVED) in 25 ms
+2026-01-29T16:26:03.958+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 38
+2026-01-29T16:26:03.958+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 38, tracking: TRK-D74FF3A6, new status: PREPARING in 3 ms
+2026-01-29T16:26:05.851+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/23
+2026-01-29T16:26:05.859+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:26:05.859+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:26:05.860+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:26:05.860+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:26:05.860+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:26:05.860+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:26:05.864+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Created shipment: 39 for order: 23
+2026-01-29T16:26:15.007+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 24
+2026-01-29T16:26:15.007+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 24
+2026-01-29T16:26:15.007+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/24
+2026-01-29T16:26:15.011+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:26:15.011+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:26:15.011+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:26:15.019+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:26:15.019+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:26:15.019+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:26:15.019+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 24
+2026-01-29T16:26:15.019+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/24
+2026-01-29T16:26:15.028+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:26:15.028+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:26:15.028+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:26:15.028+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:26:15.028+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:26:15.028+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:26:15.028+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 40 (status: RESERVED) in 26 ms
+2026-01-29T16:26:15.078+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 40
+2026-01-29T16:26:15.078+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 40, tracking: TRK-CEE532F9, new status: PREPARING in 2 ms
+2026-01-29T16:26:24.060+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/25
+2026-01-29T16:26:24.070+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:26:24.070+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:26:24.076+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:26:24.076+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:26:24.076+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:26:24.077+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:26:24.079+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : Created shipment: 41 for order: 25
+2026-01-29T16:26:50.990+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/26
+2026-01-29T16:26:51.003+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:26:51.003+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:26:51.005+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:26:51.006+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:26:51.007+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:26:51.007+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is at full capacity (validation disabled)
+2026-01-29T16:26:51.019+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable: Carrier at full capacity]
+2026-01-29T16:27:10.247+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 27
+2026-01-29T16:27:10.248+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 27
+2026-01-29T16:27:10.248+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/27
+2026-01-29T16:27:10.260+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:27:10.261+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:27:10.261+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:27:10.261+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:27:10.261+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:27:10.261+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS is at full capacity (validation disabled)
+2026-01-29T16:27:10.267+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable: Carrier at full capacity]
+2026-01-29T16:27:16.115+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/28
+2026-01-29T16:27:16.132+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:27:16.133+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:27:16.133+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:27:16.133+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:27:16.133+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:27:16.133+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is at full capacity (validation disabled)
+2026-01-29T16:27:16.133+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable: Carrier at full capacity]
+2026-01-29T16:27:21.969+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/29
+2026-01-29T16:27:21.979+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:27:21.980+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:27:21.980+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:27:21.980+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:27:21.981+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:27:21.981+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:27:21.987+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Created shipment: 42 for order: 29
+2026-01-29T16:35:00.630+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/30
+2026-01-29T16:35:00.648+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:35:00.662+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:35:00.663+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:35:00.664+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:35:00.664+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:35:00.664+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:35:00.675+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : Created shipment: 43 for order: 30
+2026-01-29T16:35:03.472+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 31
+2026-01-29T16:35:03.473+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 31
+2026-01-29T16:35:03.473+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/31
+2026-01-29T16:35:03.479+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:35:03.480+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:35:03.480+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:35:03.480+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:35:03.480+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:35:03.481+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:35:03.481+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 31
+2026-01-29T16:35:03.481+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/31
+2026-01-29T16:35:03.495+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:35:03.495+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:35:03.496+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:35:03.496+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:35:03.496+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:35:03.496+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:35:03.498+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-6] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 44 (status: RESERVED) in 25 ms
+2026-01-29T16:35:03.564+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 44
+2026-01-29T16:35:03.569+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 44, tracking: TRK-43C7BE70, new status: PREPARING in 5 ms
+2026-01-29T16:35:05.793+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 32
+2026-01-29T16:35:05.794+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 32
+2026-01-29T16:35:05.797+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/32
+2026-01-29T16:35:05.815+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:35:05.816+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:35:05.817+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:35:05.817+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:35:05.817+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:35:05.818+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:35:05.818+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 32
+2026-01-29T16:35:05.819+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/32
+2026-01-29T16:35:05.826+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:35:05.826+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:35:05.826+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:35:05.827+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:35:05.829+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:35:05.832+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:35:05.837+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 45 (status: RESERVED) in 43 ms
+2026-01-29T16:35:05.906+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 45
+2026-01-29T16:35:05.911+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 45, tracking: TRK-3C597ABE, new status: PREPARING in 4 ms
+2026-01-29T16:37:26.002+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/35
+2026-01-29T16:37:26.011+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:37:26.011+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:37:26.011+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:37:26.011+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:37:26.011+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:37:26.011+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T16:37:26.019+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : Created shipment: 46 for order: 35
+2026-01-29T16:40:23.489+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/42
+2026-01-29T16:40:23.489+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:40:23.489+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is currently unavailable (validation disabled)
+2026-01-29T16:40:23.505+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable]
+2026-01-29T16:40:25.123+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 43
+2026-01-29T16:40:25.123+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 43
+2026-01-29T16:40:25.124+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/43
+2026-01-29T16:40:25.132+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:40:25.132+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is currently unavailable (validation disabled)
+2026-01-29T16:40:25.134+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable]
+2026-01-29T16:40:31.766+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/44
+2026-01-29T16:40:31.780+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:40:31.780+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS is currently unavailable (validation disabled)
+2026-01-29T16:40:31.784+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable]
+2026-01-29T16:40:36.604+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/45
+2026-01-29T16:40:36.618+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:40:36.618+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:40:36.618+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:40:36.618+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:40:36.618+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:40:36.618+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is at full capacity (validation disabled)
+2026-01-29T16:40:36.618+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable: Carrier at full capacity]
+2026-01-29T16:40:38.524+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 46
+2026-01-29T16:40:38.524+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 46
+2026-01-29T16:40:38.532+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/46
+2026-01-29T16:40:38.541+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:40:38.541+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:40:38.541+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:40:38.541+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:40:38.541+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:40:38.541+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is at full capacity (validation disabled)
+2026-01-29T16:40:38.547+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable: Carrier at full capacity]
+2026-01-29T16:40:39.201+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/47
+2026-01-29T16:40:39.210+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T16:40:39.212+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T16:40:39.212+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T16:40:39.212+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T16:40:39.212+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T16:40:39.213+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is at full capacity (validation disabled)
+2026-01-29T16:40:39.216+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable: Carrier at full capacity]
+2026-01-29T17:09:55.677+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/48
+2026-01-29T17:09:55.697+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:09:55.697+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:09:55.697+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:09:55.697+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:09:55.697+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:09:55.698+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.CarrierService    : Carrier GLS is at full capacity (validation disabled)
+2026-01-29T17:09:55.720+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable: Carrier at full capacity]
+2026-01-29T17:10:01.148+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/49
+2026-01-29T17:10:01.156+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:10:01.162+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:10:01.162+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:10:01.163+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:10:01.165+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:10:01.165+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:10:01.208+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Created shipment: 47 for order: 49
+2026-01-29T17:10:02.225+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 50
+2026-01-29T17:10:02.225+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 50
+2026-01-29T17:10:02.225+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/50
+2026-01-29T17:10:02.239+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:10:02.239+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:10:02.241+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:10:02.241+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:10:02.241+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:10:02.241+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:10:02.241+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 50
+2026-01-29T17:10:02.242+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/50
+2026-01-29T17:10:02.242+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:10:02.247+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:10:02.247+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:10:02.247+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:10:02.247+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:10:02.247+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:10:02.247+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 48 (status: RESERVED) in 27 ms
+2026-01-29T17:10:02.297+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 48
+2026-01-29T17:10:02.308+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 48, tracking: TRK-89B2A6E6, new status: PREPARING in 7 ms
+2026-01-29T17:11:38.701+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 51
+2026-01-29T17:11:38.701+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 51
+2026-01-29T17:11:38.701+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/51
+2026-01-29T17:11:38.748+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:11:38.748+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:11:38.755+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:11:38.755+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:11:38.756+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:11:38.756+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:11:38.756+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 51
+2026-01-29T17:11:38.756+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/51
+2026-01-29T17:11:38.764+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:11:38.766+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:11:38.767+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:11:38.767+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:11:38.768+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:11:38.768+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:11:38.770+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 49 (status: RESERVED) in 67 ms
+2026-01-29T17:11:38.814+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 49
+2026-01-29T17:11:38.814+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 49, tracking: TRK-13B67289, new status: PREPARING in 2 ms
+2026-01-29T17:11:45.942+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/52
+2026-01-29T17:11:45.951+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:11:45.951+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:11:45.951+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:11:45.951+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:11:45.951+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:11:45.951+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:11:45.959+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-8] h.f.e.shipping.service.ShipmentService   : Created shipment: 50 for order: 52
+2026-01-29T17:11:51.223+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 53
+2026-01-29T17:11:51.223+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 53
+2026-01-29T17:11:51.223+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/53
+2026-01-29T17:11:51.237+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:11:51.237+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:11:51.237+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:11:51.241+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:11:51.242+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:11:51.242+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:11:51.242+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 53
+2026-01-29T17:11:51.242+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/53
+2026-01-29T17:11:51.248+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:11:51.248+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:11:51.248+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:11:51.248+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:11:51.248+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:11:51.248+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:11:51.248+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 51 (status: RESERVED) in 26 ms
+2026-01-29T17:11:51.298+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 51
+2026-01-29T17:11:51.298+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 51, tracking: TRK-63241FFC, new status: PREPARING in 3 ms
+2026-01-29T17:13:12.458+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 56
+2026-01-29T17:13:12.459+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 56
+2026-01-29T17:13:12.459+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/56
+2026-01-29T17:13:12.469+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:13:12.469+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.CarrierService    : Carrier GLS is currently unavailable (validation disabled)
+2026-01-29T17:13:12.470+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable]
+2026-01-29T17:15:46.539+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/57
+2026-01-29T17:15:46.549+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:15:46.550+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-2] h.f.e.shipping.service.CarrierService    : Carrier GLS is currently unavailable (validation disabled)
+2026-01-29T17:15:46.551+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable]
+2026-01-29T17:15:49.441+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 58
+2026-01-29T17:15:49.441+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 58
+2026-01-29T17:15:49.441+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/58
+2026-01-29T17:15:49.449+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:15:49.449+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-4] h.f.e.shipping.service.CarrierService    : Carrier GLS is currently unavailable (validation disabled)
+2026-01-29T17:15:49.449+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable]
+2026-01-29T17:20:14.987+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 62
+2026-01-29T17:20:14.989+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 62
+2026-01-29T17:20:14.996+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/62
+2026-01-29T17:20:15.004+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:20:15.004+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:20:15.004+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:20:15.004+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:20:15.004+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:20:15.004+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:20:15.004+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 62
+2026-01-29T17:20:15.004+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/62
+2026-01-29T17:20:15.013+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:20:15.013+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:20:15.013+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:20:15.013+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:20:15.013+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:20:15.013+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:20:15.036+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-7] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 52 (status: RESERVED) in 48 ms
+2026-01-29T17:20:15.236+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 52
+2026-01-29T17:20:15.251+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-1] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 52, tracking: TRK-2D7A602B, new status: PREPARING in 13 ms
+2026-01-29T17:22:57.398+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 63
+2026-01-29T17:22:57.398+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 63
+2026-01-29T17:22:57.408+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/63
+2026-01-29T17:22:57.421+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:22:57.422+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-3] h.f.e.shipping.service.CarrierService    : Carrier GLS is currently unavailable (validation disabled)
+2026-01-29T17:22:57.457+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable]
+2026-01-29T17:23:27.224+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 64
+2026-01-29T17:23:27.224+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 64
+2026-01-29T17:23:27.224+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/64
+2026-01-29T17:23:27.224+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:23:27.224+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-10] h.f.e.shipping.service.CarrierService    : Carrier GLS is currently unavailable (validation disabled)
+2026-01-29T17:23:27.224+01:00  WARN 2276 --- [shipping] [http-nio-8083-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hr.fer.ecommerce.shipping.exception.CarrierUnavailableException: Carrier 'GLS' is currently unavailable]
+2026-01-29T17:23:30.798+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Reserving shipment for order: 65
+2026-01-29T17:23:30.798+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Validating shipment readiness for order: 65
+2026-01-29T17:23:30.798+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/65
+2026-01-29T17:23:30.811+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:23:30.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:23:30.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:23:30.812+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:23:30.813+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:23:30.813+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:23:30.813+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : Shipment validation passed for order: 65
+2026-01-29T17:23:30.814+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.client.OrderClient        : Fetching order from: http://localhost:8082/api/orders/65
+2026-01-29T17:23:30.819+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating carrier availability: GLS
+2026-01-29T17:23:30.819+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS is available
+2026-01-29T17:23:30.819+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Validating shipping address for carrier GLS
+2026-01-29T17:23:30.820+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Shipping address validation passed
+2026-01-29T17:23:30.820+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Checking carrier capacity: GLS
+2026-01-29T17:23:30.821+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.CarrierService    : Carrier GLS has capacity
+2026-01-29T17:23:30.823+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-9] h.f.e.shipping.service.ShipmentService   : 2PC PREPARE: Shipment reserved with ID: 53 (status: RESERVED) in 21 ms
+2026-01-29T17:23:30.876+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Confirming shipment ID: 53
+2026-01-29T17:23:30.880+01:00  INFO 2276 --- [shipping] [http-nio-8083-exec-5] h.f.e.shipping.service.ShipmentService   : 2PC COMMIT: Shipment confirmed - ID: 53, tracking: TRK-6D1B4931, new status: PREPARING in 3 ms
+2026-01-29T17:25:14.576+01:00  INFO 2276 --- [shipping] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-29T17:25:14.655+01:00  INFO 2276 --- [shipping] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-29T17:25:14.867+01:00  INFO 2276 --- [shipping] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-29T17:25:14.889+01:00  WARN 2276 --- [shipping] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-01-29T17:25:14.889+01:00  INFO 2276 --- [shipping] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-29T17:25:14.905+01:00  INFO 2276 --- [shipping] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -7,17 +7,13 @@ function App() {
     const [loading, setLoading] = useState(false)
     const [response, setResponse] = useState(null)
     const [error, setError] = useState(null)
-    const [duration, setDuration] = useState(null)
     const [pattern, setPattern] = useState(null)
 
-    const placeOrderWithSaga = async () => {
+    const placeOrder = async (type) => {
         setLoading(true)
         setError(null)
         setResponse(null)
-        setDuration(null)
-        setPattern('Saga')
-
-        const startTime = performance.now()
+        setPattern(type)
 
         const orderData = {
             customerName: "John Doe",
@@ -33,67 +29,26 @@ function App() {
             ]
         }
 
+        const endpoint = type === 'Saga'
+            ? 'http://localhost:8080/api/gateway/place-order-saga'
+            : 'http://localhost:8080/api/gateway/place-order-2pc'
+
         try {
-            const res = await fetch('http://localhost:8080/api/gateway/place-order-saga', {
+            const res = await fetch(endpoint, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(orderData)
             })
 
             const data = await res.json()
-            const endTime = performance.now()
-            setDuration((endTime - startTime).toFixed(2))
 
-            if (data.success) {
-                setResponse(data)
-            } else {
-                setError(data.message || 'Failed to place order with Saga')
-            }
-        } catch (err) {
-            setError('Error: ' + err.message)
-        } finally {
-            setLoading(false)
-        }
-    }
+            // uvijek spremi response da prikaže metrike i greške
+            setResponse(data)
 
-    const placeOrderWith2PC = async () => {
-        setLoading(true)
-        setError(null)
-        setResponse(null)
-        setDuration(null)
-        setPattern('2PC')
-
-        const startTime = performance.now()
-
-        const orderData = {
-            customerName: "John Doe",
-            customerEmail: "john.doe@example.com",
-            shippingAddress: "123 Main Street, New York, NY 10001",
-            paymentMethod: "CREDIT_CARD",
-            paymentProvider: "FINA",
-            cardLastFourDigits: "4242",
-            carrier: "GLS",
-            orderItems: [
-                { productId: 1, quantity: 2 },
-                { productId: 2, quantity: 1 }
-            ]
-        }
-
-        try {
-            const res = await fetch('http://localhost:8080/api/gateway/place-order-2pc', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(orderData)
-            })
-
-            const data = await res.json()
-            const endTime = performance.now()
-            setDuration((endTime - startTime).toFixed(2))
-
-            if (data.success) {
-                setResponse(data)
-            } else {
-                setError(data.message || 'Failed to place order with 2PC')
+            if (!data.success) {
+                // prikazuje samo ključnu poruku
+                const msg = data.errorDetails || data.message || `Failed to place order with ${type}`
+                setError(msg)
             }
         } catch (err) {
             setError('Error: ' + err.message)
@@ -126,22 +81,25 @@ function App() {
                 <>
                     <div className="card">
                         <h3>Choose Transaction Pattern:</h3>
-
                         <div className="button-group">
                             <button
-                                onClick={placeOrderWithSaga}
+                                onClick={() => placeOrder('Saga')}
                                 disabled={loading}
                                 className="order-button saga-button"
                             >
-                                {loading ? '⏳ Processing...' : '📦 Place Order with Saga'}
+                                {loading && pattern === 'Saga'
+                                    ? '⏳ Processing...'
+                                    : '📦 Place Order with Saga'}
                             </button>
 
                             <button
-                                onClick={placeOrderWith2PC}
+                                onClick={() => placeOrder('2PC')}
                                 disabled={loading}
                                 className="order-button tpc-button"
                             >
-                                {loading ? '⏳ Processing...' : '🔒 Place Order with 2PC'}
+                                {loading && pattern === '2PC'
+                                    ? '⏳ Processing...'
+                                    : '🔒 Place Order with 2PC'}
                             </button>
                         </div>
 
@@ -154,32 +112,65 @@ function App() {
                         </p>
                     </div>
 
+                    {/* PRIKAZ ERRORA */}
                     {error && (
                         <div className="error-box">
-                            <h3>❌ Error</h3>
+                            <h3>❌ Order Failed</h3>
                             <p>{error}</p>
                         </div>
                     )}
 
+                    {/* RESPONSE – metrike i podaci */}
                     {response && (
-                        <div className="success-box">
-                            <h3>✅ Order Placed Successfully!</h3>
-                            <div className="response-details">
-                                <p><strong>Order ID:</strong> {response.orderId}</p>
-                                <p><strong>Order Status:</strong> {response.orderStatus}</p>
-                                <p><strong>Total Amount:</strong> ${response.totalAmount?.toFixed(2)}</p>
-                                <p><strong>Payment ID:</strong> {response.paymentId}</p>
-                                <p><strong>Transaction ID:</strong> {response.transactionId}</p>
-                                <p><strong>Payment Status:</strong> {response.paymentStatus}</p>
-                                <p><strong>Shipment ID:</strong> {response.shipmentId}</p>
-                                <p><strong>Tracking Number:</strong> {response.trackingNumber}</p>
-                                <p><strong>Shipment Status:</strong> {response.shipmentStatus}</p>
+                        <div className={response.success ? "success-box" : "error-box"}>
+                            <h3>
+                                {response.success
+                                    ? "✅ Order Completed"
+                                    : "⚠️ Order Failed – Metrics Available"}
+                            </h3>
 
-                                {duration && (
-                                    <p>
-                                        <strong>Request duration ({pattern}):</strong> {duration} ms
-                                    </p>
+                            <div className="response-details">
+                                {response.orderId && (
+                                    <>
+                                        <p><strong>Order ID:</strong> {response.orderId}</p>
+                                        <p><strong>Order Status:</strong> {response.orderStatus}</p>
+                                        <p><strong>Total Amount:</strong> ${response.totalAmount?.toFixed(2)}</p>
+                                    </>
                                 )}
+
+                                {response.paymentId && (
+                                    <>
+                                        <p><strong>Payment ID:</strong> {response.paymentId}</p>
+                                        <p><strong>Transaction ID:</strong> {response.transactionId}</p>
+                                        <p><strong>Payment Status:</strong> {response.paymentStatus}</p>
+                                    </>
+                                )}
+
+                                {response.shipmentId && (
+                                    <>
+                                        <p><strong>Shipment ID:</strong> {response.shipmentId}</p>
+                                        <p><strong>Tracking Number:</strong> {response.trackingNumber}</p>
+                                        <p><strong>Shipment Status:</strong> {response.shipmentStatus}</p>
+                                    </>
+                                )}
+
+                                {!response.success && response.errorDetails && (
+                                    <p><strong>Error Details:</strong> {response.errorDetails}</p>
+                                )}
+
+                                <h4>📊 Metrics</h4>
+                                <p><strong>Order Service Latency:</strong> {response.orderLatency} ms</p>
+                                <p><strong>Payment Service Latency:</strong> {response.paymentLatency} ms</p>
+                                <p><strong>Shipping Service Latency:</strong> {response.shippingLatency} ms</p>
+                                {response.prepareLatency !== undefined && (
+                                    <p><strong>Prepare Phase Latency:</strong> {response.prepareLatency} ms</p>
+                                )}
+                                {response.commitLatency !== undefined && (
+                                    <p><strong>Commit Phase Latency:</strong> {response.commitLatency} ms</p>
+                                )}
+                                <p><strong>Abort Phase Latency:</strong> {response.abortLatency} ms</p>
+                                <p><strong>Total Order Latency:</strong> {response.totalLatency} ms</p>
+                                <p><strong>Rollback / Compensations:</strong> {response.compensations}</p>
                             </div>
                         </div>
                     )}

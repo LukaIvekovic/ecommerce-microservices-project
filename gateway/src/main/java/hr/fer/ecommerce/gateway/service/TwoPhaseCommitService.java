@@ -28,25 +28,53 @@ public class TwoPhaseCommitService {
         log.info("Starting 2PC for customer: {}", request.getCustomerEmail());
         TwoPhaseCommitContext context = TwoPhaseCommitContext.builder().build();
 
+        long totalStart = System.currentTimeMillis();
+        long prepareLatency = 0;
+        long commitLatency = 0;
+        int compensations = 0;
+
         try {
-            log.info("PHASE 1: PREPARE");
-            preparePhase(request, context);
-            log.info("All participants voted READY");
+            // --- PREPARE ---
+            long startPrepare = System.currentTimeMillis();
+            preparePhase(request, context);  // priprema servise
+            prepareLatency = System.currentTimeMillis() - startPrepare;
+
         } catch (Exception e) {
             log.error("Prepare phase failed: {}", e.getMessage());
-            abortPhase(context);
+
+            // rollback svih pripremljenih resursa
+            compensations = abortPhase(context);
+
+            // čak i kod fail-a želimo pripremnu fazu
+            prepareLatency = context.getOrderLatency() + context.getPaymentLatency() + context.getShippingLatency();
+
+            long totalLatency = System.currentTimeMillis() - totalStart;
+
             return PlaceOrderResponse.builder()
                     .success(false)
                     .message("Order preparation failed - transaction aborted")
-                    .errorDetails(e.getMessage())
+                    .errorDetails(parseErrorMessage(e))
                     .timestamp(LocalDateTime.now())
+                    .orderLatency(context.getOrderLatency())
+                    .paymentLatency(context.getPaymentLatency())
+                    .shippingLatency(context.getShippingLatency())
+                    .prepareLatency(prepareLatency)
+                    .commitLatency(commitLatency)
+                    .abortLatency(context.getAbortLatency())
+                    .totalLatency(totalLatency)
+                    .compensations(compensations)
                     .build();
+
         }
 
-        log.info("PHASE 2: COMMIT");
+        // --- COMMIT ---
+        long startCommit = System.currentTimeMillis();
         commitPhase(context);
+        commitLatency = System.currentTimeMillis() - startCommit;
 
-        PlaceOrderResponse response = PlaceOrderResponse.builder()
+        long totalLatency = System.currentTimeMillis() - totalStart;
+
+        return PlaceOrderResponse.builder()
                 .success(true)
                 .message("Order placed successfully")
                 .orderId(context.getOrder().getId())
@@ -59,68 +87,105 @@ public class TwoPhaseCommitService {
                 .shipmentStatus(context.getShipment().getStatus())
                 .trackingNumber(context.getShipment().getTrackingNumber())
                 .timestamp(LocalDateTime.now())
+                .orderLatency(context.getOrderLatency())
+                .paymentLatency(context.getPaymentLatency())
+                .shippingLatency(context.getShippingLatency())
+                .prepareLatency(prepareLatency)
+                .commitLatency(commitLatency)
+                .totalLatency(totalLatency)
+                .compensations(compensations)
                 .build();
-
-        log.info("2PC completed successfully - Order ID: {}", context.getOrder().getId());
-        return response;
     }
 
-    private void preparePhase(PlaceOrderRequest request, TwoPhaseCommitContext context) {
-        CreateOrderRequest orderRequest = buildOrderRequest(request);
+    // Pomoćna metoda da iz exception-a dobiješ samo relevantnu poruku
+    private String parseErrorMessage(Exception e) {
+        String msg = e.getMessage();
+        if (msg.contains("FINA")) return "FINA service unavailable";
+        if (msg.contains("Carrier")) return "Shipping capacity unavailable";
+        return "Unexpected error: " + msg;
+    }
 
+
+
+
+
+    private void preparePhase(PlaceOrderRequest request, TwoPhaseCommitContext context) {
+        // --- ORDER ---
+        long startOrder = System.currentTimeMillis();
+        CreateOrderRequest orderRequest = buildOrderRequest(request);
         log.info("Preparing order and reserving stock");
         OrderResponse preparedOrder = microserviceClient.prepareOrder(orderRequest);
         context.setOrder(preparedOrder);
         context.setOrderPrepared(true);
-        log.info("Order prepared: ID={}, status={}", preparedOrder.getId(), preparedOrder.getStatus());
+        context.setOrderLatency(System.currentTimeMillis() - startOrder);
+        log.info("Order prepared: ID={}, status={}, latency={}ms",
+                preparedOrder.getId(), preparedOrder.getStatus(), context.getOrderLatency());
 
+        // --- PAYMENT ---
+        long startPayment = System.currentTimeMillis();
         log.info("Pre-authorizing payment");
         CreatePaymentRequest paymentRequest = buildPaymentRequest(request, preparedOrder);
         PaymentResponse preparedPayment = microserviceClient.preparePayment(paymentRequest);
         context.setPayment(preparedPayment);
         context.setPaymentPrepared(true);
-        log.info("Payment prepared: ID={}, status={}", preparedPayment.getId(), preparedPayment.getStatus());
+        context.setPaymentLatency(System.currentTimeMillis() - startPayment);
+        log.info("Payment prepared: ID={}, status={}, latency={}ms",
+                preparedPayment.getId(), preparedPayment.getStatus(), context.getPaymentLatency());
 
+        // --- SHIPMENT ---
+        long startShipment = System.currentTimeMillis();
         log.info("Reserving shipment capacity");
         CreateShipmentRequest shipmentRequest = buildShipmentRequest(request, preparedOrder);
         ShipmentResponse preparedShipment = microserviceClient.prepareShipment(shipmentRequest);
         context.setShipment(preparedShipment);
         context.setShipmentPrepared(true);
-        log.info("Shipment prepared: ID={}, status={}", preparedShipment.getId(), preparedShipment.getStatus());
+        context.setShippingLatency(System.currentTimeMillis() - startShipment);
+        log.info("Shipment prepared: ID={}, status={}, latency={}ms",
+                preparedShipment.getId(), preparedShipment.getStatus(), context.getShippingLatency());
 
         log.info("Prepare phase completed - all resources reserved");
     }
 
     private void commitPhase(TwoPhaseCommitContext context) {
+        // --- ORDER ---
+        long startOrderCommit = System.currentTimeMillis();
         log.info("Committing order");
         OrderResponse committedOrder = microserviceClient.commitOrder(context.getOrder().getId());
         context.setOrder(committedOrder);
         context.setOrderCommitted(true);
-        log.info("Order committed: ID={}", context.getOrder().getId());
+        context.addToTotalLatency(System.currentTimeMillis() - startOrderCommit);
+        log.info("Order committed: ID={}, latency={}ms", context.getOrder().getId(), System.currentTimeMillis() - startOrderCommit);
 
+        // --- PAYMENT ---
+        long startPaymentCommit = System.currentTimeMillis();
         log.info("Committing payment");
         PaymentResponse committedPayment = microserviceClient.commitPayment(context.getPayment().getId());
         context.setPayment(committedPayment);
         context.setPaymentCommitted(true);
-        log.info("Payment committed: ID={}", context.getPayment().getId());
+        context.addToTotalLatency(System.currentTimeMillis() - startPaymentCommit);
+        log.info("Payment committed: ID={}, latency={}ms", context.getPayment().getId(), System.currentTimeMillis() - startPaymentCommit);
 
+        // --- SHIPMENT ---
+        long startShipmentCommit = System.currentTimeMillis();
         log.info("Committing shipment");
         ShipmentResponse committedShipment = microserviceClient.commitShipment(context.getShipment().getId());
         context.setShipment(committedShipment);
         context.setShipmentCommitted(true);
-        log.info("Shipment committed: ID={}", context.getShipment().getId());
+        context.addToTotalLatency(System.currentTimeMillis() - startShipmentCommit);
+        log.info("Shipment committed: ID={}, latency={}ms", context.getShipment().getId(), System.currentTimeMillis() - startShipmentCommit);
 
         log.info("Commit phase completed");
     }
 
-    private void abortPhase(TwoPhaseCommitContext context) {
-        log.warn("Aborting transaction - releasing all prepared resources");
+
+    private int abortPhase(TwoPhaseCommitContext context) {
+        long startAbort = System.currentTimeMillis();
+        int compensations = 0;
 
         if (context.isShipmentPrepared() && context.getShipment() != null) {
             try {
-                log.warn("Aborting shipment: ID={}", context.getShipment().getId());
                 microserviceClient.abortShipment(context.getShipment().getId());
-                log.warn("Shipment aborted");
+                compensations++;
             } catch (Exception e) {
                 log.error("Failed to abort shipment: {}", e.getMessage());
             }
@@ -128,9 +193,8 @@ public class TwoPhaseCommitService {
 
         if (context.isPaymentPrepared() && context.getPayment() != null) {
             try {
-                log.warn("Aborting payment: ID={}", context.getPayment().getId());
                 microserviceClient.abortPayment(context.getPayment().getId());
-                log.warn("Payment aborted");
+                compensations++;
             } catch (Exception e) {
                 log.error("Failed to abort payment: {}", e.getMessage());
             }
@@ -138,16 +202,19 @@ public class TwoPhaseCommitService {
 
         if (context.isOrderPrepared() && context.getOrder() != null) {
             try {
-                log.warn("Aborting order: ID={}", context.getOrder().getId());
                 microserviceClient.abortOrder(context.getOrder().getId());
-                log.warn("Order aborted");
+                compensations++;
             } catch (Exception e) {
                 log.error("Failed to abort order: {}", e.getMessage());
             }
         }
 
-        log.warn("Abort phase completed");
+        context.setAbortLatency(System.currentTimeMillis() - startAbort);
+        log.info("Abort phase completed in {} ms with {} compensations", context.getAbortLatency(), compensations);
+
+        return compensations;
     }
+
 
     private CreateOrderRequest buildOrderRequest(PlaceOrderRequest request) {
         return CreateOrderRequest.builder()

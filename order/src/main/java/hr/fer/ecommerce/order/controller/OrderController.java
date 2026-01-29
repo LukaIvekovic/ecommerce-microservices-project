@@ -47,6 +47,7 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<OrderDto> createOrder(@RequestBody @Valid OrderRequestDto request) {
+        simulateDelay(50); // isto kašnjenje kao kod 2PC
         OrderDto order = orderService.createOrder(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(order);
     }
@@ -74,7 +75,15 @@ public class OrderController {
     @PostMapping("/prepare")
     public ResponseEntity<OrderDto> prepareOrder(@RequestBody @Valid OrderRequestDto request) {
         OrderDto order = orderService.prepareOrder(request);
+        simulateDelay(50); // kašnjenje u ms
         return ResponseEntity.status(HttpStatus.CREATED).body(order);
+    }
+    private void simulateDelay(long millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     @PostMapping("/{id}/commit")

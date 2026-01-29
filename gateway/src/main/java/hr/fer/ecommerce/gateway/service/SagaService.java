@@ -28,22 +28,38 @@ public class SagaService {
     public PlaceOrderResponse placeOrder(PlaceOrderRequest request) {
         log.info("Starting order placement for customer: {}", request.getCustomerEmail());
         SagaContext saga = SagaContext.builder().build();
+
+        long startTotal = System.currentTimeMillis();
+        long orderLatency = 0;
+        long paymentLatency = 0;
+        long shippingLatency = 0;
+        int compensations = 0;
+
         try {
-            log.info("Step 1: Creating order...");
+            // --- Step 1: Order ---
+            long startOrder = System.currentTimeMillis();
             OrderResponse order = createOrder(request);
+            orderLatency = System.currentTimeMillis() - startOrder;
             saga.setOrder(order);
             log.info("Order created with ID: {}", order.getId());
 
-            log.info("Step 2: Processing payment...");
+            // --- Step 2: Payment ---
+            long startPayment = System.currentTimeMillis();
             PaymentResponse payment = createPayment(request, order);
+            paymentLatency = System.currentTimeMillis() - startPayment;
             saga.setPayment(payment);
             log.info("Payment created with ID: {} and transaction ID: {}", payment.getId(), payment.getTransactionId());
 
-            log.info("Step 3: Creating shipment...");
+            // --- Step 3: Shipment ---
+            long startShipping = System.currentTimeMillis();
             ShipmentResponse shipment = createShipment(request, order);
+            shippingLatency = System.currentTimeMillis() - startShipping;
             saga.setShipment(shipment);
             log.info("Shipment created with ID: {}", shipment.getId());
 
+            long totalLatency = System.currentTimeMillis() - startTotal;
+
+            // --- Build response sa metrike ---
             PlaceOrderResponse response = PlaceOrderResponse.builder()
                     .success(true)
                     .message("Order placed successfully")
@@ -57,6 +73,12 @@ public class SagaService {
                     .shipmentStatus(shipment.getStatus())
                     .trackingNumber(shipment.getTrackingNumber())
                     .timestamp(LocalDateTime.now())
+                    // --- DODANO: metrike ---
+                    .orderLatency(orderLatency)
+                    .paymentLatency(paymentLatency)
+                    .shippingLatency(shippingLatency)
+                    .totalLatency(totalLatency)
+                    .compensations(compensations) // 0 jer nije bilo rollbacka
                     .build();
 
             log.info("Order placement completed successfully for order ID: {}", order.getId());
@@ -64,15 +86,31 @@ public class SagaService {
 
         } catch (Exception e) {
             log.error("Error during order placement: {}", e.getMessage(), e);
+
             rollback(request, saga);
+
+            // Broj kompenzacija = koliko rollback akcija je pozvano
+            if (saga.getShipment() != null) compensations++;
+            if (saga.getPayment() != null) compensations++;
+            if (saga.getOrder() != null) compensations++;
+
+            long totalLatency = System.currentTimeMillis() - startTotal;
+
             return PlaceOrderResponse.builder()
                     .success(false)
                     .message("Failed to place order")
                     .errorDetails(e.getMessage())
                     .timestamp(LocalDateTime.now())
+                    // --- DODANO: metrike ---
+                    .orderLatency(orderLatency)
+                    .paymentLatency(paymentLatency)
+                    .shippingLatency(shippingLatency)
+                    .totalLatency(totalLatency)
+                    .compensations(compensations)
                     .build();
         }
     }
+
 
     private void rollback(PlaceOrderRequest request, SagaContext saga) {
 
