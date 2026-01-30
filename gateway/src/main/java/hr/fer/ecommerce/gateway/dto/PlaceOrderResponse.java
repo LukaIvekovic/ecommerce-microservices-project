@@ -41,6 +41,7 @@ public class PlaceOrderResponse {
     private long prepareLatency;
     private long commitLatency;
     private long abortLatency;
+    private int global2pcRollbacks;   // 2PC rollback
 
 }
 

@@ -74,6 +74,9 @@ public class PaymentService {
 
     @Transactional
     public PaymentDto createPayment(PaymentRequestDto request) {
+        if (Math.random() < 0.05) {
+            throw new RuntimeException("Simulated payment service failure (5% failure)");
+        }
         if (paymentRepository.findByOrderId(request.getOrderId()).isPresent()) {
             throw new DuplicatePaymentException(request.getOrderId());
         }
@@ -205,6 +208,9 @@ public class PaymentService {
 
     @Transactional
     public PaymentDto preparePayment(PaymentRequestDto request) {
+        if (Math.random() < 0.05) {
+            throw new RuntimeException("Simulated payment service failure (5% failure)");
+        }
         log.info("2PC PREPARE: Pre-authorizing payment for order: {}", request.getOrderId());
         long startTime = System.nanoTime();
 

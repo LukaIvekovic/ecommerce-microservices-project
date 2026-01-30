@@ -99,24 +99,31 @@ public class SagaService {
             return PlaceOrderResponse.builder()
                     .success(false)
                     .message("Failed to place order")
-                    .errorDetails(e.getMessage())
+                    .errorDetails(parseErrorMessage(e))
                     .timestamp(LocalDateTime.now())
                     // --- DODANO: metrike ---
                     .orderLatency(orderLatency)
                     .paymentLatency(paymentLatency)
                     .shippingLatency(shippingLatency)
                     .totalLatency(totalLatency)
-                    .compensations(compensations)
+                    .compensations(sagaRollbackCounter)
                     .build();
         }
     }
+    private String parseErrorMessage(Exception e) {
+        String msg = e.getMessage();
+        if (msg.contains("FINA")) return "FINA service unavailable";
+        if (msg.contains("Carrier")) return "Shipping capacity unavailable";
+        return "Unexpected error: " + msg;
+    }
 
-
+    private int sagaRollbackCounter = 0;
     private void rollback(PlaceOrderRequest request, SagaContext saga) {
-
+        sagaRollbackCounter = 0;
         // Rollback in reverse order
         if (saga.getShipment() != null) {
             try {
+                sagaRollbackCounter++;
                 microserviceClient.cancelShipment(saga.getShipment().getId());
             } catch (Exception e) {
                 log.error("Failed to compensate shipment", e);
@@ -125,6 +132,7 @@ public class SagaService {
 
         if (saga.getPayment() != null) {
             try {
+                sagaRollbackCounter++;
                 microserviceClient.refundPayment(saga.getPayment().getId());
             } catch (Exception e) {
                 log.error("Failed to compensate payment", e);
@@ -133,6 +141,7 @@ public class SagaService {
 
         if (saga.getOrder() != null) {
             try {
+                sagaRollbackCounter++;
                 microserviceClient.cancelOrder(saga.getOrder().getId());
             } catch (Exception e) {
                 log.error("Failed to compensate order", e);

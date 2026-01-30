@@ -33,6 +33,7 @@ public class ShipmentService {
     private final OrderClient orderClient;
     private final CarrierService carrierService;
 
+
     @Transactional(readOnly = true)
     public Page<ShipmentDto> getAllShipments(Pageable pageable) {
         return shipmentRepository.findAll(pageable)
@@ -75,6 +76,9 @@ public class ShipmentService {
 
     @Transactional
     public ShipmentDto createShipment(ShipmentRequestDto request) {
+        if (Math.random() < 0.05) {
+            throw new RuntimeException("Simulated shipping service failure (5% failure)");
+        }
         if (shipmentRepository.findByOrderId(request.getOrderId()).isPresent()) {
             throw new DuplicateShipmentException(request.getOrderId());
         }
@@ -195,6 +199,9 @@ public class ShipmentService {
 
     @Transactional
     public ShipmentDto prepareShipment(ShipmentRequestDto request) {
+        if (Math.random() < 0.05) {
+            throw new RuntimeException("Simulated shipping service failure (5% failure)");
+        }
         long startTime = System.nanoTime();
 
         log.info("2PC PREPARE: Reserving shipment for order: {}", request.getOrderId());
